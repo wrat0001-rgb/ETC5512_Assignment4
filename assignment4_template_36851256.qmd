@@ -1,9 +1,11 @@
 ---
-title: "Are there differences in tap water characteristics across regions in South Australia?"
+title: "What's in Your Tap Water? Exploring Regional Differences Across South Australia"
 subtitle: "Assignment 4 ETC5512"
 author: "Waranya Ratirotjanakul (36851256)"
 date: today
 format: html
+bibliography: references.bib
+csl: apa.csl
 editor: visual
 ---
 
@@ -12,15 +14,98 @@ editor: visual
 
 ## Data and Documenting
 
-### What's in this section
+### Research Question
+Are there differences in tap water characteristics across regions in South Australia?
 
-Here is where you should provide the more comprehensive details about your data and your processing steps.
+To answer this question, the analysis addresses three sub-questions:
 
-These are the data details that an "average" blog post reader is not concerned with (Task 1).
+1. How do tap water characteristics vary across operational regions in South Australia?
+2. Which water quality parameters show the greatest variation between regions?
+3. How much variation exists between water supply systems within the same operational region?
+
+I chose this question because I am interested in sustainability and environmental systems, particularly how natural resources are managed across different communities. South Australia was selected as the case study because it is one of Australia's driest states [@dew2026waterdryconditions], making water management especially important. After moving from Thailand to Australia, I noticed that drinking tap water directly is much more common in Australia, which made me curious about whether tap water characteristics differ across regions and local water supply systems.
+
+### Data Sources and Suitability
+
+#### Dataset 1: SA Water Quality Performance Results
+
+The primary dataset is the **SA Water Quality Performance Results dataset** published by **SA Water** through the South Australian Government Open Data Portal [@sawater_water_quality]. It contains drinking water quality information, including water quality parameters, average values, guideline values, and disinfection methods. for SA Water operational regions and water supply systems across metropolitan, regional, and remote communities in South Australia.
+
+This dataset is suitable because it includes both regional and system-level information, allowing comparison of tap water characteristics across South Australia and between individual water supply systems. The reported values are based on SA Water's routine monitoring program and represent rolling averages over the previous 12 months.
+
+**Data type:** Observational data based on water samples collected through routine drinking water quality monitoring. The data are not experimental, as no treatments or interventions were applied during data collection.
+
+**Data licence:** Creative Commons Attribution (CC BY)
+
+**Data status:** Active
+
+**Update frequency:** Monthly
+
+**Date published:** 15 June 2018
+
+**Date updated:** 5 May 2026
+
+**Coverage:** South Australia
+
+**Jurisdiction:** South Australian Government
+
+**Publisher/Agency:** SA Water
+
+**Limitations:**
+
+- Results are reported as rolling 12-month average values and may not capture short-term or seasonal variation.
+- Operational regions contain multiple water supply systems, which may mask local differences within a region.
+- Exact sampling locations are not provided.
+The dataset contains many water quality parameters, so representative variables were selected for detailed analysis.
+- Each dataset release summarises the previous 12 months. Analysing long-term trends would require combining multiple historical datasets.
+- SA Water operational regions do not align directly with South Australian Government regions, requiring an approximate correspondence table for mapping.
+
+**Ethical and privacy considerations:**
+
+- The dataset contains aggregated water quality measurements and no personal or identifiable information.
+- Privacy risks are minimal.
+
+#### Dataset 2: South Australian Government Regions
+
+The second dataset is the **South Australian Government Regions dataset** published by the **South Australian Government** [@sa_gov_regions]. It contains administrative regional boundaries used for government planning, monitoring, and service delivery across South Australia.
+
+This dataset is suitable because it provides geographic boundary information that can be used to visualise regional patterns in water quality and create maps for comparison across South Australia.
+
+**Data type:** Administrative geographic data defining official South Australian Government regional boundaries.
+
+**Data licence:** Creative Commons Attribution (CC BY)
+
+**Data status:** Active
+
+**Update frequency:** Daily
+
+**Date published:** 21 December 2015
+
+**Date updated:** 20 June 2025
+
+**Geospatial coverage:** South Australia
+
+**Jurisdiction:** South Australian Government
+
+**Publisher/Agency:** Department for Housing and Urban Development
+
+**Limitations:**
+
+- Government regions do not align directly with SA Water operational regions, requiring an approximate correspondence table for mapping.
+- The dataset provides geographic boundaries only and does not contain water quality information.
+- Regional boundaries are designed for administrative purposes and may not fully represent water supply service areas.
+
+**Ethical and privacy considerations:**
+
+- The dataset contains geographic boundary information only and does not contain personal or identifiable information.
+- Privacy risks are minimal.
+
+
 
 ### Remember
 
 Please mention any additional files that you want the markers to review, eg. read me, meta data etc.
+
 
 <!-- Task 2 Tab: Writing your blogpost -->
 
@@ -50,4 +135,5 @@ There is no strict structure for you to follow. However, here is a skeleton stru
 Here is where you should tell us about your reflection on your analysis (Task 3).
 
 Again, these are the details about **your** perspective and the gritty details behind the scenes of your analysis.
+
 :::
