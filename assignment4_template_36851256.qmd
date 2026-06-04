@@ -29,11 +29,30 @@ I chose this question because I am interested in sustainability and environmenta
 
 #### Dataset 1: SA Water Quality Performance Results
 
-The primary dataset is the **SA Water Quality Performance Results dataset** published by **SA Water** through the South Australian Government Open Data Portal [@sawater_water_quality]. It contains drinking water quality information, including water quality parameters, average values, guideline values, and disinfection methods. for SA Water operational regions and water supply systems across metropolitan, regional, and remote communities in South Australia.
+The primary dataset is the **SA Water Quality Performance Results dataset** published by **SA Water** through the South Australian Government Open Data Portal [@sawater_water_quality]. It contains drinking water quality information, including water quality parameters, average values, guideline values, and disinfection methods, for SA Water operational regions and water supply systems across metropolitan, regional, and remote communities in South Australia.
 
-This dataset is suitable because it includes both regional and system-level information, allowing comparison of tap water characteristics across South Australia and between individual water supply systems. The reported values are based on SA Water's routine monitoring program and represent rolling averages over the previous 12 months.
+This dataset is suitable because it includes both regional and system-level information, allowing comparison of tap water characteristics across South Australia and between individual water supply systems. The reported values are based on SA Water's routine monitoring program and represent rolling averages over the previous 12 months. As the data are collected through established monitoring and quality assurance processes, the dataset provides a reliable basis for regional comparison. 
 
-**Data type:** Observational data based on water samples collected through routine drinking water quality monitoring. The data are not experimental, as no treatments or interventions were applied during data collection.
+Australian tap water may contain naturally occurring minerals, treatment chemicals, and trace contaminants depending on the water source and distribution system [@completehomefiltration_tap_water]. Tap water characteristics refer to the physical and chemical properties of drinking water that influence its quality, safety, and consumer acceptability. These characteristics can be broadly grouped into mineral composition, aesthetic characteristics (such as taste, appearance, and odour), and water treatment characteristics [@nhmrc_physical_chemical_values].
+
+Australian tap water is regulated under the Australian Drinking Water Guidelines (ADWG), which provide health-based and aesthetic guideline values for drinking water quality parameters [@nhmrc_physical_chemical_values]. To represent the main characteristics of tap water, a set of parameters was selected from each category. Together, these parameters provide a broad view of differences in mineral content, water quality, and treatment practices across South Australia.
+
+| Category | Parameter | Justification |
+|------------------------|------------------------|------------------------|
+| **Mineral composition** | Calcium | Contributes to water hardness and dissolved mineral content. |
+|  | Magnesium | Contributes to water hardness and mineral composition. |
+|  | Alkalinity | Indicates the water's ability to resist changes in pH. |
+|  | Total Dissolved Solids (TDS) | Measures the overall concentration of dissolved minerals in water. |
+| **Taste and appearance** | pH | Influences water chemistry and may affect taste. |
+|  | Turbidity | Reflects water clarity and the presence of suspended particles. |
+|  | Sodium | May influence the salinity and taste of drinking water. |
+|  | Sulphate | May contribute to differences in water taste. |
+| **Water treatment** | Fluoride | Indicates the use of fluoride treatment in drinking water supplies. |
+|  | Chlorine (free residual) | Reflects the level of disinfectant remaining in the water and may affect taste and odour.
+
+**Data type:** Observational data based on water samples collected through routine drinking water quality monitoring. 
+
+**Dataset size:** 4,872 observations and 11 variables
 
 **Data licence:** Creative Commons Attribution (CC BY)
 
@@ -62,8 +81,7 @@ The dataset contains many water quality parameters, so representative variables 
 
 **Ethical and privacy considerations:**
 
-- The dataset contains aggregated water quality measurements and no personal or identifiable information.
-- Privacy risks are minimal.
+- The dataset contains aggregated water quality measurements and does not include personal or identifiable information; therefore, privacy risks are minimal.
 
 #### Dataset 2: South Australian Government Regions
 
@@ -72,6 +90,8 @@ The second dataset is the **South Australian Government Regions dataset** publis
 This dataset is suitable because it provides geographic boundary information that can be used to visualise regional patterns in water quality and create maps for comparison across South Australia.
 
 **Data type:** Administrative geographic data defining official South Australian Government regional boundaries.
+
+**Dataset format:** Spatial boundary dataset (shapefile)
 
 **Data licence:** Creative Commons Attribution (CC BY)
 
@@ -97,15 +117,185 @@ This dataset is suitable because it provides geographic boundary information tha
 
 **Ethical and privacy considerations:**
 
-- The dataset contains geographic boundary information only and does not contain personal or identifiable information.
-- Privacy risks are minimal.
+- The dataset contains geographic boundary information only and does not include personal or identifiable information; therefore, privacy risks are minimal.
+
+### Data Download and Processing
+
+#### Dataset 1: SA Water Quality Performance Results
+
+**Download the data**
+The dataset was downloaded from the South Australian Government Open Data Portal using the latest available water quality performance results (April 2026) [@sawater_water_quality; @sawater_water_quality_results_Apr2026].
+
+The raw dataset was imported directly from the download URL and saved as a CSV file for reproducibility.
+
+```{r}
+# load required packages
+library(readxl)
+library(tidyverse)
+
+# url of the April 2026 water quality dataset
+url_sawater_quality <- "https://data.sa.gov.au/data/dataset/996ec2ae-d52c-4d7e-be9c-d4dab1c1aa45/resource/9d161800-cfdd-46d7-8236-3e601fdc4a1c/download/water-quality-performance-results-april-2026.xlsx"
+
+# download the dataset 
+download.file( 
+  url_sawater_quality, 
+  destfile = "data/sawater_quality_apr26.xlsx", 
+  mode = "wb" )
+
+# import the dataset and remove the final 9 footer rows
+sawater_quality_apr26 <- read_excel("data/sawater_quality_apr26.xlsx") |>
+  slice(1:(n() - 9))
+
+# save the raw dataset as a CSV file
+write_csv(
+  sawater_quality_apr26,
+  "data/sawater_quality_apr26.csv")
+```
+
+**Process the data**
+The raw dataset (`sawater_quality_apr26.csv`) was processed to prepare it for analysis. The processing steps included standardising variable names, removing unnecessary variables, converting measurement values to numeric format, and selecting water quality parameters relevant to the research question.
+
+```{r}
+# load required packages
+library(janitor)
+
+# inspect dataset structure and missing values
+glimpse(sawater_quality_apr26) 
+colSums(is.na(sawater_quality_apr26))
+
+# standardise column names to snake_case
+sawater_quality_apr26_processed <- sawater_quality_apr26 |>
+  clean_names()
+
+# clean and prepare variables
+sawater_quality_apr26_processed <- sawater_quality_apr26_processed |>
+  # remove variables not used in the analysis
+  select(
+    -end_date, 
+    -comment) |>
+  
+  # identify and convert values reported below detection limits
+  mutate(
+    below_detection =
+      str_detect(average_value, "<"),
+    
+    average_value =
+      str_remove(average_value, "<"),
+    
+    average_value =
+      as.numeric(average_value)
+  )
+  
+# inspect processed dataset 
+glimpse(sawater_quality_apr26_processed) colSums(is.na(sawater_quality_apr26_processed))
+```
+Parameters were then selected to represent the three main categories of tap water characteristics identified earlier: **mineral composition**, **taste and appearance characteristics**, and **water treatment characteristics**. These parameters were chosen because they provide a broad representation of drinking water quality and consumer acceptability across South Australia. The resulting processed dataset was saved as `sawater_quality_apr26_processed.csv` for subsequent analysis.
+
+```{r}
+# check parameter names
+unique(sawater_quality_apr26_processed$parameter)
+
+# selected parameters
+selected_params <- c(
+  "Calcium",
+  "Magnesium",
+  "Alkalinity",
+  "Total dissolved solids",
+  "pH",
+  "Turbidity",
+  "Sodium",
+  "Sulphate",
+  "Fluoride",
+  "Chlorine (free residual)"
+)
+
+# retain selected parameters
+sawater_quality_apr26_processed <- sawater_quality_apr26_processed |>
+  filter(parameter %in% selected_params)
+
+# save processed dataset as a CSV file
+write_csv(
+  sawater_quality_apr26_processed,
+  "data/sawater_quality_apr26_processed.csv")
+```
+
+#### Dataset 2: South Australian Government Regions
+
+**Download the data**
+The dataset was downloaded from the South Australian Government Open Data Portal as a shapefile containing official South Australian Government regional boundaries [@sa_gov_regions]. The downloaded ZIP file was extracted into the project data folder (`SAGovtRegions_shp`) before being imported into R.
+
+The extracted shapefile package contains both GDA94 and GDA2020 versions of the regional boundaries. The GDA2020 version (`SAGovtRegions_GDA2020.shp`) was selected because it is the current Australian national geodetic datum and provides the most up-to-date spatial reference system available in the dataset.
+
+```{r}
+# load required packages 
+library(sf)
+
+# import the South Australian Government Regions shapefile
+sagovreg_map <- read_sf(
+  here::here("data/SAGovtRegions_shp/SAGovtRegions_GDA2020.shp"))
+```
+
+**Process the data**
+The `water_quality` dataset uses SA Water operational regions, while the South Australia map (`southaus_map`) dataset uses administrative regional boundaries. Since the two datasets use different geographic classifications, a manual correspondence table was created to approximately match regions based on geographic location and regional characteristics.
+
+| Water Operation Region | Matched SA Regions | Grouping Criteria |
+|------------------------|------------------------|------------------------|
+| Metropolitan | Eastern Adelaide, Northern Adelaide, Southern Adelaide, Western Adelaide | Adelaide metropolitan and urban areas |
+| Outer Metro | Adelaide Hills, Barossa Light and Lower North, Fleurieu and Kangaroo Island | Outer metropolitan and peri-urban areas |
+| Eyre | Eyre and Western | Direct geographic alignment |
+| Northern | Yorke and Mid North, Far North | Northern inland regional areas |
+| South East | Limestone Coast | South-eastern regional alignment |
+| Remote Communities | Murray and Mallee | Remote and sparsely populated areas |
+
+This matching was used for exploratory visualisation only and does not represent official SA Water operational boundaries.
+
+```{r}
+# read the national map from electoral data
+southaus_map <- read_sf(here::here("data/SAGovtRegions_shp/SAGovtRegions_GDA2020.shp"))
+
+# create operational mapping
+region_lookup <- tribble(
+  ~region, ~water_region,
+
+  "Eastern Adelaide", "Metropolitan",
+  "Northern Adelaide", "Metropolitan",
+  "Southern Adelaide", "Metropolitan",
+  "Western Adelaide", "Metropolitan",
+
+  "Adelaide Hills", "Outer Metro",
+  "Barossa, Light and Lower North", "Outer Metro",
+  "Fleurieu and Kangaroo Island", "Outer Metro",
+
+  "Eyre and Western", "Eyre",
+
+  "Yorke and Mid North", "Northern",
+  "Far North", "Northern",
+
+  "Limestone Coast", "South East",
+
+  "Murray and Mallee", "Remote Communities"
+)
+
+# join lookup to SA map
+sa_operational <- southaus_map |>
+  left_join(region_lookup, by = "region")
+
+# merge polygons into operational regions
+sa_operational_geom <- sa_operational |>
+  group_by(water_region) |>
+  summarise()
+```
 
 
+### Metadata
 
-### Remember
+#### Dataset 1: SA Water Quality Performance Results
 
-Please mention any additional files that you want the markers to review, eg. read me, meta data etc.
+#### Dataset 2: South Australian Government Regions
 
+### Read Me
+
+### Data Dictionary
 
 <!-- Task 2 Tab: Writing your blogpost -->
 

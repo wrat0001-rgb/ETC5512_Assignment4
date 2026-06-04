@@ -1,0 +1,905 @@
+region_name,system_name,parameter,units,health_guideline,aesthetic_guideline,average_value,health_compliance_number,disinfection,below_detection
+Eyre,Coffin Bay,Alkalinity,mg/L,NG,NG,223,NA,Chlorine,FALSE
+Eyre,Coffin Bay,Calcium,mg/L,NG,NG,47.3,NA,Chlorine,FALSE
+Eyre,Coffin Bay,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine,FALSE
+Eyre,Coffin Bay,Fluoride,mg/L,≤ 1.5,NG,1,100%,Chlorine,FALSE
+Eyre,Coffin Bay,Magnesium,mg/L,NG,NG,32.9,NA,Chlorine,FALSE
+Eyre,Coffin Bay,pH,pH units,NG,6.5 - 8.5,7.8,NA,Chlorine,FALSE
+Eyre,Coffin Bay,Sodium,mg/L,NG,≤ 180,70.8,NA,Chlorine,FALSE
+Eyre,Coffin Bay,Sulphate,mg/L,NG,≤ 250,22.2,NA,Chlorine,FALSE
+Eyre,Coffin Bay,Total dissolved solids,mg/L,NG,≤ 600,466,NA,Chlorine,FALSE
+Eyre,Coffin Bay,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Eyre,Elliston,Alkalinity,mg/L,NG,NG,229,NA,Chlorine,FALSE
+Eyre,Elliston,Calcium,mg/L,NG,NG,60.5,NA,Chlorine,FALSE
+Eyre,Elliston,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine,FALSE
+Eyre,Elliston,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,Chlorine,FALSE
+Eyre,Elliston,Magnesium,mg/L,NG,NG,33.5,NA,Chlorine,FALSE
+Eyre,Elliston,pH,pH units,NG,6.5 - 8.5,7.6,NA,Chlorine,FALSE
+Eyre,Elliston,Sodium,mg/L,NG,≤ 180,119,NA,Chlorine,FALSE
+Eyre,Elliston,Sulphate,mg/L,NG,≤ 250,32.4,NA,Chlorine,FALSE
+Eyre,Elliston,Total dissolved solids,mg/L,NG,≤ 600,665,NA,Chlorine,FALSE
+Eyre,Elliston,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Eyre,Eyre South,Alkalinity,mg/L,NG,NG,229,NA,Chlorine,FALSE
+Eyre,Eyre South,Calcium,mg/L,NG,NG,73.6,NA,Chlorine,FALSE
+Eyre,Eyre South,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.1,100%,Chlorine,FALSE
+Eyre,Eyre South,Fluoride,mg/L,≤ 1.5,NG,0.5,100%,Chlorine,FALSE
+Eyre,Eyre South,Magnesium,mg/L,NG,NG,22.1,NA,Chlorine,FALSE
+Eyre,Eyre South,pH,pH units,NG,6.5 - 8.5,7.6,NA,Chlorine,FALSE
+Eyre,Eyre South,Sodium,mg/L,NG,≤ 180,95.3,NA,Chlorine,FALSE
+Eyre,Eyre South,Sulphate,mg/L,NG,≤ 250,25,NA,Chlorine,FALSE
+Eyre,Eyre South,Total dissolved solids,mg/L,NG,≤ 600,562,NA,Chlorine,FALSE
+Eyre,Eyre South,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Eyre,Eyre South/Morgan,Alkalinity,mg/L,NG,NG,158,NA,Chlorine,FALSE
+Eyre,Eyre South/Morgan,Calcium,mg/L,NG,NG,52,NA,Chlorine,FALSE
+Eyre,Eyre South/Morgan,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.1,100%,Chlorine,FALSE
+Eyre,Eyre South/Morgan,Fluoride,mg/L,≤ 1.5,NG,0.5,100%,Chlorine,FALSE
+Eyre,Eyre South/Morgan,Magnesium,mg/L,NG,NG,15.3,NA,Chlorine,FALSE
+Eyre,Eyre South/Morgan,pH,pH units,NG,6.5 - 8.5,7.8,NA,Chlorine,FALSE
+Eyre,Eyre South/Morgan,Sodium,mg/L,NG,≤ 180,79.6,NA,Chlorine,FALSE
+Eyre,Eyre South/Morgan,Sulphate,mg/L,NG,≤ 250,35.1,NA,Chlorine,FALSE
+Eyre,Eyre South/Morgan,Total dissolved solids,mg/L,NG,≤ 600,454,NA,Chlorine,FALSE
+Eyre,Eyre South/Morgan,Turbidity,NTU,NG,≤ 5,0.12,NA,Chlorine,FALSE
+Eyre,Morgan/Eyre,Alkalinity,mg/L,NG,NG,60,NA,Chlorine,FALSE
+Eyre,Morgan/Eyre,Calcium,mg/L,NG,NG,24.5,NA,Chlorine,FALSE
+Eyre,Morgan/Eyre,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.2,100%,Chlorine,FALSE
+Eyre,Morgan/Eyre,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,Chlorine,FALSE
+Eyre,Morgan/Eyre,Magnesium,mg/L,NG,NG,9.69,NA,Chlorine,FALSE
+Eyre,Morgan/Eyre,pH,pH units,NG,6.5 - 8.5,7.6,NA,Chlorine,FALSE
+Eyre,Morgan/Eyre,Sodium,mg/L,NG,≤ 180,62.5,NA,Chlorine,FALSE
+Eyre,Morgan/Eyre,Sulphate,mg/L,NG,≤ 250,51.6,NA,Chlorine,FALSE
+Eyre,Morgan/Eyre,Total dissolved solids,mg/L,NG,≤ 600,300,NA,Chlorine,FALSE
+Eyre,Morgan/Eyre,Turbidity,NTU,NG,≤ 5,0.56,NA,Chlorine,FALSE
+Metropolitan,Anstey Hill (supplying north eastern Adelaide),Alkalinity,mg/L,NG,NG,59,NA,Chlorine,FALSE
+Metropolitan,Anstey Hill (supplying north eastern Adelaide),Calcium,mg/L,NG,NG,19.8,NA,Chlorine,FALSE
+Metropolitan,Anstey Hill (supplying north eastern Adelaide),Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.2,100%,Chlorine,FALSE
+Metropolitan,Anstey Hill (supplying north eastern Adelaide),Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chlorine,FALSE
+Metropolitan,Anstey Hill (supplying north eastern Adelaide),Magnesium,mg/L,NG,NG,12.03,NA,Chlorine,FALSE
+Metropolitan,Anstey Hill (supplying north eastern Adelaide),pH,pH units,NG,6.5 - 8.5,7.2,NA,Chlorine,FALSE
+Metropolitan,Anstey Hill (supplying north eastern Adelaide),Sodium,mg/L,NG,≤ 180,53,NA,Chlorine,FALSE
+Metropolitan,Anstey Hill (supplying north eastern Adelaide),Sulphate,mg/L,NG,≤ 250,46.5,NA,Chlorine,FALSE
+Metropolitan,Anstey Hill (supplying north eastern Adelaide),Total dissolved solids,mg/L,NG,≤ 600,295,NA,Chlorine,FALSE
+Metropolitan,Anstey Hill (supplying north eastern Adelaide),Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Metropolitan,Barossa (supplying Gawler and surrounds),Alkalinity,mg/L,NG,NG,65,NA,Chlorine,FALSE
+Metropolitan,Barossa (supplying Gawler and surrounds),Calcium,mg/L,NG,NG,27.4,NA,Chlorine,FALSE
+Metropolitan,Barossa (supplying Gawler and surrounds),Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.4,100%,Chlorine,FALSE
+Metropolitan,Barossa (supplying Gawler and surrounds),Fluoride,mg/L,≤ 1.5,NG,0.8,100%,Chlorine,FALSE
+Metropolitan,Barossa (supplying Gawler and surrounds),Magnesium,mg/L,NG,NG,16.6,NA,Chlorine,FALSE
+Metropolitan,Barossa (supplying Gawler and surrounds),pH,pH units,NG,6.5 - 8.5,7.1,NA,Chlorine,FALSE
+Metropolitan,Barossa (supplying Gawler and surrounds),Sodium,mg/L,NG,≤ 180,74.8,NA,Chlorine,FALSE
+Metropolitan,Barossa (supplying Gawler and surrounds),Sulphate,mg/L,NG,≤ 250,58.6,NA,Chlorine,FALSE
+Metropolitan,Barossa (supplying Gawler and surrounds),Total dissolved solids,mg/L,NG,≤ 600,397,NA,Chlorine,FALSE
+Metropolitan,Barossa (supplying Gawler and surrounds),Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Metropolitan,Central metro Adelaide suburbs,Alkalinity,mg/L,NG,NG,59,NA,Chlorine,FALSE
+Metropolitan,Central metro Adelaide suburbs,Calcium,mg/L,NG,NG,21.4,NA,Chlorine,FALSE
+Metropolitan,Central metro Adelaide suburbs,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.3,100%,Chlorine,FALSE
+Metropolitan,Central metro Adelaide suburbs,Fluoride,mg/L,≤ 1.5,NG,0.5,100%,Chlorine,FALSE
+Metropolitan,Central metro Adelaide suburbs,Magnesium,mg/L,NG,NG,12.72,NA,Chlorine,FALSE
+Metropolitan,Central metro Adelaide suburbs,pH,pH units,NG,6.5 - 8.5,7.3,NA,Chlorine,FALSE
+Metropolitan,Central metro Adelaide suburbs,Sodium,mg/L,NG,≤ 180,55.2,NA,Chlorine,FALSE
+Metropolitan,Central metro Adelaide suburbs,Sulphate,mg/L,NG,≤ 250,42.8,NA,Chlorine,FALSE
+Metropolitan,Central metro Adelaide suburbs,Total dissolved solids,mg/L,NG,≤ 600,311,NA,Chlorine,FALSE
+Metropolitan,Central metro Adelaide suburbs,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Metropolitan,Eastern metro Adelaide suburbs,Alkalinity,mg/L,NG,NG,60,NA,Chlorine,FALSE
+Metropolitan,Eastern metro Adelaide suburbs,Calcium,mg/L,NG,NG,22.3,NA,Chlorine,FALSE
+Metropolitan,Eastern metro Adelaide suburbs,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.4,100%,Chlorine,FALSE
+Metropolitan,Eastern metro Adelaide suburbs,Fluoride,mg/L,≤ 1.5,NG,0.5,100%,Chlorine,FALSE
+Metropolitan,Eastern metro Adelaide suburbs,Magnesium,mg/L,NG,NG,13.54,NA,Chlorine,FALSE
+Metropolitan,Eastern metro Adelaide suburbs,pH,pH units,NG,6.5 - 8.5,7.3,NA,Chlorine,FALSE
+Metropolitan,Eastern metro Adelaide suburbs,Sodium,mg/L,NG,≤ 180,58.6,NA,Chlorine,FALSE
+Metropolitan,Eastern metro Adelaide suburbs,Sulphate,mg/L,NG,≤ 250,44.7,NA,Chlorine,FALSE
+Metropolitan,Eastern metro Adelaide suburbs,Total dissolved solids,mg/L,NG,≤ 600,299,NA,Chlorine,FALSE
+Metropolitan,Eastern metro Adelaide suburbs,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Metropolitan,Myponga metro (supplying outer southern Adelaide),Alkalinity,mg/L,NG,NG,73,NA,Chloramine / UV,FALSE
+Metropolitan,Myponga metro (supplying outer southern Adelaide),Calcium,mg/L,NG,NG,28.5,NA,Chloramine / UV,FALSE
+Metropolitan,Myponga metro (supplying outer southern Adelaide),Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine / UV,TRUE
+Metropolitan,Myponga metro (supplying outer southern Adelaide),Fluoride,mg/L,≤ 1.5,NG,0.8,100%,Chloramine / UV,FALSE
+Metropolitan,Myponga metro (supplying outer southern Adelaide),Magnesium,mg/L,NG,NG,15.7,NA,Chloramine / UV,FALSE
+Metropolitan,Myponga metro (supplying outer southern Adelaide),pH,pH units,NG,6.5 - 8.5,8.6,NA,Chloramine / UV,FALSE
+Metropolitan,Myponga metro (supplying outer southern Adelaide),Sodium,mg/L,NG,≤ 180,106.6,NA,Chloramine / UV,FALSE
+Metropolitan,Myponga metro (supplying outer southern Adelaide),Sulphate,mg/L,NG,≤ 250,69.3,NA,Chloramine / UV,FALSE
+Metropolitan,Myponga metro (supplying outer southern Adelaide),Total dissolved solids,mg/L,NG,≤ 600,482,NA,Chloramine / UV,FALSE
+Metropolitan,Myponga metro (supplying outer southern Adelaide),Turbidity,NTU,NG,≤ 5,0.1,NA,Chloramine / UV,TRUE
+Metropolitan,Northern metro Adelaide suburbs,Alkalinity,mg/L,NG,NG,64,NA,Chlorine,FALSE
+Metropolitan,Northern metro Adelaide suburbs,Calcium,mg/L,NG,NG,22.3,NA,Chlorine,FALSE
+Metropolitan,Northern metro Adelaide suburbs,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.4,100%,Chlorine,FALSE
+Metropolitan,Northern metro Adelaide suburbs,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chlorine,FALSE
+Metropolitan,Northern metro Adelaide suburbs,Magnesium,mg/L,NG,NG,13.61,NA,Chlorine,FALSE
+Metropolitan,Northern metro Adelaide suburbs,pH,pH units,NG,6.5 - 8.5,7.2,NA,Chlorine,FALSE
+Metropolitan,Northern metro Adelaide suburbs,Sodium,mg/L,NG,≤ 180,59.5,NA,Chlorine,FALSE
+Metropolitan,Northern metro Adelaide suburbs,Sulphate,mg/L,NG,≤ 250,48.1,NA,Chlorine,FALSE
+Metropolitan,Northern metro Adelaide suburbs,Total dissolved solids,mg/L,NG,≤ 600,356,NA,Chlorine,FALSE
+Metropolitan,Northern metro Adelaide suburbs,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Metropolitan,Southern metro Adelaide suburbs,Alkalinity,mg/L,NG,NG,60,NA,Chlorine,FALSE
+Metropolitan,Southern metro Adelaide suburbs,Calcium,mg/L,NG,NG,20.9,NA,Chlorine,FALSE
+Metropolitan,Southern metro Adelaide suburbs,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.3,100%,Chlorine,FALSE
+Metropolitan,Southern metro Adelaide suburbs,Fluoride,mg/L,≤ 1.5,NG,0.5,100%,Chlorine,FALSE
+Metropolitan,Southern metro Adelaide suburbs,Magnesium,mg/L,NG,NG,12.4,NA,Chlorine,FALSE
+Metropolitan,Southern metro Adelaide suburbs,pH,pH units,NG,6.5 - 8.5,7.5,NA,Chlorine,FALSE
+Metropolitan,Southern metro Adelaide suburbs,Sodium,mg/L,NG,≤ 180,54.9,NA,Chlorine,FALSE
+Metropolitan,Southern metro Adelaide suburbs,Sulphate,mg/L,NG,≤ 250,40.1,NA,Chlorine,FALSE
+Metropolitan,Southern metro Adelaide suburbs,Total dissolved solids,mg/L,NG,≤ 600,298,NA,Chlorine,FALSE
+Metropolitan,Southern metro Adelaide suburbs,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Metropolitan,Western metro Adelaide suburbs,Alkalinity,mg/L,NG,NG,65,NA,Chlorine,FALSE
+Metropolitan,Western metro Adelaide suburbs,Calcium,mg/L,NG,NG,22.4,NA,Chlorine,FALSE
+Metropolitan,Western metro Adelaide suburbs,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.3,100%,Chlorine,FALSE
+Metropolitan,Western metro Adelaide suburbs,Fluoride,mg/L,≤ 1.5,NG,0.53,100%,Chlorine,FALSE
+Metropolitan,Western metro Adelaide suburbs,Magnesium,mg/L,NG,NG,14.6,NA,Chlorine,FALSE
+Metropolitan,Western metro Adelaide suburbs,pH,pH units,NG,6.5 - 8.5,7.3,NA,Chlorine,FALSE
+Metropolitan,Western metro Adelaide suburbs,Sodium,mg/L,NG,≤ 180,60.6,NA,Chlorine,FALSE
+Metropolitan,Western metro Adelaide suburbs,Sulphate,mg/L,NG,≤ 250,45,NA,Chlorine,FALSE
+Metropolitan,Western metro Adelaide suburbs,Total dissolved solids,mg/L,NG,≤ 600,313,NA,Chlorine,FALSE
+Metropolitan,Western metro Adelaide suburbs,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Northern,Barmera,Alkalinity,mg/L,NG,NG,50,NA,Chlorine / UV,FALSE
+Northern,Barmera,Calcium,mg/L,NG,NG,15.3,NA,Chlorine / UV,FALSE
+Northern,Barmera,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine / UV,FALSE
+Northern,Barmera,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chlorine / UV,FALSE
+Northern,Barmera,Magnesium,mg/L,NG,NG,9.83,NA,Chlorine / UV,FALSE
+Northern,Barmera,pH,pH units,NG,6.5 - 8.5,7.5,NA,Chlorine / UV,FALSE
+Northern,Barmera,Sodium,mg/L,NG,≤ 180,45.2,NA,Chlorine / UV,FALSE
+Northern,Barmera,Sulphate,mg/L,NG,≤ 250,50.9,NA,Chlorine / UV,FALSE
+Northern,Barmera,Total dissolved solids,mg/L,NG,≤ 600,218,NA,Chlorine / UV,FALSE
+Northern,Barmera,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine / UV,TRUE
+Northern,Berri,Alkalinity,mg/L,NG,NG,52,NA,Chlorine / UV,FALSE
+Northern,Berri,Calcium,mg/L,NG,NG,13.5,NA,Chlorine / UV,FALSE
+Northern,Berri,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.1,100%,Chlorine / UV,FALSE
+Northern,Berri,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chlorine / UV,FALSE
+Northern,Berri,Magnesium,mg/L,NG,NG,8.75,NA,Chlorine / UV,FALSE
+Northern,Berri,pH,pH units,NG,6.5 - 8.5,7.3,NA,Chlorine / UV,FALSE
+Northern,Berri,Sodium,mg/L,NG,≤ 180,42.4,NA,Chlorine / UV,FALSE
+Northern,Berri,Sulphate,mg/L,NG,≤ 250,43.5,NA,Chlorine / UV,FALSE
+Northern,Berri,Total dissolved solids,mg/L,NG,≤ 600,214,NA,Chlorine / UV,FALSE
+Northern,Berri,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine / UV,TRUE
+Northern,Blanchetown,Alkalinity,mg/L,NG,NG,70,NA,Chlorine,FALSE
+Northern,Blanchetown,Calcium,mg/L,NG,NG,14.16,NA,Chlorine,FALSE
+Northern,Blanchetown,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.7,100%,Chlorine,FALSE
+Northern,Blanchetown,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+Northern,Blanchetown,Magnesium,mg/L,NG,NG,9.47,NA,Chlorine,FALSE
+Northern,Blanchetown,pH,pH units,NG,6.5 - 8.5,7.6,NA,Chlorine,FALSE
+Northern,Blanchetown,Sodium,mg/L,NG,≤ 180,46.2,NA,Chlorine,FALSE
+Northern,Blanchetown,Sulphate,mg/L,NG,≤ 250,13.4,NA,Chlorine,FALSE
+Northern,Blanchetown,Total dissolved solids,mg/L,NG,≤ 600,229,NA,Chlorine,FALSE
+Northern,Blanchetown,Turbidity,NTU,NG,≤ 5,0.29,NA,Chlorine,FALSE
+Northern,Cadell,Alkalinity,mg/L,NG,NG,69,NA,Chlorine,FALSE
+Northern,Cadell,Calcium,mg/L,NG,NG,14.6,NA,Chlorine,FALSE
+Northern,Cadell,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.8,100%,Chlorine,FALSE
+Northern,Cadell,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+Northern,Cadell,Magnesium,mg/L,NG,NG,10.1,NA,Chlorine,FALSE
+Northern,Cadell,pH,pH units,NG,6.5 - 8.5,7.4,NA,Chlorine,FALSE
+Northern,Cadell,Sodium,mg/L,NG,≤ 180,45.3,NA,Chlorine,FALSE
+Northern,Cadell,Sulphate,mg/L,NG,≤ 250,15.1,NA,Chlorine,FALSE
+Northern,Cadell,Total dissolved solids,mg/L,NG,≤ 600,224,NA,Chlorine,FALSE
+Northern,Cadell,Turbidity,NTU,NG,≤ 5,0.48,NA,Chlorine,FALSE
+Northern,Glossop,Alkalinity,mg/L,NG,NG,72,NA,Chlorine,FALSE
+Northern,Glossop,Calcium,mg/L,NG,NG,14.1,NA,Chlorine,FALSE
+Northern,Glossop,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine,FALSE
+Northern,Glossop,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+Northern,Glossop,Magnesium,mg/L,NG,NG,9.04,NA,Chlorine,FALSE
+Northern,Glossop,pH,pH units,NG,6.5 - 8.5,7.9,NA,Chlorine,FALSE
+Northern,Glossop,Sodium,mg/L,NG,≤ 180,40.6,NA,Chlorine,FALSE
+Northern,Glossop,Sulphate,mg/L,NG,≤ 250,10.9,NA,Chlorine,FALSE
+Northern,Glossop,Total dissolved solids,mg/L,NG,≤ 600,200,NA,Chlorine,FALSE
+Northern,Glossop,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Northern,Leigh Creek,Alkalinity,mg/L,NG,NG,62,NA,Chlorine,FALSE
+Northern,Leigh Creek,Calcium,mg/L,NG,NG,2.47,NA,Chlorine,FALSE
+Northern,Leigh Creek,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine,FALSE
+Northern,Leigh Creek,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+Northern,Leigh Creek,Magnesium,mg/L,NG,NG,0.19,NA,Chlorine,FALSE
+Northern,Leigh Creek,pH,pH units,NG,6.5 - 8.5,8.7,NA,Chlorine,FALSE
+Northern,Leigh Creek,Sodium,mg/L,NG,≤ 180,44,NA,Chlorine,FALSE
+Northern,Leigh Creek,Sulphate,mg/L,NG,≤ 250,13,NA,Chlorine,FALSE
+Northern,Leigh Creek,Total dissolved solids,mg/L,NG,≤ 600,125,NA,Chlorine,FALSE
+Northern,Leigh Creek,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,FALSE
+Northern,Loxton,Alkalinity,mg/L,NG,NG,60,NA,Chloramine / UV,FALSE
+Northern,Loxton,Calcium,mg/L,NG,NG,13.14,NA,Chloramine / UV,FALSE
+Northern,Loxton,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine / UV,TRUE
+Northern,Loxton,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chloramine / UV,FALSE
+Northern,Loxton,Magnesium,mg/L,NG,NG,8.99,NA,Chloramine / UV,FALSE
+Northern,Loxton,pH,pH units,NG,6.5 - 8.5,8.7,NA,Chloramine / UV,FALSE
+Northern,Loxton,Sodium,mg/L,NG,≤ 180,51.8,NA,Chloramine / UV,FALSE
+Northern,Loxton,Sulphate,mg/L,NG,≤ 250,43,NA,Chloramine / UV,FALSE
+Northern,Loxton,Total dissolved solids,mg/L,NG,≤ 600,233,NA,Chloramine / UV,FALSE
+Northern,Loxton,Turbidity,NTU,NG,≤ 5,0.1,NA,Chloramine / UV,TRUE
+Northern,Melrose,Alkalinity,mg/L,NG,NG,296,NA,Chlorine,FALSE
+Northern,Melrose,Calcium,mg/L,NG,NG,62.4,NA,Chlorine,FALSE
+Northern,Melrose,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine,FALSE
+Northern,Melrose,Fluoride,mg/L,≤ 1.5,NG,1.1,100%,Chlorine,FALSE
+Northern,Melrose,Magnesium,mg/L,NG,NG,51.1,NA,Chlorine,FALSE
+Northern,Melrose,pH,pH units,NG,6.5 - 8.5,7.4,NA,Chlorine,FALSE
+Northern,Melrose,Sodium,mg/L,NG,≤ 180,413,NA,Chlorine,FALSE
+Northern,Melrose,Sulphate,mg/L,NG,≤ 250,172.3,NA,Chlorine,FALSE
+Northern,Melrose,Total dissolved solids,mg/L,NG,≤ 600,NA,NA,Chlorine,FALSE
+Northern,Melrose,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Northern,Moorook,Alkalinity,mg/L,NG,NG,64,NA,Chlorine,FALSE
+Northern,Moorook,Calcium,mg/L,NG,NG,13,NA,Chlorine,FALSE
+Northern,Moorook,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.7,100%,Chlorine,FALSE
+Northern,Moorook,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+Northern,Moorook,Magnesium,mg/L,NG,NG,7.93,NA,Chlorine,FALSE
+Northern,Moorook,pH,pH units,NG,6.5 - 8.5,7.9,NA,Chlorine,FALSE
+Northern,Moorook,Sodium,mg/L,NG,≤ 180,42.2,NA,Chlorine,FALSE
+Northern,Moorook,Sulphate,mg/L,NG,≤ 250,8.6,NA,Chlorine,FALSE
+Northern,Moorook,Total dissolved solids,mg/L,NG,≤ 600,204,NA,Chlorine,FALSE
+Northern,Moorook,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Northern,Morgan/Northern,Alkalinity,mg/L,NG,NG,70,NA,Chloramine,FALSE
+Northern,Morgan/Northern,Calcium,mg/L,NG,NG,16.1,NA,Chloramine,FALSE
+Northern,Morgan/Northern,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine,TRUE
+Northern,Morgan/Northern,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,Chloramine,FALSE
+Northern,Morgan/Northern,Magnesium,mg/L,NG,NG,10,NA,Chloramine,FALSE
+Northern,Morgan/Northern,pH,pH units,NG,6.5 - 8.5,8.6,NA,Chloramine,FALSE
+Northern,Morgan/Northern,Sodium,mg/L,NG,≤ 180,61.1,NA,Chloramine,FALSE
+Northern,Morgan/Northern,Sulphate,mg/L,NG,≤ 250,48.8,NA,Chloramine,FALSE
+Northern,Morgan/Northern,Total dissolved solids,mg/L,NG,≤ 600,278,NA,Chloramine,FALSE
+Northern,Morgan/Northern,Turbidity,NTU,NG,≤ 5,0.1,NA,Chloramine,TRUE
+Northern,Morgan/Swan Reach,Alkalinity,mg/L,NG,NG,76,NA,Chloramine,FALSE
+Northern,Morgan/Swan Reach,Calcium,mg/L,NG,NG,17.9,NA,Chloramine,FALSE
+Northern,Morgan/Swan Reach,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine,TRUE
+Northern,Morgan/Swan Reach,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,Chloramine,FALSE
+Northern,Morgan/Swan Reach,Magnesium,mg/L,NG,NG,9.86,NA,Chloramine,FALSE
+Northern,Morgan/Swan Reach,pH,pH units,NG,6.5 - 8.5,8.9,NA,Chloramine,FALSE
+Northern,Morgan/Swan Reach,Sodium,mg/L,NG,≤ 180,62.4,NA,Chloramine,FALSE
+Northern,Morgan/Swan Reach,Sulphate,mg/L,NG,≤ 250,49.7,NA,Chloramine,FALSE
+Northern,Morgan/Swan Reach,Total dissolved solids,mg/L,NG,≤ 600,289,NA,Chloramine,FALSE
+Northern,Morgan/Swan Reach,Turbidity,NTU,NG,≤ 5,0.1,NA,Chloramine,TRUE
+Northern,Parachilna,Alkalinity,mg/L,NG,NG,208,NA,Chlorine,FALSE
+Northern,Parachilna,Calcium,mg/L,NG,NG,55.9,NA,Chlorine,FALSE
+Northern,Parachilna,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.1,100%,Chlorine,FALSE
+Northern,Parachilna,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,Chlorine,FALSE
+Northern,Parachilna,Magnesium,mg/L,NG,NG,39.2,NA,Chlorine,FALSE
+Northern,Parachilna,pH,pH units,NG,6.5 - 8.5,7.9,NA,Chlorine,FALSE
+Northern,Parachilna,Sodium,mg/L,NG,≤ 180,172,NA,Chlorine,FALSE
+Northern,Parachilna,Sulphate,mg/L,NG,≤ 250,98.5,NA,Chlorine,FALSE
+Northern,Parachilna,Total dissolved solids,mg/L,NG,≤ 600,836,NA,Chlorine,FALSE
+Northern,Parachilna,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Northern,Quorn,Alkalinity,mg/L,NG,NG,421,NA,Chlorine,FALSE
+Northern,Quorn,Calcium,mg/L,NG,NG,79,NA,Chlorine,FALSE
+Northern,Quorn,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.2,100%,Chlorine,FALSE
+Northern,Quorn,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,Chlorine,FALSE
+Northern,Quorn,Magnesium,mg/L,NG,NG,71.7,NA,Chlorine,FALSE
+Northern,Quorn,pH,pH units,NG,6.5 - 8.5,7.1,NA,Chlorine,FALSE
+Northern,Quorn,Sodium,mg/L,NG,≤ 180,239,NA,Chlorine,FALSE
+Northern,Quorn,Sulphate,mg/L,NG,≤ 250,81.2,NA,Chlorine,FALSE
+Northern,Quorn,Total dissolved solids,mg/L,NG,≤ 600,NA,NA,Chlorine,FALSE
+Northern,Quorn,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Northern,Renmark,Alkalinity,mg/L,NG,NG,51,NA,Chlorine / UV,FALSE
+Northern,Renmark,Calcium,mg/L,NG,NG,14.64,NA,Chlorine / UV,FALSE
+Northern,Renmark,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine / UV,FALSE
+Northern,Renmark,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chlorine / UV,FALSE
+Northern,Renmark,Magnesium,mg/L,NG,NG,7.74,NA,Chlorine / UV,FALSE
+Northern,Renmark,pH,pH units,NG,6.5 - 8.5,7.8,NA,Chlorine / UV,FALSE
+Northern,Renmark,Sodium,mg/L,NG,≤ 180,40.4,NA,Chlorine / UV,FALSE
+Northern,Renmark,Sulphate,mg/L,NG,≤ 250,43.1,NA,Chlorine / UV,FALSE
+Northern,Renmark,Total dissolved solids,mg/L,NG,≤ 600,206,NA,Chlorine / UV,FALSE
+Northern,Renmark,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine / UV,TRUE
+Northern,Waikerie,Alkalinity,mg/L,NG,NG,48,NA,Chlorine / UV,FALSE
+Northern,Waikerie,Calcium,mg/L,NG,NG,13.62,NA,Chlorine / UV,FALSE
+Northern,Waikerie,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine / UV,FALSE
+Northern,Waikerie,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chlorine / UV,FALSE
+Northern,Waikerie,Magnesium,mg/L,NG,NG,9.13,NA,Chlorine / UV,FALSE
+Northern,Waikerie,pH,pH units,NG,6.5 - 8.5,7.5,NA,Chlorine / UV,FALSE
+Northern,Waikerie,Sodium,mg/L,NG,≤ 180,48.4,NA,Chlorine / UV,FALSE
+Northern,Waikerie,Sulphate,mg/L,NG,≤ 250,43.2,NA,Chlorine / UV,FALSE
+Northern,Waikerie,Total dissolved solids,mg/L,NG,≤ 600,228,NA,Chlorine / UV,FALSE
+Northern,Waikerie,Turbidity,NTU,NG,≤ 5,0.17,NA,Chlorine / UV,FALSE
+Northern,Wilmington,Alkalinity,mg/L,NG,NG,88,NA,Chlorine,FALSE
+Northern,Wilmington,Calcium,mg/L,NG,NG,18,NA,Chlorine,FALSE
+Northern,Wilmington,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,2.2,100%,Chlorine,FALSE
+Northern,Wilmington,Fluoride,mg/L,≤ 1.5,NG,0.2,100%,Chlorine,FALSE
+Northern,Wilmington,Magnesium,mg/L,NG,NG,17.3,NA,Chlorine,FALSE
+Northern,Wilmington,pH,pH units,NG,6.5 - 8.5,7,NA,Chlorine,FALSE
+Northern,Wilmington,Sodium,mg/L,NG,≤ 180,53.3,NA,Chlorine,FALSE
+Northern,Wilmington,Sulphate,mg/L,NG,≤ 250,18.2,NA,Chlorine,FALSE
+Northern,Wilmington,Total dissolved solids,mg/L,NG,≤ 600,329,NA,Chlorine,FALSE
+Northern,Wilmington,Turbidity,NTU,NG,≤ 5,0.17,NA,Chlorine,FALSE
+Northern,Woolpunda,Alkalinity,mg/L,NG,NG,80,NA,Chloramine,FALSE
+Northern,Woolpunda,Calcium,mg/L,NG,NG,14.6,NA,Chloramine,FALSE
+Northern,Woolpunda,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine,TRUE
+Northern,Woolpunda,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chloramine,TRUE
+Northern,Woolpunda,Magnesium,mg/L,NG,NG,9.28,NA,Chloramine,FALSE
+Northern,Woolpunda,pH,pH units,NG,6.5 - 8.5,8.7,NA,Chloramine,FALSE
+Northern,Woolpunda,Sodium,mg/L,NG,≤ 180,50.7,NA,Chloramine,FALSE
+Northern,Woolpunda,Sulphate,mg/L,NG,≤ 250,12.7,NA,Chloramine,FALSE
+Northern,Woolpunda,Total dissolved solids,mg/L,NG,≤ 600,237,NA,Chloramine,FALSE
+Northern,Woolpunda,Turbidity,NTU,NG,≤ 5,0.14,NA,Chloramine,FALSE
+Northern,Oodnadatta,Alkalinity,mg/L,NG,NG,55,NA,Chlorine,FALSE
+Northern,Oodnadatta,Calcium,mg/L,NG,NG,16.4,NA,Chlorine,FALSE
+Northern,Oodnadatta,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.2,100%,Chlorine,FALSE
+Northern,Oodnadatta,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+Northern,Oodnadatta,Magnesium,mg/L,NG,NG,2.71,NA,Chlorine,FALSE
+Northern,Oodnadatta,pH,pH units,NG,6.5 - 8.5,8,NA,Chlorine,FALSE
+Northern,Oodnadatta,Sodium,mg/L,NG,≤ 180,59.3,NA,Chlorine,FALSE
+Northern,Oodnadatta,Sulphate,mg/L,NG,≤ 250,25.4,NA,Chlorine,FALSE
+Northern,Oodnadatta,Total dissolved solids,mg/L,NG,≤ 600,248,NA,Chlorine,FALSE
+Northern,Oodnadatta,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Northern,Marla,Alkalinity,mg/L,NG,NG,64,NA,Chlorine,FALSE
+Northern,Marla,Calcium,mg/L,NG,NG,20.6,NA,Chlorine,FALSE
+Northern,Marla,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.1,100%,Chlorine,FALSE
+Northern,Marla,Fluoride,mg/L,≤ 1.5,NG,0.2,100%,Chlorine,FALSE
+Northern,Marla,Magnesium,mg/L,NG,NG,4.54,NA,Chlorine,FALSE
+Northern,Marla,pH,pH units,NG,6.5 - 8.5,8.6,NA,Chlorine,FALSE
+Northern,Marla,Sodium,mg/L,NG,≤ 180,24.4,NA,Chlorine,FALSE
+Northern,Marla,Sulphate,mg/L,NG,≤ 250,11.5,NA,Chlorine,FALSE
+Northern,Marla,Total dissolved solids,mg/L,NG,≤ 600,159,NA,Chlorine,FALSE
+Northern,Marla,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Northern,Mannahill,Alkalinity,mg/L,NG,NG,62,NA,Chlorine,FALSE
+Northern,Mannahill,Calcium,mg/L,NG,NG,16.1,NA,Chlorine,FALSE
+Northern,Mannahill,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.6,100%,Chlorine,FALSE
+Northern,Mannahill,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,Chlorine,FALSE
+Northern,Mannahill,Magnesium,mg/L,NG,NG,10.34,NA,Chlorine,FALSE
+Northern,Mannahill,pH,pH units,NG,6.5 - 8.5,8.2,NA,Chlorine,FALSE
+Northern,Mannahill,Sodium,mg/L,NG,≤ 180,62.4,NA,Chlorine,FALSE
+Northern,Mannahill,Sulphate,mg/L,NG,≤ 250,49.6,NA,Chlorine,FALSE
+Northern,Mannahill,Total dissolved solids,mg/L,NG,≤ 600,291,NA,Chlorine,FALSE
+Northern,Mannahill,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Northern,Terowie,Alkalinity,mg/L,NG,NG,62,NA,Chlorine,FALSE
+Northern,Terowie,Calcium,mg/L,NG,NG,17.5,NA,Chlorine,FALSE
+Northern,Terowie,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.5,100%,Chlorine,FALSE
+Northern,Terowie,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,Chlorine,FALSE
+Northern,Terowie,Magnesium,mg/L,NG,NG,10.41,NA,Chlorine,FALSE
+Northern,Terowie,pH,pH units,NG,6.5 - 8.5,8.1,NA,Chlorine,FALSE
+Northern,Terowie,Sodium,mg/L,NG,≤ 180,66.7,NA,Chlorine,FALSE
+Northern,Terowie,Sulphate,mg/L,NG,≤ 250,52.1,NA,Chlorine,FALSE
+Northern,Terowie,Total dissolved solids,mg/L,NG,≤ 600,286,NA,Chlorine,FALSE
+Northern,Terowie,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Northern,Yunta,Alkalinity,mg/L,NG,NG,62,NA,Chlorine,FALSE
+Northern,Yunta,Calcium,mg/L,NG,NG,17.4,NA,Chlorine,FALSE
+Northern,Yunta,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.8,100%,Chlorine,FALSE
+Northern,Yunta,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chlorine,FALSE
+Northern,Yunta,Magnesium,mg/L,NG,NG,9.43,NA,Chlorine,FALSE
+Northern,Yunta,pH,pH units,NG,6.5 - 8.5,8.7,NA,Chlorine,FALSE
+Northern,Yunta,Sodium,mg/L,NG,≤ 180,62.8,NA,Chlorine,FALSE
+Northern,Yunta,Sulphate,mg/L,NG,≤ 250,49.4,NA,Chlorine,FALSE
+Northern,Yunta,Total dissolved solids,mg/L,NG,≤ 600,295,NA,Chlorine,FALSE
+Northern,Yunta,Turbidity,NTU,NG,≤ 5,0.13,NA,Chlorine,FALSE
+Northern,Marree,Alkalinity,mg/L,NG,NG,97,NA,Chlorine,FALSE
+Northern,Marree,Calcium,mg/L,NG,NG,13,NA,Chlorine,FALSE
+Northern,Marree,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.1,100%,Chlorine,FALSE
+Northern,Marree,Fluoride,mg/L,≤ 1.5,NG,0.26,100%,Chlorine,FALSE
+Northern,Marree,Magnesium,mg/L,NG,NG,0.84,NA,Chlorine,FALSE
+Northern,Marree,pH,pH units,NG,6.5 - 8.5,8.2,NA,Chlorine,FALSE
+Northern,Marree,Sodium,mg/L,NG,≤ 180,78.9,NA,Chlorine,FALSE
+Northern,Marree,Sulphate,mg/L,NG,≤ 250,0.6,NA,Chlorine,TRUE
+Northern,Marree,Total dissolved solids,mg/L,NG,≤ 600,244,NA,Chlorine,FALSE
+Northern,Marree,Turbidity,NTU,NG,≤ 5,0.21,NA,Chlorine,FALSE
+Outer Metro,Barossa,Alkalinity,mg/L,NG,NG,64,NA,Chlorine,FALSE
+Outer Metro,Barossa,Calcium,mg/L,NG,NG,27.6,NA,Chlorine,FALSE
+Outer Metro,Barossa,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.7,100%,Chlorine,FALSE
+Outer Metro,Barossa,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chlorine,FALSE
+Outer Metro,Barossa,Magnesium,mg/L,NG,NG,16.7,NA,Chlorine,FALSE
+Outer Metro,Barossa,pH,pH units,NG,6.5 - 8.5,7.4,NA,Chlorine,FALSE
+Outer Metro,Barossa,Sodium,mg/L,NG,≤ 180,74.4,NA,Chlorine,FALSE
+Outer Metro,Barossa,Sulphate,mg/L,NG,≤ 250,59.8,NA,Chlorine,FALSE
+Outer Metro,Barossa,Total dissolved solids,mg/L,NG,≤ 600,387,NA,Chlorine,FALSE
+Outer Metro,Barossa,Turbidity,NTU,NG,≤ 5,0.25,NA,Chlorine,FALSE
+Outer Metro,Cowirra,Alkalinity,mg/L,NG,NG,81,NA,Chlorine,FALSE
+Outer Metro,Cowirra,Calcium,mg/L,NG,NG,16.3,NA,Chlorine,FALSE
+Outer Metro,Cowirra,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.8,100%,Chlorine,FALSE
+Outer Metro,Cowirra,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+Outer Metro,Cowirra,Magnesium,mg/L,NG,NG,10.07,NA,Chlorine,FALSE
+Outer Metro,Cowirra,pH,pH units,NG,6.5 - 8.5,7.6,NA,Chlorine,FALSE
+Outer Metro,Cowirra,Sodium,mg/L,NG,≤ 180,54.7,NA,Chlorine,FALSE
+Outer Metro,Cowirra,Sulphate,mg/L,NG,≤ 250,16.5,NA,Chlorine,FALSE
+Outer Metro,Cowirra,Total dissolved solids,mg/L,NG,≤ 600,254,NA,Chlorine,FALSE
+Outer Metro,Cowirra,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Outer Metro,Happy Valley,Alkalinity,mg/L,NG,NG,59,NA,Chlorine / UV,FALSE
+Outer Metro,Happy Valley,Calcium,mg/L,NG,NG,24.3,NA,Chlorine / UV,FALSE
+Outer Metro,Happy Valley,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.5,100%,Chlorine / UV,FALSE
+Outer Metro,Happy Valley,Fluoride,mg/L,≤ 1.5,NG,0.4,100%,Chlorine / UV,FALSE
+Outer Metro,Happy Valley,Magnesium,mg/L,NG,NG,12.6,NA,Chlorine / UV,FALSE
+Outer Metro,Happy Valley,pH,pH units,NG,6.5 - 8.5,7.7,NA,Chlorine / UV,FALSE
+Outer Metro,Happy Valley,Sodium,mg/L,NG,≤ 180,55.3,NA,Chlorine / UV,FALSE
+Outer Metro,Happy Valley,Sulphate,mg/L,NG,≤ 250,43.7,NA,Chlorine / UV,FALSE
+Outer Metro,Happy Valley,Total dissolved solids,mg/L,NG,≤ 600,306,NA,Chlorine / UV,FALSE
+Outer Metro,Happy Valley,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine / UV,TRUE
+Outer Metro,Hawker,Alkalinity,mg/L,NG,NG,79,NA,Chlorine,FALSE
+Outer Metro,Hawker,Calcium,mg/L,NG,NG,14.7,NA,Chlorine,FALSE
+Outer Metro,Hawker,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine,FALSE
+Outer Metro,Hawker,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+Outer Metro,Hawker,Magnesium,mg/L,NG,NG,13.8,NA,Chlorine,FALSE
+Outer Metro,Hawker,pH,pH units,NG,6.5 - 8.5,8,NA,Chlorine,FALSE
+Outer Metro,Hawker,Sodium,mg/L,NG,≤ 180,77.3,NA,Chlorine,FALSE
+Outer Metro,Hawker,Sulphate,mg/L,NG,≤ 250,43.2,NA,Chlorine,FALSE
+Outer Metro,Hawker,Total dissolved solids,mg/L,NG,≤ 600,315,NA,Chlorine,FALSE
+Outer Metro,Hawker,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Outer Metro,Kanmantoo,Alkalinity,mg/L,NG,NG,81,NA,Chlorine,FALSE
+Outer Metro,Kanmantoo,Calcium,mg/L,NG,NG,16.2,NA,Chlorine,FALSE
+Outer Metro,Kanmantoo,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.9,100%,Chlorine,FALSE
+Outer Metro,Kanmantoo,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,FALSE
+Outer Metro,Kanmantoo,Magnesium,mg/L,NG,NG,10.5,NA,Chlorine,FALSE
+Outer Metro,Kanmantoo,pH,pH units,NG,6.5 - 8.5,7.6,NA,Chlorine,FALSE
+Outer Metro,Kanmantoo,Sodium,mg/L,NG,≤ 180,51.7,NA,Chlorine,FALSE
+Outer Metro,Kanmantoo,Sulphate,mg/L,NG,≤ 250,15.9,NA,Chlorine,FALSE
+Outer Metro,Kanmantoo,Total dissolved solids,mg/L,NG,≤ 600,265,NA,Chlorine,FALSE
+Outer Metro,Kanmantoo,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Outer Metro,Mannum,Alkalinity,mg/L,NG,NG,57,NA,Chlorine / UV,FALSE
+Outer Metro,Mannum,Calcium,mg/L,NG,NG,15.5,NA,Chlorine / UV,FALSE
+Outer Metro,Mannum,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.2,100%,Chlorine / UV,FALSE
+Outer Metro,Mannum,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chlorine / UV,FALSE
+Outer Metro,Mannum,Magnesium,mg/L,NG,NG,10.49,NA,Chlorine / UV,FALSE
+Outer Metro,Mannum,pH,pH units,NG,6.5 - 8.5,7.3,NA,Chlorine / UV,FALSE
+Outer Metro,Mannum,Sodium,mg/L,NG,≤ 180,50.6,NA,Chlorine / UV,FALSE
+Outer Metro,Mannum,Sulphate,mg/L,NG,≤ 250,47.8,NA,Chlorine / UV,FALSE
+Outer Metro,Mannum,Total dissolved solids,mg/L,NG,≤ 600,262,NA,Chlorine / UV,FALSE
+Outer Metro,Mannum,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine / UV,TRUE
+Outer Metro,Middle River,Alkalinity,mg/L,NG,NG,26,NA,Chlorine / UV,FALSE
+Outer Metro,Middle River,Calcium,mg/L,NG,NG,12.65,NA,Chlorine / UV,FALSE
+Outer Metro,Middle River,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.8,100%,Chlorine / UV,FALSE
+Outer Metro,Middle River,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine / UV,TRUE
+Outer Metro,Middle River,Magnesium,mg/L,NG,NG,12.93,NA,Chlorine / UV,FALSE
+Outer Metro,Middle River,pH,pH units,NG,6.5 - 8.5,7.4,NA,Chlorine / UV,FALSE
+Outer Metro,Middle River,Sodium,mg/L,NG,≤ 180,159,NA,Chlorine / UV,FALSE
+Outer Metro,Middle River,Sulphate,mg/L,NG,≤ 250,72.5,NA,Chlorine / UV,FALSE
+Outer Metro,Middle River,Total dissolved solids,mg/L,NG,≤ 600,566,NA,Chlorine / UV,FALSE
+Outer Metro,Middle River,Turbidity,NTU,NG,≤ 5,0.15,NA,Chlorine / UV,FALSE
+Outer Metro,Mt Compass,Alkalinity,mg/L,NG,NG,113,NA,Chlorine,FALSE
+Outer Metro,Mt Compass,Calcium,mg/L,NG,NG,11.81,NA,Chlorine,FALSE
+Outer Metro,Mt Compass,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.2,100%,Chlorine,FALSE
+Outer Metro,Mt Compass,Fluoride,mg/L,≤ 1.5,NG,0.2,100%,Chlorine,FALSE
+Outer Metro,Mt Compass,Magnesium,mg/L,NG,NG,6.4,NA,Chlorine,FALSE
+Outer Metro,Mt Compass,pH,pH units,NG,6.5 - 8.5,7.5,NA,Chlorine,FALSE
+Outer Metro,Mt Compass,Sodium,mg/L,NG,≤ 180,63.1,NA,Chlorine,FALSE
+Outer Metro,Mt Compass,Sulphate,mg/L,NG,≤ 250,8.6,NA,Chlorine,FALSE
+Outer Metro,Mt Compass,Total dissolved solids,mg/L,NG,≤ 600,243,NA,Chlorine,FALSE
+Outer Metro,Mt Compass,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Outer Metro,Mt Pleasant,Alkalinity,mg/L,NG,NG,64,NA,Chlorine,FALSE
+Outer Metro,Mt Pleasant,Calcium,mg/L,NG,NG,14.5,NA,Chlorine,FALSE
+Outer Metro,Mt Pleasant,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.3,100%,Chlorine,FALSE
+Outer Metro,Mt Pleasant,Fluoride,mg/L,≤ 1.5,NG,0.9,100%,Chlorine,FALSE
+Outer Metro,Mt Pleasant,Magnesium,mg/L,NG,NG,10.16,NA,Chlorine,FALSE
+Outer Metro,Mt Pleasant,pH,pH units,NG,6.5 - 8.5,7.3,NA,Chlorine,FALSE
+Outer Metro,Mt Pleasant,Sodium,mg/L,NG,≤ 180,56,NA,Chlorine,FALSE
+Outer Metro,Mt Pleasant,Sulphate,mg/L,NG,≤ 250,44.2,NA,Chlorine,FALSE
+Outer Metro,Mt Pleasant,Total dissolved solids,mg/L,NG,≤ 600,284,NA,Chlorine,FALSE
+Outer Metro,Mt Pleasant,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Outer Metro,Murray Bridge,Alkalinity,mg/L,NG,NG,65,NA,Chlorine / UV,FALSE
+Outer Metro,Murray Bridge,Calcium,mg/L,NG,NG,16.9,NA,Chlorine / UV,FALSE
+Outer Metro,Murray Bridge,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,2,100%,Chlorine / UV,FALSE
+Outer Metro,Murray Bridge,Fluoride,mg/L,≤ 1.5,NG,0.8,100%,Chlorine / UV,FALSE
+Outer Metro,Murray Bridge,Magnesium,mg/L,NG,NG,11.06,NA,Chlorine / UV,FALSE
+Outer Metro,Murray Bridge,pH,pH units,NG,6.5 - 8.5,7.5,NA,Chlorine / UV,FALSE
+Outer Metro,Murray Bridge,Sodium,mg/L,NG,≤ 180,56.8,NA,Chlorine / UV,FALSE
+Outer Metro,Murray Bridge,Sulphate,mg/L,NG,≤ 250,46.8,NA,Chlorine / UV,FALSE
+Outer Metro,Murray Bridge,Total dissolved solids,mg/L,NG,≤ 600,282,NA,Chlorine / UV,FALSE
+Outer Metro,Murray Bridge,Turbidity,NTU,NG,≤ 5,0.11,NA,Chlorine / UV,FALSE
+Outer Metro,Mypolonga,Alkalinity,mg/L,NG,NG,78,NA,Chlorine,FALSE
+Outer Metro,Mypolonga,Calcium,mg/L,NG,NG,18,NA,Chlorine,FALSE
+Outer Metro,Mypolonga,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.4,100%,Chlorine,FALSE
+Outer Metro,Mypolonga,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+Outer Metro,Mypolonga,Magnesium,mg/L,NG,NG,12.6,NA,Chlorine,FALSE
+Outer Metro,Mypolonga,pH,pH units,NG,6.5 - 8.5,7.5,NA,Chlorine,FALSE
+Outer Metro,Mypolonga,Sodium,mg/L,NG,≤ 180,60.2,NA,Chlorine,FALSE
+Outer Metro,Mypolonga,Sulphate,mg/L,NG,≤ 250,19.6,NA,Chlorine,FALSE
+Outer Metro,Mypolonga,Total dissolved solids,mg/L,NG,≤ 600,268,NA,Chlorine,FALSE
+Outer Metro,Mypolonga,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Outer Metro,Myponga (supplying Victor Harbor and the Fleurieu),Alkalinity,mg/L,NG,NG,72,NA,Chloramine / UV,FALSE
+Outer Metro,Myponga (supplying Victor Harbor and the Fleurieu),Calcium,mg/L,NG,NG,28.8,NA,Chloramine / UV,FALSE
+Outer Metro,Myponga (supplying Victor Harbor and the Fleurieu),Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine / UV,TRUE
+Outer Metro,Myponga (supplying Victor Harbor and the Fleurieu),Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chloramine / UV,FALSE
+Outer Metro,Myponga (supplying Victor Harbor and the Fleurieu),Magnesium,mg/L,NG,NG,15.8,NA,Chloramine / UV,FALSE
+Outer Metro,Myponga (supplying Victor Harbor and the Fleurieu),pH,pH units,NG,6.5 - 8.5,8.6,NA,Chloramine / UV,FALSE
+Outer Metro,Myponga (supplying Victor Harbor and the Fleurieu),Sodium,mg/L,NG,≤ 180,107.6,NA,Chloramine / UV,FALSE
+Outer Metro,Myponga (supplying Victor Harbor and the Fleurieu),Sulphate,mg/L,NG,≤ 250,69.1,NA,Chloramine / UV,FALSE
+Outer Metro,Myponga (supplying Victor Harbor and the Fleurieu),Total dissolved solids,mg/L,NG,≤ 600,490,NA,Chloramine / UV,FALSE
+Outer Metro,Myponga (supplying Victor Harbor and the Fleurieu),Turbidity,NTU,NG,≤ 5,0.1,NA,Chloramine / UV,TRUE
+Outer Metro,"Myponga, Yankalilla, Normanville and Carrickalinga",Alkalinity,mg/L,NG,NG,72,NA,Chloramine / UV,FALSE
+Outer Metro,"Myponga, Yankalilla, Normanville and Carrickalinga",Calcium,mg/L,NG,NG,28.8,NA,Chloramine / UV,FALSE
+Outer Metro,"Myponga, Yankalilla, Normanville and Carrickalinga",Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine / UV,TRUE
+Outer Metro,"Myponga, Yankalilla, Normanville and Carrickalinga",Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chloramine / UV,FALSE
+Outer Metro,"Myponga, Yankalilla, Normanville and Carrickalinga",Magnesium,mg/L,NG,NG,15.8,NA,Chloramine / UV,FALSE
+Outer Metro,"Myponga, Yankalilla, Normanville and Carrickalinga",pH,pH units,NG,6.5 - 8.5,8.6,NA,Chloramine / UV,FALSE
+Outer Metro,"Myponga, Yankalilla, Normanville and Carrickalinga",Sodium,mg/L,NG,≤ 180,107.6,NA,Chloramine / UV,FALSE
+Outer Metro,"Myponga, Yankalilla, Normanville and Carrickalinga",Sulphate,mg/L,NG,≤ 250,69.1,NA,Chloramine / UV,FALSE
+Outer Metro,"Myponga, Yankalilla, Normanville and Carrickalinga",Total dissolved solids,mg/L,NG,≤ 600,490,NA,Chloramine / UV,FALSE
+Outer Metro,"Myponga, Yankalilla, Normanville and Carrickalinga",Turbidity,NTU,NG,≤ 5,0.1,NA,Chloramine / UV,TRUE
+Outer Metro,Palmer,Alkalinity,mg/L,NG,NG,84,NA,Chlorine,FALSE
+Outer Metro,Palmer,Calcium,mg/L,NG,NG,19,NA,Chlorine,FALSE
+Outer Metro,Palmer,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine,FALSE
+Outer Metro,Palmer,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,FALSE
+Outer Metro,Palmer,Magnesium,mg/L,NG,NG,9.61,NA,Chlorine,FALSE
+Outer Metro,Palmer,pH,pH units,NG,6.5 - 8.5,7.8,NA,Chlorine,FALSE
+Outer Metro,Palmer,Sodium,mg/L,NG,≤ 180,53.1,NA,Chlorine,FALSE
+Outer Metro,Palmer,Sulphate,mg/L,NG,≤ 250,15,NA,Chlorine,FALSE
+Outer Metro,Palmer,Total dissolved solids,mg/L,NG,≤ 600,251,NA,Chlorine,FALSE
+Outer Metro,Palmer,Turbidity,NTU,NG,≤ 5,0.11,NA,Chlorine,FALSE
+Outer Metro,Penneshaw,Alkalinity,mg/L,NG,NG,65,NA,Chlorine,FALSE
+Outer Metro,Penneshaw,Calcium,mg/L,NG,NG,24.7,NA,Chlorine,FALSE
+Outer Metro,Penneshaw,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine,FALSE
+Outer Metro,Penneshaw,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+Outer Metro,Penneshaw,Magnesium,mg/L,NG,NG,1.58,NA,Chlorine,FALSE
+Outer Metro,Penneshaw,pH,pH units,NG,6.5 - 8.5,8.3,NA,Chlorine,FALSE
+Outer Metro,Penneshaw,Sodium,mg/L,NG,≤ 180,45.1,NA,Chlorine,FALSE
+Outer Metro,Penneshaw,Sulphate,mg/L,NG,≤ 250,2.9,NA,Chlorine,FALSE
+Outer Metro,Penneshaw,Total dissolved solids,mg/L,NG,≤ 600,204,NA,Chlorine,FALSE
+Outer Metro,Penneshaw,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Outer Metro,Summit,Alkalinity,mg/L,NG,NG,78,NA,Chloramine / UV,FALSE
+Outer Metro,Summit,Calcium,mg/L,NG,NG,19,NA,Chloramine / UV,FALSE
+Outer Metro,Summit,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine / UV,TRUE
+Outer Metro,Summit,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chloramine / UV,FALSE
+Outer Metro,Summit,Magnesium,mg/L,NG,NG,11.05,NA,Chloramine / UV,FALSE
+Outer Metro,Summit,pH,pH units,NG,6.5 - 8.5,8.7,NA,Chloramine / UV,FALSE
+Outer Metro,Summit,Sodium,mg/L,NG,≤ 180,59.4,NA,Chloramine / UV,FALSE
+Outer Metro,Summit,Sulphate,mg/L,NG,≤ 250,44.6,NA,Chloramine / UV,FALSE
+Outer Metro,Summit,Total dissolved solids,mg/L,NG,≤ 600,286,NA,Chloramine / UV,FALSE
+Outer Metro,Summit,Turbidity,NTU,NG,≤ 5,0.1,NA,Chloramine / UV,TRUE
+Outer Metro,Swan Reach,Alkalinity,mg/L,NG,NG,68,NA,Chloramine / UV,FALSE
+Outer Metro,Swan Reach,Calcium,mg/L,NG,NG,16,NA,Chloramine / UV,FALSE
+Outer Metro,Swan Reach,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine / UV,TRUE
+Outer Metro,Swan Reach,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chloramine / UV,FALSE
+Outer Metro,Swan Reach,Magnesium,mg/L,NG,NG,10.1,NA,Chloramine / UV,FALSE
+Outer Metro,Swan Reach,pH,pH units,NG,6.5 - 8.5,8.9,NA,Chloramine / UV,FALSE
+Outer Metro,Swan Reach,Sodium,mg/L,NG,≤ 180,61.1,NA,Chloramine / UV,FALSE
+Outer Metro,Swan Reach,Sulphate,mg/L,NG,≤ 250,51.7,NA,Chloramine / UV,FALSE
+Outer Metro,Swan Reach,Total dissolved solids,mg/L,NG,≤ 600,276,NA,Chloramine / UV,FALSE
+Outer Metro,Swan Reach,Turbidity,NTU,NG,≤ 5,0.1,NA,Chloramine / UV,TRUE
+Outer Metro,Swan Reach Town,Alkalinity,mg/L,NG,NG,77,NA,Chlorine,FALSE
+Outer Metro,Swan Reach Town,Calcium,mg/L,NG,NG,14.9,NA,Chlorine,FALSE
+Outer Metro,Swan Reach Town,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.8,100%,Chlorine,FALSE
+Outer Metro,Swan Reach Town,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+Outer Metro,Swan Reach Town,Magnesium,mg/L,NG,NG,9.97,NA,Chlorine,FALSE
+Outer Metro,Swan Reach Town,pH,pH units,NG,6.5 - 8.5,7.7,NA,Chlorine,FALSE
+Outer Metro,Swan Reach Town,Sodium,mg/L,NG,≤ 180,52,NA,Chlorine,FALSE
+Outer Metro,Swan Reach Town,Sulphate,mg/L,NG,≤ 250,15.4,NA,Chlorine,FALSE
+Outer Metro,Swan Reach Town,Total dissolved solids,mg/L,NG,≤ 600,250,NA,Chlorine,FALSE
+Outer Metro,Swan Reach Town,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+Outer Metro,Wirrina Cove,Alkalinity,mg/L,NG,NG,69,NA,Chlorine / UV,FALSE
+Outer Metro,Wirrina Cove,Calcium,mg/L,NG,NG,38.1,NA,Chlorine / UV,FALSE
+Outer Metro,Wirrina Cove,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.3,100%,Chlorine / UV,FALSE
+Outer Metro,Wirrina Cove,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine / UV,TRUE
+Outer Metro,Wirrina Cove,Magnesium,mg/L,NG,NG,33,NA,Chlorine / UV,FALSE
+Outer Metro,Wirrina Cove,pH,pH units,NG,6.5 - 8.5,7.6,NA,Chlorine / UV,FALSE
+Outer Metro,Wirrina Cove,Sodium,mg/L,NG,≤ 180,307,NA,Chlorine / UV,FALSE
+Outer Metro,Wirrina Cove,Sulphate,mg/L,NG,≤ 250,162.5,NA,Chlorine / UV,FALSE
+Outer Metro,Wirrina Cove,Total dissolved solids,mg/L,NG,≤ 600,NA,NA,Chlorine / UV,FALSE
+Outer Metro,Wirrina Cove,Turbidity,NTU,NG,≤ 5,0.35,NA,Chlorine / UV,FALSE
+Remote Communities,Amata,Alkalinity,mg/L,NG,NG,358,NA,UV,FALSE
+Remote Communities,Amata,Calcium,mg/L,NG,NG,67.6,NA,UV,FALSE
+Remote Communities,Amata,Fluoride,mg/L,≤ 1.5,NG,0.9,100%,UV,FALSE
+Remote Communities,Amata,Magnesium,mg/L,NG,NG,48.3,NA,UV,FALSE
+Remote Communities,Amata,pH,pH units,NG,6.5 - 8.5,7.7,NA,UV,FALSE
+Remote Communities,Amata,Sodium,mg/L,NG,≤ 180,116,NA,UV,FALSE
+Remote Communities,Amata,Sulphate,mg/L,NG,≤ 250,73,NA,UV,FALSE
+Remote Communities,Amata,Total dissolved solids,mg/L,NG,≤ 600,692,NA,UV,FALSE
+Remote Communities,Amata,Turbidity,NTU,NG,≤ 5,0.1,NA,UV,TRUE
+Remote Communities,Davenport,Alkalinity,mg/L,NG,NG,49,NA,Chloramine,FALSE
+Remote Communities,Davenport,Calcium,mg/L,NG,NG,12.3,NA,Chloramine,FALSE
+Remote Communities,Davenport,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine,TRUE
+Remote Communities,Davenport,pH,pH units,NG,6.5 - 8.5,8.4,NA,Chloramine,FALSE
+Remote Communities,Davenport,Total dissolved solids,mg/L,NG,≤ 600,210,NA,Chloramine,FALSE
+Remote Communities,Davenport,Turbidity,NTU,NG,≤ 5,0.24,NA,Chloramine,FALSE
+Remote Communities,Indulkana,Alkalinity,mg/L,NG,NG,73,NA,UV,FALSE
+Remote Communities,Indulkana,Calcium,mg/L,NG,NG,33.1,NA,UV,FALSE
+Remote Communities,Indulkana,Fluoride,mg/L,≤ 1.5,NG,0.16,100%,UV,FALSE
+Remote Communities,Indulkana,Magnesium,mg/L,NG,NG,14.94,NA,UV,FALSE
+Remote Communities,Indulkana,pH,pH units,NG,6.5 - 8.5,6.8,NA,UV,FALSE
+Remote Communities,Indulkana,Sodium,mg/L,NG,≤ 180,88.1,NA,UV,FALSE
+Remote Communities,Indulkana,Sulphate,mg/L,NG,≤ 250,47.5,NA,UV,FALSE
+Remote Communities,Indulkana,Total dissolved solids,mg/L,NG,≤ 600,423,NA,UV,FALSE
+Remote Communities,Indulkana,Turbidity,NTU,NG,≤ 5,1.29,NA,UV,FALSE
+Remote Communities,Kalka,Alkalinity,mg/L,NG,NG,316,NA,UV,FALSE
+Remote Communities,Kalka,Calcium,mg/L,NG,NG,45.8,NA,UV,FALSE
+Remote Communities,Kalka,Fluoride,mg/L,≤ 1.5,NG,1,100%,UV,FALSE
+Remote Communities,Kalka,Magnesium,mg/L,NG,NG,59.8,NA,UV,FALSE
+Remote Communities,Kalka,pH,pH units,NG,6.5 - 8.5,7.8,NA,UV,FALSE
+Remote Communities,Kalka,Sodium,mg/L,NG,≤ 180,86.9,NA,UV,FALSE
+Remote Communities,Kalka,Sulphate,mg/L,NG,≤ 250,51.5,NA,UV,FALSE
+Remote Communities,Kalka,Total dissolved solids,mg/L,NG,≤ 600,608,NA,UV,FALSE
+Remote Communities,Kalka,Turbidity,NTU,NG,≤ 5,0.1,NA,UV,TRUE
+Remote Communities,Kaltjiti,Alkalinity,mg/L,NG,NG,90,NA,UV,FALSE
+Remote Communities,Kaltjiti,Calcium,mg/L,NG,NG,18,NA,UV,FALSE
+Remote Communities,Kaltjiti,Fluoride,mg/L,≤ 1.5,NG,0.5,100%,UV,FALSE
+Remote Communities,Kaltjiti,Magnesium,mg/L,NG,NG,14.4,NA,UV,FALSE
+Remote Communities,Kaltjiti,pH,pH units,NG,6.5 - 8.5,7.7,NA,UV,FALSE
+Remote Communities,Kaltjiti,Sodium,mg/L,NG,≤ 180,105.9,NA,UV,FALSE
+Remote Communities,Kaltjiti,Sulphate,mg/L,NG,≤ 250,37.1,NA,UV,FALSE
+Remote Communities,Kaltjiti,Total dissolved solids,mg/L,NG,≤ 600,435,NA,UV,FALSE
+Remote Communities,Kaltjiti,Turbidity,NTU,NG,≤ 5,0.1,NA,UV,TRUE
+Remote Communities,Mimili,Alkalinity,mg/L,NG,NG,55,NA,UV,FALSE
+Remote Communities,Mimili,Calcium,mg/L,NG,NG,9.85,NA,UV,FALSE
+Remote Communities,Mimili,Fluoride,mg/L,≤ 1.5,NG,0.5,100%,UV,FALSE
+Remote Communities,Mimili,Magnesium,mg/L,NG,NG,7.59,NA,UV,FALSE
+Remote Communities,Mimili,pH,pH units,NG,6.5 - 8.5,7.7,NA,UV,FALSE
+Remote Communities,Mimili,Sodium,mg/L,NG,≤ 180,74,NA,UV,FALSE
+Remote Communities,Mimili,Sulphate,mg/L,NG,≤ 250,28,NA,UV,FALSE
+Remote Communities,Mimili,Total dissolved solids,mg/L,NG,≤ 600,286,NA,UV,FALSE
+Remote Communities,Mimili,Turbidity,NTU,NG,≤ 5,0.1,NA,UV,TRUE
+Remote Communities,Murputja,Alkalinity,mg/L,NG,NG,104,NA,UV,FALSE
+Remote Communities,Murputja,Calcium,mg/L,NG,NG,13.1,NA,UV,FALSE
+Remote Communities,Murputja,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,UV,FALSE
+Remote Communities,Murputja,Magnesium,mg/L,NG,NG,13.5,NA,UV,FALSE
+Remote Communities,Murputja,pH,pH units,NG,6.5 - 8.5,7.8,NA,UV,FALSE
+Remote Communities,Murputja,Sodium,mg/L,NG,≤ 180,57.9,NA,UV,FALSE
+Remote Communities,Murputja,Sulphate,mg/L,NG,≤ 250,16.6,NA,UV,FALSE
+Remote Communities,Murputja,Total dissolved solids,mg/L,NG,≤ 600,292,NA,UV,FALSE
+Remote Communities,Murputja,Turbidity,NTU,NG,≤ 5,0.11,NA,UV,FALSE
+Remote Communities,Nepabunna,Alkalinity,mg/L,NG,NG,28,NA,UV,FALSE
+Remote Communities,Nepabunna,Calcium,mg/L,NG,NG,1.61,NA,UV,FALSE
+Remote Communities,Nepabunna,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,UV,TRUE
+Remote Communities,Nepabunna,Magnesium,mg/L,NG,NG,0.21,NA,UV,FALSE
+Remote Communities,Nepabunna,pH,pH units,NG,6.5 - 8.5,7.6,NA,UV,FALSE
+Remote Communities,Nepabunna,Sodium,mg/L,NG,≤ 180,21.2,NA,UV,FALSE
+Remote Communities,Nepabunna,Sulphate,mg/L,NG,≤ 250,1.8,NA,UV,FALSE
+Remote Communities,Nepabunna,Total dissolved solids,mg/L,NG,≤ 600,74,NA,UV,FALSE
+Remote Communities,Nepabunna,Turbidity,NTU,NG,≤ 5,0.93,NA,UV,FALSE
+Remote Communities,Oak Valley,Alkalinity,mg/L,NG,NG,12,NA,UV,FALSE
+Remote Communities,Oak Valley,Calcium,mg/L,NG,NG,2.7,NA,UV,FALSE
+Remote Communities,Oak Valley,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,UV,TRUE
+Remote Communities,Oak Valley,Magnesium,mg/L,NG,NG,0.38,NA,UV,FALSE
+Remote Communities,Oak Valley,pH,pH units,NG,6.5 - 8.5,7,NA,UV,FALSE
+Remote Communities,Oak Valley,Sodium,mg/L,NG,≤ 180,3.7,NA,UV,FALSE
+Remote Communities,Oak Valley,Sulphate,mg/L,NG,≤ 250,1.2,NA,UV,FALSE
+Remote Communities,Oak Valley,Total dissolved solids,mg/L,NG,≤ 600,28,NA,UV,FALSE
+Remote Communities,Oak Valley,Turbidity,NTU,NG,≤ 5,0.17,NA,UV,FALSE
+Remote Communities,Pipalyatjara,Alkalinity,mg/L,NG,NG,365,NA,UV,FALSE
+Remote Communities,Pipalyatjara,Calcium,mg/L,NG,NG,37.8,NA,UV,FALSE
+Remote Communities,Pipalyatjara,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,UV,FALSE
+Remote Communities,Pipalyatjara,Magnesium,mg/L,NG,NG,78.4,NA,UV,FALSE
+Remote Communities,Pipalyatjara,pH,pH units,NG,6.5 - 8.5,7.8,NA,UV,FALSE
+Remote Communities,Pipalyatjara,Sodium,mg/L,NG,≤ 180,108.8,NA,UV,FALSE
+Remote Communities,Pipalyatjara,Sulphate,mg/L,NG,≤ 250,59.9,NA,UV,FALSE
+Remote Communities,Pipalyatjara,Total dissolved solids,mg/L,NG,≤ 600,715,NA,UV,FALSE
+Remote Communities,Pipalyatjara,Turbidity,NTU,NG,≤ 5,0.1,NA,UV,TRUE
+Remote Communities,Pt Pearce,Alkalinity,mg/L,NG,NG,52,NA,Chloramine,FALSE
+Remote Communities,Pt Pearce,Calcium,mg/L,NG,NG,12,NA,Chloramine,FALSE
+Remote Communities,Pt Pearce,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine,TRUE
+Remote Communities,Pt Pearce,pH,pH units,NG,6.5 - 8.5,8.9,NA,Chloramine,FALSE
+Remote Communities,Pt Pearce,Total dissolved solids,mg/L,NG,≤ 600,239,NA,Chloramine,FALSE
+Remote Communities,Pt Pearce,Turbidity,NTU,NG,≤ 5,0.14,NA,Chloramine,FALSE
+Remote Communities,Pukatja,Alkalinity,mg/L,NG,NG,336,NA,UV,FALSE
+Remote Communities,Pukatja,Calcium,mg/L,NG,NG,45.7,NA,UV,FALSE
+Remote Communities,Pukatja,Fluoride,mg/L,≤ 1.5,NG,1.2,100%,UV,FALSE
+Remote Communities,Pukatja,Magnesium,mg/L,NG,NG,32.9,NA,UV,FALSE
+Remote Communities,Pukatja,pH,pH units,NG,6.5 - 8.5,7.7,NA,UV,FALSE
+Remote Communities,Pukatja,Sodium,mg/L,NG,≤ 180,103.7,NA,UV,FALSE
+Remote Communities,Pukatja,Sulphate,mg/L,NG,≤ 250,46.6,NA,UV,FALSE
+Remote Communities,Pukatja,Total dissolved solids,mg/L,NG,≤ 600,517,NA,UV,FALSE
+Remote Communities,Pukatja,Turbidity,NTU,NG,≤ 5,0.1,NA,UV,TRUE
+Remote Communities,Raukkan,Alkalinity,mg/L,NG,NG,46,NA,Chloramine / UV,FALSE
+Remote Communities,Raukkan,Calcium,mg/L,NG,NG,11.3,NA,Chloramine / UV,FALSE
+Remote Communities,Raukkan,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine / UV,TRUE
+Remote Communities,Raukkan,pH,pH units,NG,6.5 - 8.5,8.8,NA,Chloramine / UV,FALSE
+Remote Communities,Raukkan,Total dissolved solids,mg/L,NG,≤ 600,258,NA,Chloramine / UV,FALSE
+Remote Communities,Raukkan,Turbidity,NTU,NG,≤ 5,0.1,NA,Chloramine / UV,TRUE
+Remote Communities,Umuwa,Alkalinity,mg/L,NG,NG,280,NA,UV,FALSE
+Remote Communities,Umuwa,Calcium,mg/L,NG,NG,45.1,NA,UV,FALSE
+Remote Communities,Umuwa,Fluoride,mg/L,≤ 1.5,NG,0.9,100%,UV,FALSE
+Remote Communities,Umuwa,Magnesium,mg/L,NG,NG,32.8,NA,UV,FALSE
+Remote Communities,Umuwa,pH,pH units,NG,6.5 - 8.5,7.8,NA,UV,FALSE
+Remote Communities,Umuwa,Sodium,mg/L,NG,≤ 180,44.8,NA,UV,FALSE
+Remote Communities,Umuwa,Sulphate,mg/L,NG,≤ 250,16.8,NA,UV,FALSE
+Remote Communities,Umuwa,Total dissolved solids,mg/L,NG,≤ 600,355,NA,UV,FALSE
+Remote Communities,Umuwa,Turbidity,NTU,NG,≤ 5,0.1,NA,UV,TRUE
+Remote Communities,Watinuma,Alkalinity,mg/L,NG,NG,339,NA,UV,FALSE
+Remote Communities,Watinuma,Calcium,mg/L,NG,NG,44.3,NA,UV,FALSE
+Remote Communities,Watinuma,Fluoride,mg/L,≤ 1.5,NG,1.3,100%,UV,FALSE
+Remote Communities,Watinuma,Magnesium,mg/L,NG,NG,79,NA,UV,FALSE
+Remote Communities,Watinuma,pH,pH units,NG,6.5 - 8.5,7.9,NA,UV,FALSE
+Remote Communities,Watinuma,Sodium,mg/L,NG,≤ 180,132,NA,UV,FALSE
+Remote Communities,Watinuma,Sulphate,mg/L,NG,≤ 250,94.1,NA,UV,FALSE
+Remote Communities,Watinuma,Total dissolved solids,mg/L,NG,≤ 600,806,NA,UV,FALSE
+Remote Communities,Watinuma,Turbidity,NTU,NG,≤ 5,0.1,NA,UV,TRUE
+Remote Communities,Yalata,Alkalinity,mg/L,NG,NG,106,NA,UV,FALSE
+Remote Communities,Yalata,Calcium,mg/L,NG,NG,40.9,NA,UV,FALSE
+Remote Communities,Yalata,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,UV,TRUE
+Remote Communities,Yalata,Magnesium,mg/L,NG,NG,1.62,NA,UV,FALSE
+Remote Communities,Yalata,pH,pH units,NG,6.5 - 8.5,7.9,NA,UV,FALSE
+Remote Communities,Yalata,Sodium,mg/L,NG,≤ 180,22.1,NA,UV,FALSE
+Remote Communities,Yalata,Sulphate,mg/L,NG,≤ 250,1.7,NA,UV,FALSE
+Remote Communities,Yalata,Total dissolved solids,mg/L,NG,≤ 600,191,NA,UV,FALSE
+Remote Communities,Yalata,Turbidity,NTU,NG,≤ 5,0.1,NA,UV,TRUE
+Remote Communities,Yunyarinyi,Alkalinity,mg/L,NG,NG,27,NA,UV,FALSE
+Remote Communities,Yunyarinyi,Calcium,mg/L,NG,NG,7.35,NA,UV,FALSE
+Remote Communities,Yunyarinyi,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,UV,TRUE
+Remote Communities,Yunyarinyi,Magnesium,mg/L,NG,NG,0.65,NA,UV,FALSE
+Remote Communities,Yunyarinyi,pH,pH units,NG,6.5 - 8.5,8.1,NA,UV,FALSE
+Remote Communities,Yunyarinyi,Sodium,mg/L,NG,≤ 180,3.2,NA,UV,FALSE
+Remote Communities,Yunyarinyi,Sulphate,mg/L,NG,≤ 250,0.6,NA,UV,TRUE
+Remote Communities,Yunyarinyi,Total dissolved solids,mg/L,NG,≤ 600,133,NA,UV,FALSE
+Remote Communities,Yunyarinyi,Turbidity,NTU,NG,≤ 5,0.1,NA,UV,TRUE
+Remote Communities,Gerard,Alkalinity,mg/L,NG,NG,54,NA,Chlorine,FALSE
+Remote Communities,Gerard,Calcium,mg/L,NG,NG,12.14,NA,Chlorine,FALSE
+Remote Communities,Gerard,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.1,100%,Chlorine,FALSE
+Remote Communities,Gerard,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,Chlorine,FALSE
+Remote Communities,Gerard,Magnesium,mg/L,NG,NG,8.53,NA,Chlorine,FALSE
+Remote Communities,Gerard,pH,pH units,NG,6.5 - 8.5,7.8,NA,Chlorine,FALSE
+Remote Communities,Gerard,Sodium,mg/L,NG,≤ 180,42.9,NA,Chlorine,FALSE
+Remote Communities,Gerard,Sulphate,mg/L,NG,≤ 250,33.1,NA,Chlorine,FALSE
+Remote Communities,Gerard,Total dissolved solids,mg/L,NG,≤ 600,208,NA,Chlorine,FALSE
+Remote Communities,Gerard,Turbidity,NTU,NG,≤ 5,0.62,NA,Chlorine,FALSE
+South East,Beachport,Alkalinity,mg/L,NG,NG,326,NA,Chlorine,FALSE
+South East,Beachport,Calcium,mg/L,NG,NG,74,NA,Chlorine,FALSE
+South East,Beachport,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine,FALSE
+South East,Beachport,Fluoride,mg/L,≤ 1.5,NG,0.2,100%,Chlorine,FALSE
+South East,Beachport,Magnesium,mg/L,NG,NG,21.2,NA,Chlorine,FALSE
+South East,Beachport,pH,pH units,NG,6.5 - 8.5,7.6,NA,Chlorine,FALSE
+South East,Beachport,Sodium,mg/L,NG,≤ 180,125,NA,Chlorine,FALSE
+South East,Beachport,Sulphate,mg/L,NG,≤ 250,23.6,NA,Chlorine,FALSE
+South East,Beachport,Total dissolved solids,mg/L,NG,≤ 600,669,NA,Chlorine,FALSE
+South East,Beachport,Turbidity,NTU,NG,≤ 5,0.11,NA,Chlorine,FALSE
+South East,Bordertown,Alkalinity,mg/L,NG,NG,288,NA,Chlorine,FALSE
+South East,Bordertown,Calcium,mg/L,NG,NG,78.6,NA,Chlorine,FALSE
+South East,Bordertown,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.1,100%,Chlorine,FALSE
+South East,Bordertown,Fluoride,mg/L,≤ 1.5,NG,0.3,100%,Chlorine,FALSE
+South East,Bordertown,Magnesium,mg/L,NG,NG,21.6,NA,Chlorine,FALSE
+South East,Bordertown,pH,pH units,NG,6.5 - 8.5,7.3,NA,Chlorine,FALSE
+South East,Bordertown,Sodium,mg/L,NG,≤ 180,83.5,NA,Chlorine,FALSE
+South East,Bordertown,Sulphate,mg/L,NG,≤ 250,16.8,NA,Chlorine,FALSE
+South East,Bordertown,Total dissolved solids,mg/L,NG,≤ 600,520,NA,Chlorine,FALSE
+South East,Bordertown,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+South East,Geranium,Alkalinity,mg/L,NG,NG,510,NA,Chlorine,FALSE
+South East,Geranium,Calcium,mg/L,NG,NG,99.2,NA,Chlorine,FALSE
+South East,Geranium,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.3,100%,Chlorine,FALSE
+South East,Geranium,Fluoride,mg/L,≤ 1.5,NG,1,100%,Chlorine,FALSE
+South East,Geranium,Magnesium,mg/L,NG,NG,75.8,NA,Chlorine,FALSE
+South East,Geranium,pH,pH units,NG,6.5 - 8.5,7,NA,Chlorine,FALSE
+South East,Geranium,Sodium,mg/L,NG,≤ 180,320,NA,Chlorine,FALSE
+South East,Geranium,Sulphate,mg/L,NG,≤ 250,119.5,NA,Chlorine,FALSE
+South East,Geranium,Total dissolved solids,mg/L,NG,≤ 600,NA,NA,Chlorine,FALSE
+South East,Geranium,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+South East,Kalangadoo,Alkalinity,mg/L,NG,NG,346,NA,Chlorine,FALSE
+South East,Kalangadoo,Calcium,mg/L,NG,NG,120,NA,Chlorine,FALSE
+South East,Kalangadoo,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.1,100%,Chlorine,FALSE
+South East,Kalangadoo,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,TRUE
+South East,Kalangadoo,Magnesium,mg/L,NG,NG,10.78,NA,Chlorine,FALSE
+South East,Kalangadoo,pH,pH units,NG,6.5 - 8.5,7.3,NA,Chlorine,FALSE
+South East,Kalangadoo,Sodium,mg/L,NG,≤ 180,65.4,NA,Chlorine,FALSE
+South East,Kalangadoo,Sulphate,mg/L,NG,≤ 250,6.9,NA,Chlorine,FALSE
+South East,Kalangadoo,Total dissolved solids,mg/L,NG,≤ 600,550,NA,Chlorine,FALSE
+South East,Kalangadoo,Turbidity,NTU,NG,≤ 5,0.44,NA,Chlorine,FALSE
+South East,Kingston SE,Alkalinity,mg/L,NG,NG,305,NA,Chlorine,FALSE
+South East,Kingston SE,Calcium,mg/L,NG,NG,66.2,NA,Chlorine,FALSE
+South East,Kingston SE,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.9,100%,Chlorine,FALSE
+South East,Kingston SE,Fluoride,mg/L,≤ 1.5,NG,0.3,100%,Chlorine,FALSE
+South East,Kingston SE,Magnesium,mg/L,NG,NG,18.1,NA,Chlorine,FALSE
+South East,Kingston SE,pH,pH units,NG,6.5 - 8.5,7.5,NA,Chlorine,FALSE
+South East,Kingston SE,Sodium,mg/L,NG,≤ 180,208,NA,Chlorine,FALSE
+South East,Kingston SE,Sulphate,mg/L,NG,≤ 250,28.7,NA,Chlorine,FALSE
+South East,Kingston SE,Total dissolved solids,mg/L,NG,≤ 600,841,NA,Chlorine,FALSE
+South East,Kingston SE,Turbidity,NTU,NG,≤ 5,0.13,NA,Chlorine,FALSE
+South East,Lameroo,Alkalinity,mg/L,NG,NG,236,NA,Chlorine,FALSE
+South East,Lameroo,Calcium,mg/L,NG,NG,48,NA,Chlorine,FALSE
+South East,Lameroo,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.5,100%,Chlorine,FALSE
+South East,Lameroo,Fluoride,mg/L,≤ 1.5,NG,0.6,100%,Chlorine,FALSE
+South East,Lameroo,Magnesium,mg/L,NG,NG,30.3,NA,Chlorine,FALSE
+South East,Lameroo,pH,pH units,NG,6.5 - 8.5,7.8,NA,Chlorine,FALSE
+South East,Lameroo,Sodium,mg/L,NG,≤ 180,253,NA,Chlorine,FALSE
+South East,Lameroo,Sulphate,mg/L,NG,≤ 250,85.4,NA,Chlorine,FALSE
+South East,Lameroo,Total dissolved solids,mg/L,NG,≤ 600,971,NA,Chlorine,FALSE
+South East,Lameroo,Turbidity,NTU,NG,≤ 5,0.11,NA,Chlorine,FALSE
+South East,Lucindale,Alkalinity,mg/L,NG,NG,323,NA,Chlorine,FALSE
+South East,Lucindale,Calcium,mg/L,NG,NG,78.6,NA,Chlorine,FALSE
+South East,Lucindale,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.9,100%,Chlorine,FALSE
+South East,Lucindale,Fluoride,mg/L,≤ 1.5,NG,0.3,100%,Chlorine,FALSE
+South East,Lucindale,Magnesium,mg/L,NG,NG,30.5,NA,Chlorine,FALSE
+South East,Lucindale,pH,pH units,NG,6.5 - 8.5,7.6,NA,Chlorine,FALSE
+South East,Lucindale,Sodium,mg/L,NG,≤ 180,173,NA,Chlorine,FALSE
+South East,Lucindale,Sulphate,mg/L,NG,≤ 250,8.5,NA,Chlorine,FALSE
+South East,Lucindale,Total dissolved solids,mg/L,NG,≤ 600,830,NA,Chlorine,FALSE
+South East,Lucindale,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+South East,Millicent,Alkalinity,mg/L,NG,NG,301,NA,Chlorine,FALSE
+South East,Millicent,Calcium,mg/L,NG,NG,80.7,NA,Chlorine,FALSE
+South East,Millicent,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.9,100%,Chlorine,FALSE
+South East,Millicent,Fluoride,mg/L,≤ 1.5,NG,1,100%,Chlorine,FALSE
+South East,Millicent,Magnesium,mg/L,NG,NG,41.1,NA,Chlorine,FALSE
+South East,Millicent,pH,pH units,NG,6.5 - 8.5,7.5,NA,Chlorine,FALSE
+South East,Millicent,Sodium,mg/L,NG,≤ 180,88.8,NA,Chlorine,FALSE
+South East,Millicent,Sulphate,mg/L,NG,≤ 250,69.3,NA,Chlorine,FALSE
+South East,Millicent,Total dissolved solids,mg/L,NG,≤ 600,634,NA,Chlorine,FALSE
+South East,Millicent,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+South East,Mt Burr,Alkalinity,mg/L,NG,NG,280,NA,Chlorine,FALSE
+South East,Mt Burr,Calcium,mg/L,NG,NG,88.4,NA,Chlorine,FALSE
+South East,Mt Burr,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine,FALSE
+South East,Mt Burr,Fluoride,mg/L,≤ 1.5,NG,0.3,100%,Chlorine,FALSE
+South East,Mt Burr,Magnesium,mg/L,NG,NG,18.3,NA,Chlorine,FALSE
+South East,Mt Burr,pH,pH units,NG,6.5 - 8.5,7.8,NA,Chlorine,FALSE
+South East,Mt Burr,Sodium,mg/L,NG,≤ 180,46.7,NA,Chlorine,FALSE
+South East,Mt Burr,Sulphate,mg/L,NG,≤ 250,8.6,NA,Chlorine,FALSE
+South East,Mt Burr,Total dissolved solids,mg/L,NG,≤ 600,439,NA,Chlorine,FALSE
+South East,Mt Burr,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+South East,Mt Gambier,Alkalinity,mg/L,NG,NG,174,NA,Chlorine,FALSE
+South East,Mt Gambier,Calcium,mg/L,NG,NG,42.3,NA,Chlorine,FALSE
+South East,Mt Gambier,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.1,100%,Chlorine,FALSE
+South East,Mt Gambier,Fluoride,mg/L,≤ 1.5,NG,0.9,100%,Chlorine,FALSE
+South East,Mt Gambier,Magnesium,mg/L,NG,NG,19.54,NA,Chlorine,FALSE
+South East,Mt Gambier,pH,pH units,NG,6.5 - 8.5,8.1,NA,Chlorine,FALSE
+South East,Mt Gambier,Sodium,mg/L,NG,≤ 180,56.2,NA,Chlorine,FALSE
+South East,Mt Gambier,Sulphate,mg/L,NG,≤ 250,15.7,NA,Chlorine,FALSE
+South East,Mt Gambier,Total dissolved solids,mg/L,NG,≤ 600,365,NA,Chlorine,FALSE
+South East,Mt Gambier,Turbidity,NTU,NG,≤ 5,0.12,NA,Chlorine,FALSE
+South East,Nangwarry,Alkalinity,mg/L,NG,NG,369,NA,Chlorine,FALSE
+South East,Nangwarry,Calcium,mg/L,NG,NG,129,NA,Chlorine,FALSE
+South East,Nangwarry,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.9,100%,Chlorine,FALSE
+South East,Nangwarry,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,FALSE
+South East,Nangwarry,Magnesium,mg/L,NG,NG,13.4,NA,Chlorine,FALSE
+South East,Nangwarry,pH,pH units,NG,6.5 - 8.5,7.3,NA,Chlorine,FALSE
+South East,Nangwarry,Sodium,mg/L,NG,≤ 180,85.2,NA,Chlorine,FALSE
+South East,Nangwarry,Sulphate,mg/L,NG,≤ 250,24.8,NA,Chlorine,FALSE
+South East,Nangwarry,Total dissolved solids,mg/L,NG,≤ 600,668,NA,Chlorine,FALSE
+South East,Nangwarry,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+South East,Naracoorte,Alkalinity,mg/L,NG,NG,321,NA,Chlorine,FALSE
+South East,Naracoorte,Calcium,mg/L,NG,NG,59.1,NA,Chlorine,FALSE
+South East,Naracoorte,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.8,100%,Chlorine,FALSE
+South East,Naracoorte,Fluoride,mg/L,≤ 1.5,NG,1.1,100%,Chlorine,FALSE
+South East,Naracoorte,Magnesium,mg/L,NG,NG,48.4,NA,Chlorine,FALSE
+South East,Naracoorte,pH,pH units,NG,6.5 - 8.5,7.7,NA,Chlorine,FALSE
+South East,Naracoorte,Sodium,mg/L,NG,≤ 180,315,NA,Chlorine,FALSE
+South East,Naracoorte,Sulphate,mg/L,NG,≤ 250,127.3,NA,Chlorine,FALSE
+South East,Naracoorte,Total dissolved solids,mg/L,NG,≤ 600,NA,NA,Chlorine,FALSE
+South East,Naracoorte,Turbidity,NTU,NG,≤ 5,0.47,NA,Chlorine,FALSE
+South East,Padthaway,Alkalinity,mg/L,NG,NG,381,NA,Chlorine,FALSE
+South East,Padthaway,Calcium,mg/L,NG,NG,160,NA,Chlorine,FALSE
+South East,Padthaway,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.8,100%,Chlorine,FALSE
+South East,Padthaway,Fluoride,mg/L,≤ 1.5,NG,0.1,100%,Chlorine,FALSE
+South East,Padthaway,Magnesium,mg/L,NG,NG,49.7,NA,Chlorine,FALSE
+South East,Padthaway,pH,pH units,NG,6.5 - 8.5,7.6,NA,Chlorine,FALSE
+South East,Padthaway,Sodium,mg/L,NG,≤ 180,364,NA,Chlorine,FALSE
+South East,Padthaway,Sulphate,mg/L,NG,≤ 250,77.3,NA,Chlorine,FALSE
+South East,Padthaway,Total dissolved solids,mg/L,NG,≤ 600,NA,NA,Chlorine,FALSE
+South East,Padthaway,Turbidity,NTU,NG,≤ 5,0.12,NA,Chlorine,FALSE
+South East,Parilla,Alkalinity,mg/L,NG,NG,178,NA,Chlorine,FALSE
+South East,Parilla,Calcium,mg/L,NG,NG,42.8,NA,Chlorine,FALSE
+South East,Parilla,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.2,100%,Chlorine,FALSE
+South East,Parilla,Fluoride,mg/L,≤ 1.5,NG,0.5,100%,Chlorine,FALSE
+South East,Parilla,Magnesium,mg/L,NG,NG,18.8,NA,Chlorine,FALSE
+South East,Parilla,pH,pH units,NG,6.5 - 8.5,7.8,NA,Chlorine,FALSE
+South East,Parilla,Sodium,mg/L,NG,≤ 180,158,NA,Chlorine,FALSE
+South East,Parilla,Sulphate,mg/L,NG,≤ 250,50.6,NA,Chlorine,FALSE
+South East,Parilla,Total dissolved solids,mg/L,NG,≤ 600,683,NA,Chlorine,FALSE
+South East,Parilla,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+South East,Penola,Alkalinity,mg/L,NG,NG,314,NA,Chlorine,FALSE
+South East,Penola,Calcium,mg/L,NG,NG,96.9,NA,Chlorine,FALSE
+South East,Penola,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.9,100%,Chlorine,FALSE
+South East,Penola,Fluoride,mg/L,≤ 1.5,NG,0.2,100%,Chlorine,FALSE
+South East,Penola,Magnesium,mg/L,NG,NG,20.3,NA,Chlorine,FALSE
+South East,Penola,pH,pH units,NG,6.5 - 8.5,7.4,NA,Chlorine,FALSE
+South East,Penola,Sodium,mg/L,NG,≤ 180,110,NA,Chlorine,FALSE
+South East,Penola,Sulphate,mg/L,NG,≤ 250,5.3,NA,Chlorine,FALSE
+South East,Penola,Total dissolved solids,mg/L,NG,≤ 600,655,NA,Chlorine,FALSE
+South East,Penola,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+South East,Pinnaroo,Alkalinity,mg/L,NG,NG,245,NA,Chlorine,FALSE
+South East,Pinnaroo,Calcium,mg/L,NG,NG,54.8,NA,Chlorine,FALSE
+South East,Pinnaroo,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.5,100%,Chlorine,FALSE
+South East,Pinnaroo,Fluoride,mg/L,≤ 1.5,NG,0.7,100%,Chlorine,FALSE
+South East,Pinnaroo,Magnesium,mg/L,NG,NG,27.2,NA,Chlorine,FALSE
+South East,Pinnaroo,pH,pH units,NG,6.5 - 8.5,7.7,NA,Chlorine,FALSE
+South East,Pinnaroo,Sodium,mg/L,NG,≤ 180,171,NA,Chlorine,FALSE
+South East,Pinnaroo,Sulphate,mg/L,NG,≤ 250,74.8,NA,Chlorine,FALSE
+South East,Pinnaroo,Total dissolved solids,mg/L,NG,≤ 600,673,NA,Chlorine,FALSE
+South East,Pinnaroo,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+South East,Port MacDonnell,Alkalinity,mg/L,NG,NG,360,NA,Chlorine,FALSE
+South East,Port MacDonnell,Calcium,mg/L,NG,NG,2.29,NA,Chlorine,FALSE
+South East,Port MacDonnell,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1.1,100%,Chlorine,FALSE
+South East,Port MacDonnell,Fluoride,mg/L,≤ 1.5,NG,0.8,100%,Chlorine,FALSE
+South East,Port MacDonnell,Magnesium,mg/L,NG,NG,4.11,NA,Chlorine,FALSE
+South East,Port MacDonnell,pH,pH units,NG,6.5 - 8.5,8,NA,Chlorine,FALSE
+South East,Port MacDonnell,Sodium,mg/L,NG,≤ 180,268,NA,Chlorine,FALSE
+South East,Port MacDonnell,Sulphate,mg/L,NG,≤ 250,21.8,NA,Chlorine,FALSE
+South East,Port MacDonnell,Total dissolved solids,mg/L,NG,≤ 600,699,NA,Chlorine,FALSE
+South East,Port MacDonnell,Turbidity,NTU,NG,≤ 5,0.13,NA,Chlorine,FALSE
+South East,Robe,Alkalinity,mg/L,NG,NG,323,NA,Chlorine,FALSE
+South East,Robe,Calcium,mg/L,NG,NG,22.4,NA,Chlorine,FALSE
+South East,Robe,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.9,100%,Chlorine,FALSE
+South East,Robe,Fluoride,mg/L,≤ 1.5,NG,0.3,100%,Chlorine,FALSE
+South East,Robe,Magnesium,mg/L,NG,NG,16.6,NA,Chlorine,FALSE
+South East,Robe,pH,pH units,NG,6.5 - 8.5,7.7,NA,Chlorine,FALSE
+South East,Robe,Sodium,mg/L,NG,≤ 180,234,NA,Chlorine,FALSE
+South East,Robe,Sulphate,mg/L,NG,≤ 250,21.2,NA,Chlorine,FALSE
+South East,Robe,Total dissolved solids,mg/L,NG,≤ 600,771,NA,Chlorine,FALSE
+South East,Robe,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
+South East,Tailem Bend,Alkalinity,mg/L,NG,NG,77,NA,Chloramine / UV,FALSE
+South East,Tailem Bend,Calcium,mg/L,NG,NG,18.4,NA,Chloramine / UV,FALSE
+South East,Tailem Bend,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,0.1,100%,Chloramine / UV,TRUE
+South East,Tailem Bend,Fluoride,mg/L,≤ 1.5,NG,0.55,100%,Chloramine / UV,FALSE
+South East,Tailem Bend,Magnesium,mg/L,NG,NG,11.2,NA,Chloramine / UV,FALSE
+South East,Tailem Bend,pH,pH units,NG,6.5 - 8.5,8.8,NA,Chloramine / UV,FALSE
+South East,Tailem Bend,Sodium,mg/L,NG,≤ 180,63.7,NA,Chloramine / UV,FALSE
+South East,Tailem Bend,Sulphate,mg/L,NG,≤ 250,49.3,NA,Chloramine / UV,FALSE
+South East,Tailem Bend,Total dissolved solids,mg/L,NG,≤ 600,300,NA,Chloramine / UV,FALSE
+South East,Tailem Bend,Turbidity,NTU,NG,≤ 5,0.1,NA,Chloramine / UV,TRUE
+South East,Tarpeena,Alkalinity,mg/L,NG,NG,364,NA,Chlorine,FALSE
+South East,Tarpeena,Calcium,mg/L,NG,NG,138,NA,Chlorine,FALSE
+South East,Tarpeena,Chlorine (free residual),mg/L,≤ 5,≤ 0.6,1,100%,Chlorine,FALSE
+South East,Tarpeena,Fluoride,mg/L,≤ 1.5,NG,0.2,100%,Chlorine,FALSE
+South East,Tarpeena,Magnesium,mg/L,NG,NG,17.1,NA,Chlorine,FALSE
+South East,Tarpeena,pH,pH units,NG,6.5 - 8.5,7.6,NA,Chlorine,FALSE
+South East,Tarpeena,Sodium,mg/L,NG,≤ 180,110,NA,Chlorine,FALSE
+South East,Tarpeena,Sulphate,mg/L,NG,≤ 250,14.9,NA,Chlorine,FALSE
+South East,Tarpeena,Total dissolved solids,mg/L,NG,≤ 600,735,NA,Chlorine,FALSE
+South East,Tarpeena,Turbidity,NTU,NG,≤ 5,0.1,NA,Chlorine,TRUE
