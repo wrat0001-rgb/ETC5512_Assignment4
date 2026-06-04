@@ -1,0 +1,68 @@
+Dataset 2: South Australia Operational Regions
+
+Dataset title: South Australia Operational Regions (Processed Spatial Dataset)
+
+Dataset description: This processed spatial dataset was derived from the South Australian Government Regions dataset published by the South Australian Government [@sa_gov_regions].
+
+The dataset contains geographic boundaries aggregated to approximate SA Water operational regions. It was created to support visualisation of regional differences in tap water characteristics across South Australia.
+
+Purpose: This dataset was created to support mapping, visualisation, and regional comparison of tap water characteristics across South Australia.
+
+Data source:
+- Publisher: Department for Housing and Urban Development, Government of South Australia
+- Platform: South Australian Government Open Data Portal
+- Original dataset: South Australian Government Regions
+
+Data collection method: The original dataset is administrative geographic boundary data used for government planning, monitoring, and service delivery across South Australia.
+
+Processing steps: The original shapefile was processed by:
+- Importing the GDA2020 version of the South Australian Government Regions shapefile.
+- Creating a correspondence table between South Australian Government regions and SA Water operational region.
+- Joining the correspondence table to the spatial dataset.
+- Aggregating regional boundaries into six operational regions: Metropolitan, Outer Metro, Eyre, Northern, South East, and Remote Communities.
+- Saving the resulting spatial dataset as an RDS file.
+
+Spatial coverage: South Australia
+
+Coordinate reference system (CRS): GDA2020
+
+File format: RDS (spatial sf object)
+
+Dataset dimensions:
+- Rows: 6
+- Columns: 2
+- Geometry type: MULTIPOLYGON
+
+Variables:
+| Variable       | Description                                                         |
+| -------------- | ------------------------------------------------------------------- |
+| `water_region` | Approximate SA Water operational region used in the analysis.       |
+| `geometry`     | MULTIPOLYGON geometry representing the operational region boundary. |
+
+
+Region correspondence:
+| SA Water Operational Region | Matched South Australian Government Regions                                 |
+| --------------------------- | --------------------------------------------------------------------------- |
+| Metropolitan                | Eastern Adelaide, Northern Adelaide, Southern Adelaide, Western Adelaide    |
+| Outer Metro                 | Adelaide Hills, Barossa Light and Lower North, Fleurieu and Kangaroo Island |
+| Eyre                        | Eyre and Western                                                            |
+| Northern                    | Yorke and Mid North, Far North                                              |
+| South East                  | Limestone Coast                                                             |
+| Remote Communities          | Murray and Mallee                                                           |
+
+Limitations:
+- SA Water operational regions are not publicly available as spatial boundaries.
+- Operational regions were approximated using South Australian Government regional boundaries.
+- The correspondence table was created manually based on geographic location and SA Water service network information.
+- The dataset is intended for exploratory visualisation and does not represent official SA Water operational boundaries.
+
+License:
+This processed dataset is derived from the South Australian Government Regions dataset published by the Government of South Australia under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence.
+
+Appropriate attribution to the original source is required. The correspondence table and regional aggregation were created for this project and do not represent official SA Water operational boundaries.
+
+Dataset created: 4 June 2026
+
+Dataset last updated: 5 June 2026
+
+Metadata last updated: 5 June 2026

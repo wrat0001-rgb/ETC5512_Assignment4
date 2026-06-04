@@ -1,0 +1,80 @@
+Dataset 1: SA Water Quality Performance (April 2026)
+
+Dataset title: SA Water Quality Performance Results (April 2026)
+
+Dataset description: This processed dataset was derived from the SA Water Quality Performance Results dataset published by SA Water through the South Australian Government Open Data Portal.
+
+The dataset contains selected drinking water quality parameters for water supply systems across South Australia. Variables were cleaned, standardised, and filtered to support analysis of regional differences in tap water characteristics.
+
+The processed dataset focuses on parameters representing mineral composition, taste and appearance characteristics, and water treatment characteristics.
+
+This dataset was created to investigate:
+
+1. Differences in tap water characteristics across South Australian operational regions.
+2. Which water quality parameters vary most between regions.
+3. Variation between water supply systems within operational regions.
+
+Data source:
+- Publisher: SA Water
+- Platform: South Australian Government Open Data Portal
+- Original dataset: Water Quality Performance Results
+
+Data collection method: The original data are observational monitoring data collected through SA Water's routine drinking water quality monitoring program. Results are reported as rolling 12-month average values for each water supply system and water quality parameter.
+
+Processing steps:
+- Removed footer rows from the source spreadsheet.
+- Standardised variable names using clean_names().
+- Removed variables not required for analysis (end_date and comment).
+- Removed "<" symbols from average_value and converted the variable to numeric format.
+- Filtered to selected parameters representing tap water characteristics.
+
+Spatial coverage: South Australia
+
+Temporal coverage: Rolling 12-month averages reported in the April 2026 release (12 months to 30 April 2026).
+
+File format: CSV
+
+Dataset dimensions:
+- Rows: 904
+- Columns: 9
+
+Relevant variables:
+| Variable | Description |
+| ---------| ------------|
+| `region_name` | SA Water operational region. |
+| `system_name` | Individual water supply system. |
+| `parameter` | Water quality parameter measured. |
+| `units` | Measurement units for the parameter. |
+| `average_value`| Rolling 12-month average value reported by SA Water. |
+| `health_guideline` | Australian Drinking Water Guidelines (ADWG) health-based value. |
+| `aesthetic_guideline` | Australian Drinking Water Guidelines (ADWG) aesthetic guideline value. |
+| `health_compliance_number` | Percentage compliance with the health guideline where reported. |
+| `disinfection` | Primary disinfection method used by the water supply system. |
+
+Selected parameters:
+- Calcium
+- Magnesium
+- Alkalinity
+- Total dissolved solids
+- pH
+- Turbidity
+- Sodium
+- Sulphate
+- Fluoride
+- Chlorine (free residual)
+
+Limitations:
+- Values are reported as rolling 12-month averages and may not reflect short-term variation.
+- Operational regions contain multiple water supply systems, which may mask local variation.
+- Exact sampling locations are not provided.
+- Only selected water quality parameters were retained from the original dataset.
+- Long-term trend analysis would require combining multiple historical releases.
+
+License:
+This processed dataset is derived from the SA Water Quality Performance Results dataset published by SA Water under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence. Appropriate attribution to the original source is required.
+
+Dataset created: 4 June 2026
+
+Dataset last updated: 5 June 2026
+
+Metadata last updated: 5 June 2026

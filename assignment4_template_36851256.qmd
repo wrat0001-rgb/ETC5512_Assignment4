@@ -54,7 +54,7 @@ Australian tap water is regulated under the Australian Drinking Water Guidelines
 
 **Dataset size:** 4,872 observations and 11 variables
 
-**Data licence:** Creative Commons Attribution (CC BY)
+**Data licence:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 **Data status:** Active
 
@@ -93,7 +93,7 @@ This dataset is suitable because it provides geographic boundary information tha
 
 **Dataset format:** Spatial boundary dataset (shapefile)
 
-**Data licence:** Creative Commons Attribution (CC BY)
+**Data licence:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 **Data status:** Active
 
@@ -124,6 +124,7 @@ This dataset is suitable because it provides geographic boundary information tha
 #### Dataset 1: SA Water Quality Performance Results
 
 **Download the data**
+
 The dataset was downloaded from the South Australian Government Open Data Portal using the latest available water quality performance results (April 2026) [@sawater_water_quality; @sawater_water_quality_results_Apr2026].
 
 The raw dataset was imported directly from the download URL and saved as a CSV file for reproducibility.
@@ -143,16 +144,18 @@ download.file(
   mode = "wb" )
 
 # import the dataset and remove the final 9 footer rows
-sawater_quality_apr26 <- read_excel("data/sawater_quality_apr26.xlsx") |>
+sawater_quality_apr26 <- read_excel("raw_data/sawater_quality_apr26.xlsx") |>
   slice(1:(n() - 9))
 
 # save the raw dataset as a CSV file
 write_csv(
   sawater_quality_apr26,
-  "data/sawater_quality_apr26.csv")
+  "raw_data/sawater_quality_apr26.csv"
+  )
 ```
 
 **Process the data**
+
 The raw dataset (`sawater_quality_apr26.csv`) was processed to prepare it for analysis. The processing steps included standardising variable names, removing unnecessary variables, converting measurement values to numeric format, and selecting water quality parameters relevant to the research question.
 
 ```{r}
@@ -174,20 +177,16 @@ sawater_quality_apr26_processed <- sawater_quality_apr26_processed |>
     -end_date, 
     -comment) |>
   
-  # identify and convert values reported below detection limits
+  # remove "<" symbol and convert to numeric
   mutate(
-    below_detection =
-      str_detect(average_value, "<"),
-    
-    average_value =
-      str_remove(average_value, "<"),
-    
-    average_value =
-      as.numeric(average_value)
+    average_value = average_value |>
+      str_remove("<") |>
+      as.numeric()
   )
   
 # inspect processed dataset 
-glimpse(sawater_quality_apr26_processed) colSums(is.na(sawater_quality_apr26_processed))
+glimpse(sawater_quality_apr26_processed) 
+colSums(is.na(sawater_quality_apr26_processed))
 ```
 Parameters were then selected to represent the three main categories of tap water characteristics identified earlier: **mineral composition**, **taste and appearance characteristics**, and **water treatment characteristics**. These parameters were chosen because they provide a broad representation of drinking water quality and consumer acceptability across South Australia. The resulting processed dataset was saved as `sawater_quality_apr26_processed.csv` for subsequent analysis.
 
@@ -216,12 +215,14 @@ sawater_quality_apr26_processed <- sawater_quality_apr26_processed |>
 # save processed dataset as a CSV file
 write_csv(
   sawater_quality_apr26_processed,
-  "data/sawater_quality_apr26_processed.csv")
+  "processed_data/sawater_quality_apr26_processed.csv"
+  )
 ```
 
 #### Dataset 2: South Australian Government Regions
 
 **Download the data**
+
 The dataset was downloaded from the South Australian Government Open Data Portal as a shapefile containing official South Australian Government regional boundaries [@sa_gov_regions]. The downloaded ZIP file was extracted into the project data folder (`SAGovtRegions_shp`) before being imported into R.
 
 The extracted shapefile package contains both GDA94 and GDA2020 versions of the regional boundaries. The GDA2020 version (`SAGovtRegions_GDA2020.shp`) was selected because it is the current Australian national geodetic datum and provides the most up-to-date spatial reference system available in the dataset.
@@ -232,11 +233,14 @@ library(sf)
 
 # import the South Australian Government Regions shapefile
 sagovreg_map <- read_sf(
-  here::here("data/SAGovtRegions_shp/SAGovtRegions_GDA2020.shp"))
+  here::here("raw_data/SAGovtRegions_shp/SAGovtRegions_GDA2020.shp"))
 ```
 
 **Process the data**
-The `water_quality` dataset uses SA Water operational regions, while the South Australia map (`southaus_map`) dataset uses administrative regional boundaries. Since the two datasets use different geographic classifications, a manual correspondence table was created to approximately match regions based on geographic location and regional characteristics.
+
+The `sawater_quality_apr26_processed` dataset uses SA Water operational regions, while the South Australia Government Regions dataset (`sagovreg_map`) uses administrative regional boundaries. Because the two datasets use different geographic classifications, a correspondence table was created to approximately align regions for mapping purposes. 
+
+The matching was based on geographic location, regional characteristics, and SA Water's service network information [@sawater_networks_treatment].
 
 | Water Operation Region | Matched SA Regions | Grouping Criteria |
 |------------------------|------------------------|------------------------|
@@ -247,13 +251,12 @@ The `water_quality` dataset uses SA Water operational regions, while the South A
 | South East | Limestone Coast | South-eastern regional alignment |
 | Remote Communities | Murray and Mallee | Remote and sparsely populated areas |
 
-This matching was used for exploratory visualisation only and does not represent official SA Water operational boundaries.
+This correspondence was used for exploratory visualisation only and does not represent official SA Water operational boundaries.
+
+The processed spatial dataset was saved as `sa_operational_geom.rds`, which contains South Australian Government regional boundaries aggregated to approximate SA Water operational regions and was used for subsequent mapping and visualisation.
 
 ```{r}
-# read the national map from electoral data
-southaus_map <- read_sf(here::here("data/SAGovtRegions_shp/SAGovtRegions_GDA2020.shp"))
-
-# create operational mapping
+# create correspondence table between SA Government regions and SA Water operational regions
 region_lookup <- tribble(
   ~region, ~water_region,
 
@@ -276,26 +279,37 @@ region_lookup <- tribble(
   "Murray and Mallee", "Remote Communities"
 )
 
-# join lookup to SA map
-sa_operational <- southaus_map |>
+# join correspondence table to regional boundaries
+sa_operational <- sagovreg_map |>
   left_join(region_lookup, by = "region")
 
-# merge polygons into operational regions
+# merge boundaries into operational regions
 sa_operational_geom <- sa_operational |>
   group_by(water_region) |>
   summarise()
-```
 
+# inspect processed dataset
+glimpse(sa_operational_geom)
+
+# save processed spatial dataset
+saveRDS(
+  sa_operational_geom, 
+  "processed_data/sa_operational_geom.rds" 
+  )
+```
 
 ### Metadata
 
-#### Dataset 1: SA Water Quality Performance Results
+Metadata files were prepared for both processed datasets (`sawater_quality_apr26_metadata.txt` and `sa_operational_geom_metadata.txt`) and are available in the `processed_data` folder. The metadata files describe the dataset purpose, data sources, processing steps, variables, spatial and temporal coverage, limitations, and licensing information to support interpretation and reproducibility.
 
-#### Dataset 2: South Australian Government Regions
+### README File
 
-### Read Me
+A `README-36851256.txt` file was prepared following the Harvard School README template [@harvard_readme_files]. The file documents the processed datasets, data sources, processing steps, and limitations, and is available in the `processed_data` folder.
 
 ### Data Dictionary
+
+A data dictionary (`data-dictionary-36851256.csv`) was prepared for both processed datasets and is available in the `processed_data` folder. The data dictionary documents variable names, data types, descriptions, example values, and derivation information to support interpretation and reuse of the data.
+
 
 <!-- Task 2 Tab: Writing your blogpost -->
 

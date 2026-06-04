@@ -1,0 +1,16 @@
+﻿sawater_quality_apr26,,,,
+Variable Name,Variable Label,Data Type,Description,Example
+region_name,Region Name,Character,SA Water operational region where the water supply system is located.,Metropolitan
+system_name,System Name,Character,Name of the water supply system.,Coffin Bay
+parameter,Water Quality Parameter,Character,Water quality characteristic being measured.,Total dissolved solids
+units,Measurement Unit,Character,Unit used to report the parameter value.,mg/L
+health_guideline,Health Guideline,Character,"ADWG health-based guideline value where applicable. ""NG"" indicates no guideline value.",≤ 1.5
+aesthetic_guideline,Aesthetic Guideline,Character,"ADWG aesthetic guideline value related to taste, appearance, or odour. ""NG"" indicates no guideline value.",≤ 500
+average_value,Average Value,Numeric,"Rolling 12-month average measurement value reported by SA Water. Derived by removing ""<"" symbols from the original text field and converting values to numeric format.",223
+health_compliance_number,Health Compliance (%),Character,Percentage compliance with health guideline values where reported.,100%
+disinfection,Disinfection Method,Character,Primary disinfection method used by the water supply system.,Chlorine
+,,,,
+sa_operational_geom,,,,
+Variable Name,Variable Label,Data Type,Description,Example
+water_region,Water Operational Region,Character,Approximate SA Water operational region created from grouped government regions. Derived from a manually created correspondence table linking South Australian Government regions to SA Water operational regions.,Eyre
+geometry,Geometry,Spatial geometry (MULTIPOLYGON),Spatial polygon representing the operational region boundary for mapping and spatial analysis. Derived by aggregating South Australian Government regional boundaries according to the correspondence table.,MULTIPOLYGON
