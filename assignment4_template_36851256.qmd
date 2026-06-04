@@ -1,5 +1,5 @@
 ---
-title: "What's in Your Tap Water? Exploring Regional Differences Across South Australia"
+title: "Are there differences in tap water characteristics across regions in South Australia?"
 subtitle: "Assignment 4 ETC5512"
 author: "Waranya Ratirotjanakul (36851256)"
 date: today
@@ -341,9 +341,32 @@ The folder contains the processed datasets used for analysis, together with supp
 
 ## Blog post
 
-### What's in this section
+### Why investigate tap water?
 
-Here is where you should write your blogpost! (Task 2)
+South Australia is one of Australia's driest states [@dew2026waterdryconditions], making effective water management particularly important. Although Australian tap water is generally considered safe to drink, drinking water characteristics can vary depending on water sources, mineral composition, and treatment processes. In South Australia, differences in taste are often associated with higher mineral concentrations and chlorine used during water treatment, even when water quality meets Australian Drinking Water Guidelines (ADWG) [@metropolitanplumbing_adelaide_tap_water].
+
+After moving from Thailand to Australia, one of the things that surprised me was how common it is to drink water directly from the tap. This raised an interesting question: if people across South Australia rely on different water sources and supply systems, do they actually receive water with similar characteristics?
+
+Using publicly available SA Water monitoring data, this blog investigates whether tap water characteristics differ across South Australia, which water quality parameters vary the most between regions, and whether regional averages mask variation between individual water supply systems.
+
+### Where does the data come from?
+
+This analysis uses the SA Water Quality Performance Results dataset published by SA Water through the South Australian Government Open Data Portal [@sawater_water_quality], which contains drinking water quality measurements for water supply systems across South Australia. The reported values are rolling 12-month averages collected through SA Water's routine monitoring program.
+
+To visualise regional patterns, the South Australian Government Regions dataset [@sa_gov_regions] was also used. Since government regions do not align directly with SA Water operational regions, an approximate correspondence table was created for mapping.
+
+The analysis focuses on selected water quality parameters representing mineral composition, taste and appearance characteristics, and water treatment characteristics. These parameters provide a manageable way to compare tap water characteristics across South Australia.
+
+### What does the data tell us?
+#### Regional differences in tap water characteristics
+
+#### Which water quality characteristics vary the most?
+#### Are regional averages hiding local differences?
+
+### So what?
+
+
+#### What could be explored next?
 
 ### Blogpost Structure
 
