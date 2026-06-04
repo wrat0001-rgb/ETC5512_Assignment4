@@ -6,6 +6,13 @@ date: today
 format: html
 bibliography: references.bib
 csl: apa.csl
+nocite: |
+  @readxl
+  @tidyverse
+  @janitor
+  @sf_book
+  @sf_article
+  @here
 editor: visual
 ---
 
@@ -33,7 +40,7 @@ The primary dataset is the **SA Water Quality Performance Results dataset** publ
 
 This dataset is suitable because it includes both regional and system-level information, allowing comparison of tap water characteristics across South Australia and between individual water supply systems. The reported values are based on SA Water's routine monitoring program and represent rolling averages over the previous 12 months. As the data are collected through established monitoring and quality assurance processes, the dataset provides a reliable basis for regional comparison. 
 
-Australian tap water may contain naturally occurring minerals, treatment chemicals, and trace contaminants depending on the water source and distribution system [@completehomefiltration_tap_water]. Tap water characteristics refer to the physical and chemical properties of drinking water that influence its quality, safety, and consumer acceptability. These characteristics can be broadly grouped into mineral composition, aesthetic characteristics (such as taste, appearance, and odour), and water treatment characteristics [@nhmrc_physical_chemical_values].
+Australian tap water may contain naturally occurring minerals, treatment chemicals, and trace contaminants depending on the water source and distribution system [@completehomefiltration_tap_water]. **Tap water characteristics** refer to the physical and chemical properties of drinking water that influence its quality, safety, and consumer acceptability. These characteristics can be broadly grouped into mineral composition, aesthetic characteristics (such as taste, appearance, and odour), and water treatment characteristics [@nhmrc_physical_chemical_values].
 
 Australian tap water is regulated under the Australian Drinking Water Guidelines (ADWG), which provide health-based and aesthetic guideline values for drinking water quality parameters [@nhmrc_physical_chemical_values]. To represent the main characteristics of tap water, a set of parameters was selected from each category. Together, these parameters provide a broad view of differences in mineral content, water quality, and treatment practices across South Australia.
 
@@ -304,11 +311,30 @@ Metadata files were prepared for both processed datasets (`sawater_quality_apr26
 
 ### README File
 
-A `README-36851256.txt` file was prepared following the Harvard School README template [@harvard_readme_files]. The file documents the processed datasets, data sources, processing steps, and limitations, and is available in the `processed_data` folder.
+A `README.txt` file was prepared following the Harvard School README template [@harvard_readme_files]. The file documents the processed datasets, data sources, processing steps, and limitations, and is available in the `processed_data` folder.
 
 ### Data Dictionary
 
-A data dictionary (`data-dictionary-36851256.csv`) was prepared for both processed datasets and is available in the `processed_data` folder. The data dictionary documents variable names, data types, descriptions, example values, and derivation information to support interpretation and reuse of the data.
+A data dictionary (`data_dictionary.csv`) was prepared for both processed datasets and is available in the `processed_data` folder. The data dictionary documents variable names, data types, descriptions, example values, and derivation information to support interpretation and reuse of the data.
+
+### Processed Data Folder Structure
+
+All processed datasets and supporting documentation are stored in the `processed_data` folder. The folder structure is shown below.
+
+```text
+processed_data/
+│
+├── README.txt
+├── data_dictionary.csv
+│
+├── sawater_quality_apr26_processed.csv
+├── sawater_quality_apr26_metadata.txt
+│
+├── sa_operational_geom.rds
+└── sa_operational_geom_metadata.txt
+```
+
+The folder contains the processed datasets used for analysis, together with supporting documentation including metadata files, a data dictionary, and a README file to facilitate interpretation, reproducibility, and reuse.
 
 
 <!-- Task 2 Tab: Writing your blogpost -->

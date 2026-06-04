@@ -157,7 +157,7 @@ div.csl-indent {
 <h4 class="anchored" data-anchor-id="dataset-1-sa-water-quality-performance-results">Dataset 1: SA Water Quality Performance Results</h4>
 <p>The primary dataset is the <strong>SA Water Quality Performance Results dataset</strong> published by <strong>SA Water</strong> through the South Australian Government Open Data Portal <span class="citation" data-cites="sawater_water_quality">(<a href="#ref-sawater_water_quality" role="doc-biblioref">SA Water, 2026b</a>)</span>. It contains drinking water quality information, including water quality parameters, average values, guideline values, and disinfection methods, for SA Water operational regions and water supply systems across metropolitan, regional, and remote communities in South Australia.</p>
 <p>This dataset is suitable because it includes both regional and system-level information, allowing comparison of tap water characteristics across South Australia and between individual water supply systems. The reported values are based on SA Water’s routine monitoring program and represent rolling averages over the previous 12 months. As the data are collected through established monitoring and quality assurance processes, the dataset provides a reliable basis for regional comparison.</p>
-<p>Australian tap water may contain naturally occurring minerals, treatment chemicals, and trace contaminants depending on the water source and distribution system <span class="citation" data-cites="completehomefiltration_tap_water">(<a href="#ref-completehomefiltration_tap_water" role="doc-biblioref">Complete Home Filtration, 2024</a>)</span>. Tap water characteristics refer to the physical and chemical properties of drinking water that influence its quality, safety, and consumer acceptability. These characteristics can be broadly grouped into mineral composition, aesthetic characteristics (such as taste, appearance, and odour), and water treatment characteristics <span class="citation" data-cites="nhmrc_physical_chemical_values">(<a href="#ref-nhmrc_physical_chemical_values" role="doc-biblioref">National Health and Medical Research Council, 2026</a>)</span>.</p>
+<p>Australian tap water may contain naturally occurring minerals, treatment chemicals, and trace contaminants depending on the water source and distribution system <span class="citation" data-cites="completehomefiltration_tap_water">(<a href="#ref-completehomefiltration_tap_water" role="doc-biblioref">Complete Home Filtration, 2024</a>)</span>. <strong>Tap water characteristics</strong> refer to the physical and chemical properties of drinking water that influence its quality, safety, and consumer acceptability. These characteristics can be broadly grouped into mineral composition, aesthetic characteristics (such as taste, appearance, and odour), and water treatment characteristics <span class="citation" data-cites="nhmrc_physical_chemical_values">(<a href="#ref-nhmrc_physical_chemical_values" role="doc-biblioref">National Health and Medical Research Council, 2026</a>)</span>.</p>
 <p>Australian tap water is regulated under the Australian Drinking Water Guidelines (ADWG), which provide health-based and aesthetic guideline values for drinking water quality parameters <span class="citation" data-cites="nhmrc_physical_chemical_values">(<a href="#ref-nhmrc_physical_chemical_values" role="doc-biblioref">National Health and Medical Research Council, 2026</a>)</span>. To represent the main characteristics of tap water, a set of parameters was selected from each category. Together, these parameters provide a broad view of differences in mineral content, water quality, and treatment practices across South Australia.</p>
 <table class="caption-top table">
 <colgroup>
@@ -304,23 +304,33 @@ div.csl-indent {
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>( </span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  url_sawater_quality, </span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">destfile =</span> <span class="st">"data/sawater_quality_apr26.xlsx"</span>, </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">mode =</span> <span class="st">"wb"</span> )</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># import the dataset and remove the final 9 footer rows</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>sawater_quality_apr26 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/sawater_quality_apr26.xlsx"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span>(<span class="fu">n</span>() <span class="sc">-</span> <span class="dv">9</span>))</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># save the raw dataset as a CSV file</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  sawater_quality_apr26,</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/sawater_quality_apr26.csv"</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">mode =</span> <span class="st">"wb"</span> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in download.file(url_sawater_quality, destfile =
+"data/sawater_quality_apr26.xlsx", : URL
+https://data.sa.gov.au/data/dataset/996ec2ae-d52c-4d7e-be9c-d4dab1c1aa45/resource/9d161800-cfdd-46d7-8236-3e601fdc4a1c/download/water-quality-performance-results-april-2026.xlsx:
+cannot open destfile 'data/sawater_quality_apr26.xlsx', reason 'No such file or
+directory'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in download.file(url_sawater_quality, destfile =
+"data/sawater_quality_apr26.xlsx", : download had nonzero exit status</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import the dataset and remove the final 9 footer rows</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>sawater_quality_apr26 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"raw_data/sawater_quality_apr26.xlsx"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span>(<span class="fu">n</span>() <span class="sc">-</span> <span class="dv">9</span>))</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># save the raw dataset as a CSV file</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  sawater_quality_apr26,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"raw_data/sawater_quality_apr26.csv"</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Process the data</strong></p>
 <p>The raw dataset (<code>sawater_quality_apr26.csv</code>) was processed to prepare it for analysis. The processing steps included standardising variable names, removing unnecessary variables, converting measurement values to numeric format, and selecting water quality parameters relevant to the research question.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load required packages</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load required packages</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'janitor'</code></pre>
@@ -330,8 +340,8 @@ Attaching package: 'janitor'</code></pre>
 
     chisq.test, fisher.test</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect dataset structure and missing values</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(sawater_quality_apr26) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect dataset structure and missing values</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(sawater_quality_apr26) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 4,867
 Columns: 11
@@ -347,7 +357,7 @@ $ Disinfection            &lt;chr&gt; "Chlorine", "Chlorine", "Chlorine", "Chlor
 $ `End Date`              &lt;chr&gt; "01/05/2025 - 30/04/2026", "01/05/2025 - 30/04…
 $ Comment                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(sawater_quality_apr26))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(sawater_quality_apr26))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          Region Name           System Name             Parameter 
                     0                     0                     0 
@@ -358,31 +368,31 @@ $ Comment                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA
              End Date               Comment 
                     0                  4081 </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># standardise column names to snake_case</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>sawater_quality_apr26_processed <span class="ot">&lt;-</span> sawater_quality_apr26 <span class="sc">|&gt;</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>()</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># clean and prepare variables</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>sawater_quality_apr26_processed <span class="ot">&lt;-</span> sawater_quality_apr26_processed <span class="sc">|&gt;</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># remove variables not used in the analysis</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span>end_date, </span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span>comment) <span class="sc">|&gt;</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># remove "&lt;" symbol and convert to numeric</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">average_value =</span> average_value <span class="sc">|&gt;</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_remove</span>(<span class="st">"&lt;"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">as.numeric</span>()</span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># standardise column names to snake_case</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>sawater_quality_apr26_processed <span class="ot">&lt;-</span> sawater_quality_apr26 <span class="sc">|&gt;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>()</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># clean and prepare variables</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>sawater_quality_apr26_processed <span class="ot">&lt;-</span> sawater_quality_apr26_processed <span class="sc">|&gt;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># remove variables not used in the analysis</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span>end_date, </span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span>comment) <span class="sc">|&gt;</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># remove "&lt;" symbol and convert to numeric</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">average_value =</span> average_value <span class="sc">|&gt;</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_remove</span>(<span class="st">"&lt;"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">as.numeric</span>()</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: There was 1 warning in `mutate()`.
 ℹ In argument: `average_value = as.numeric(str_remove(average_value, "&lt;"))`.
 Caused by warning:
 ! NAs introduced by coercion</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect processed dataset </span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(sawater_quality_apr26_processed) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect processed dataset </span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(sawater_quality_apr26_processed) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 4,867
 Columns: 9
@@ -396,7 +406,7 @@ $ average_value            &lt;dbl&gt; 2.23e+02, 4.00e-03, 3.00e-04, 9.20e-04, 1
 $ health_compliance_number &lt;chr&gt; "NA", "NA", "100%", "100%", "100%", "100%", "…
 $ disinfection             &lt;chr&gt; "Chlorine", "Chlorine", "Chlorine", "Chlorine…</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(sawater_quality_apr26_processed))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(sawater_quality_apr26_processed))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>             region_name              system_name                parameter 
                        0                        0                        0 
@@ -408,8 +418,8 @@ $ disinfection             &lt;chr&gt; "Chlorine", "Chlorine", "Chlorine", "Chlo
 </div>
 <p>Parameters were then selected to represent the three main categories of tap water characteristics identified earlier: <strong>mineral composition</strong>, <strong>taste and appearance characteristics</strong>, and <strong>water treatment characteristics</strong>. These parameters were chosen because they provide a broad representation of drinking water quality and consumer acceptability across South Australia. The resulting processed dataset was saved as <code>sawater_quality_apr26_processed.csv</code> for subsequent analysis.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check parameter names</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(sawater_quality_apr26_processed<span class="sc">$</span>parameter)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check parameter names</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(sawater_quality_apr26_processed<span class="sc">$</span>parameter)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Alkalinity"                    "Aluminium - acid soluble"     
  [3] "Antimony"                      "Arsenic"                      
@@ -442,29 +452,29 @@ $ disinfection             &lt;chr&gt; "Chlorine", "Chlorine", "Chlorine", "Chlo
 [57] "NDMA (N-Nitrosodimethylamine)" "Chlorite"                     
 [59] "Ammonia - free - as NH3"      </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># selected parameters</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>selected_params <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Calcium"</span>,</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Magnesium"</span>,</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Alkalinity"</span>,</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Total dissolved solids"</span>,</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pH"</span>,</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Turbidity"</span>,</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sodium"</span>,</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sulphate"</span>,</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Fluoride"</span>,</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Chlorine (free residual)"</span></span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="co"># retain selected parameters</span></span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>sawater_quality_apr26_processed <span class="ot">&lt;-</span> sawater_quality_apr26_processed <span class="sc">|&gt;</span></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(parameter <span class="sc">%in%</span> selected_params)</span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="co"># save processed dataset as a CSV file</span></span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(</span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>  sawater_quality_apr26_processed,</span>
-<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/sawater_quality_apr26_processed.csv"</span></span>
-<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># selected parameters</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>selected_params <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Calcium"</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Magnesium"</span>,</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Alkalinity"</span>,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Total dissolved solids"</span>,</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pH"</span>,</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Turbidity"</span>,</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sodium"</span>,</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sulphate"</span>,</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Fluoride"</span>,</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Chlorine (free residual)"</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="co"># retain selected parameters</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>sawater_quality_apr26_processed <span class="ot">&lt;-</span> sawater_quality_apr26_processed <span class="sc">|&gt;</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(parameter <span class="sc">%in%</span> selected_params)</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="co"># save processed dataset as a CSV file</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>  sawater_quality_apr26_processed,</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"processed_data/sawater_quality_apr26_processed.csv"</span></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="dataset-2-south-australian-government-regions-1" class="level4">
@@ -473,14 +483,14 @@ $ disinfection             &lt;chr&gt; "Chlorine", "Chlorine", "Chlorine", "Chlo
 <p>The dataset was downloaded from the South Australian Government Open Data Portal as a shapefile containing official South Australian Government regional boundaries <span class="citation" data-cites="sa_gov_regions">(<a href="#ref-sa_gov_regions" role="doc-biblioref">Government of South Australia, 2025</a>)</span>. The downloaded ZIP file was extracted into the project data folder (<code>SAGovtRegions_shp</code>) before being imported into R.</p>
 <p>The extracted shapefile package contains both GDA94 and GDA2020 versions of the regional boundaries. The GDA2020 version (<code>SAGovtRegions_GDA2020.shp</code>) was selected because it is the current Australian national geodetic datum and provides the most up-to-date spatial reference system available in the dataset.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load required packages </span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load required packages </span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Linking to GEOS 3.13.0, GDAL 3.8.5, PROJ 9.5.1; sf_use_s2() is TRUE</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import the South Australian Government Regions shapefile</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>sagovreg_map <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/SAGovtRegions_shp/SAGovtRegions_GDA2020.shp"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import the South Australian Government Regions shapefile</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>sagovreg_map <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"raw_data/SAGovtRegions_shp/SAGovtRegions_GDA2020.shp"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Process the data</strong></p>
 <p>The <code>sawater_quality_apr26_processed</code> dataset uses SA Water operational regions, while the South Australia Government Regions dataset (<code>sagovreg_map</code>) uses administrative regional boundaries. Because the two datasets use different geographic classifications, a correspondence table was created to approximately align regions for mapping purposes.</p>
@@ -534,166 +544,80 @@ $ disinfection             &lt;chr&gt; "Chlorine", "Chlorine", "Chlorine", "Chlo
 <p>This correspondence was used for exploratory visualisation only and does not represent official SA Water operational boundaries.</p>
 <p>The processed spatial dataset was saved as <code>sa_operational_geom.rds</code>, which contains South Australian Government regional boundaries aggregated to approximate SA Water operational regions and was used for subsequent mapping and visualisation.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create correspondence table between SA Government regions and SA Water operational regions</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>region_lookup <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>region, <span class="sc">~</span>water_region,</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Eastern Adelaide"</span>, <span class="st">"Metropolitan"</span>,</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Northern Adelaide"</span>, <span class="st">"Metropolitan"</span>,</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Southern Adelaide"</span>, <span class="st">"Metropolitan"</span>,</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Western Adelaide"</span>, <span class="st">"Metropolitan"</span>,</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Adelaide Hills"</span>, <span class="st">"Outer Metro"</span>,</span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Barossa, Light and Lower North"</span>, <span class="st">"Outer Metro"</span>,</span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Fleurieu and Kangaroo Island"</span>, <span class="st">"Outer Metro"</span>,</span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Eyre and Western"</span>, <span class="st">"Eyre"</span>,</span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Yorke and Mid North"</span>, <span class="st">"Northern"</span>,</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Far North"</span>, <span class="st">"Northern"</span>,</span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Limestone Coast"</span>, <span class="st">"South East"</span>,</span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Murray and Mallee"</span>, <span class="st">"Remote Communities"</span></span>
-<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a><span class="co"># join correspondence table to regional boundaries</span></span>
-<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>sa_operational <span class="ot">&lt;-</span> sagovreg_map <span class="sc">|&gt;</span></span>
-<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(region_lookup, <span class="at">by =</span> <span class="st">"region"</span>)</span>
-<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a><span class="co"># merge boundaries into operational regions</span></span>
-<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>sa_operational_geom <span class="ot">&lt;-</span> sa_operational <span class="sc">|&gt;</span></span>
-<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(water_region) <span class="sc">|&gt;</span></span>
-<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>()</span>
-<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a><span class="co"># save processed spatial dataset</span></span>
-<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(</span>
-<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a>  sa_operational_geom, </span>
-<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/sa_operational_geom.rds"</span> </span>
-<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create correspondence table between SA Government regions and SA Water operational regions</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>region_lookup <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>region, <span class="sc">~</span>water_region,</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Eastern Adelaide"</span>, <span class="st">"Metropolitan"</span>,</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Northern Adelaide"</span>, <span class="st">"Metropolitan"</span>,</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Southern Adelaide"</span>, <span class="st">"Metropolitan"</span>,</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Western Adelaide"</span>, <span class="st">"Metropolitan"</span>,</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Adelaide Hills"</span>, <span class="st">"Outer Metro"</span>,</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Barossa, Light and Lower North"</span>, <span class="st">"Outer Metro"</span>,</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Fleurieu and Kangaroo Island"</span>, <span class="st">"Outer Metro"</span>,</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Eyre and Western"</span>, <span class="st">"Eyre"</span>,</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Yorke and Mid North"</span>, <span class="st">"Northern"</span>,</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Far North"</span>, <span class="st">"Northern"</span>,</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Limestone Coast"</span>, <span class="st">"South East"</span>,</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Murray and Mallee"</span>, <span class="st">"Remote Communities"</span></span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a><span class="co"># join correspondence table to regional boundaries</span></span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a>sa_operational <span class="ot">&lt;-</span> sagovreg_map <span class="sc">|&gt;</span></span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(region_lookup, <span class="at">by =</span> <span class="st">"region"</span>)</span>
+<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a><span class="co"># merge boundaries into operational regions</span></span>
+<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>sa_operational_geom <span class="ot">&lt;-</span> sa_operational <span class="sc">|&gt;</span></span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(water_region) <span class="sc">|&gt;</span></span>
+<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>()</span>
+<span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect processed dataset</span></span>
+<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(sa_operational_geom)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 6
+Columns: 2
+$ water_region &lt;chr&gt; "Eyre", "Metropolitan", "Northern", "Outer Metro", "Remot…
+$ geometry     &lt;GEOMETRY [°]&gt; MULTIPOLYGON (((133.8186 -2..., POLYGON ((138.67…</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save processed spatial dataset</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  sa_operational_geom, </span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"processed_data/sa_operational_geom.rds"</span> </span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
 <section id="metadata" class="level3">
 <h3 class="anchored" data-anchor-id="metadata">Metadata</h3>
-<section id="dataset-1-sa-water-quality-performance-april-2026" class="level4">
-<h4 class="anchored" data-anchor-id="dataset-1-sa-water-quality-performance-april-2026">Dataset 1: SA Water Quality Performance (April 2026)</h4>
-<p><strong>Dataset title:</strong> SA Water Quality Performance Results (April 2026) <strong>Dataset description:</strong> This processed dataset was derived from the SA Water Quality Performance Results dataset published by SA Water through the South Australian Government Open Data Portal <span class="citation" data-cites="sawater_water_quality">(<a href="#ref-sawater_water_quality" role="doc-biblioref">SA Water, 2026b</a>)</span>.</p>
-<p>The dataset contains selected drinking water quality parameters for water supply systems across South Australia. Variables were cleaned, standardised, and filtered to support analysis of regional differences in tap water characteristics.</p>
-<p>The processed dataset focuses on parameters representing mineral composition, taste and appearance characteristics, and water treatment characteristics.</p>
-<p>This dataset was created to investigate:</p>
-<ol type="1">
-<li>Differences in tap water characteristics across South Australian operational regions.</li>
-<li>Which water quality parameters vary most between regions.</li>
-<li>Variation between water supply systems within operational regions.</li>
-</ol>
-<p><strong>Data source:</strong></p>
-<ul>
-<li><strong>Publisher:</strong> SA Water</li>
-<li><strong>Platform:</strong> South Australian Government Open Data Portal</li>
-<li><strong>Original dataset:</strong> Water Quality Performance Results</li>
-</ul>
-<p><strong>Data collection method:</strong> The original data are observational monitoring data collected through SA Water’s routine drinking water quality monitoring program. Results are reported as rolling 12-month average values for each water supply system and water quality parameter.</p>
-<p><strong>Processing steps:</strong> The raw dataset was processed by:</p>
-<ul>
-<li>Removing footer rows from the source spreadsheet.</li>
-<li>Standardising variable names using clean_names().</li>
-<li>Removing variables not required for analysis (end_date and comment).</li>
-<li>Converting average_value to numeric format.</li>
-<li>Creating a below_detection indicator for values reported below detection limits.</li>
-<li>Filtering to selected parameters relevant to tap water characteristics.</li>
-</ul>
-<p><strong>Spatial coverage:</strong> South Australia</p>
-<p><strong>Temporal coverage:</strong> Rolling 12-month averages reported in the April 2026 release (12 months to 30 April 2026).</p>
-<p><strong>File format:</strong> CSV</p>
-<p><strong>Dataset dimensions:</strong></p>
-<ul>
-<li><strong>Rows:</strong> 904</li>
-<li><strong>Columns:</strong> 10</li>
-</ul>
-<p><strong>Relevant variables:</strong> | Variable | Description | | ———| ————| | <code>region_name</code> | SA Water operational region. | | <code>system_name</code> | Individual water supply system. | | <code>parameter</code> | Water quality parameter measured. | | <code>units</code> | Measurement units for the parameter. | | <code>average_value</code>| Rolling 12-month average value. | | <code>health_guideline</code> | Australian Drinking Water Guidelines health-based value. | | <code>aesthetic_guideline</code> | Australian Drinking Water Guidelines aesthetic value. | | <code>health_compliance_number</code> | Reported compliance percentage where applicable. | | <code>disinfection</code> | Primary disinfection method used. |</p>
-<p><strong>Selected parameters:</strong></p>
-<ul>
-<li>Calcium</li>
-<li>Magnesium</li>
-<li>Alkalinity</li>
-<li>Total dissolved solids</li>
-<li>pH</li>
-<li>Turbidity</li>
-<li>Sodium</li>
-<li>Sulphate</li>
-<li>Fluoride</li>
-<li>Chlorine (free residual)</li>
-</ul>
-<p><strong>Limitations:</strong></p>
-<ul>
-<li>Values are reported as rolling 12-month averages and may not reflect short-term variation.</li>
-<li>Operational regions contain multiple water supply systems, which may mask local variation.</li>
-<li>Exact sampling locations are not provided.</li>
-<li>Only selected water quality parameters were retained from the original dataset.</li>
-<li>Long-term trend analysis would require combining multiple historical releases.</li>
-</ul>
-<p><strong>License:</strong> This processed dataset is derived from data published by SA Water under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence. Users may copy, share, and adapt the data provided appropriate attribution is given to the original source.</p>
-<p><strong>Dataset created:</strong> 4 June 2026</p>
-<p><strong>Dataset last updated:</strong> 5 June 2026</p>
-<p><strong>Metadata last updated:</strong> 5 June 2026</p>
+<p>Metadata files were prepared for both processed datasets (<code>sawater_quality_apr26_metadata.txt</code> and <code>sa_operational_geom_metadata.txt</code>) and are available in the <code>processed_data</code> folder. The metadata files describe the dataset purpose, data sources, processing steps, variables, spatial and temporal coverage, limitations, and licensing information to support interpretation and reproducibility.</p>
 </section>
-<section id="dataset-2-south-australia-operational-regions" class="level4">
-<h4 class="anchored" data-anchor-id="dataset-2-south-australia-operational-regions">Dataset 2: South Australia Operational Regions</h4>
-<p><strong>Dataset title:</strong> South Australia Operational Regions</p>
-<p><strong>Dataset description:</strong> This processed spatial dataset was derived from the South Australian Government Regions dataset published by the South Australian Government <span class="citation" data-cites="sa_gov_regions">(<a href="#ref-sa_gov_regions" role="doc-biblioref">Government of South Australia, 2025</a>)</span>.</p>
-<p>The dataset contains geographic boundaries aggregated to approximate SA Water operational regions. It was created to support visualisation of regional differences in tap water characteristics across South Australia.</p>
-<p><strong>Purpose:</strong> This dataset was created to:</p>
-<ul>
-<li>Visualise regional patterns in tap water characteristics.</li>
-<li>Support mapping of SA Water operational regions.</li>
-<li>Enable comparison of water quality characteristics across regions.</li>
-</ul>
-<p><strong>Data source:</strong></p>
-<ul>
-<li><strong>Publisher:</strong> Department for Housing and Urban Development, Government of South Australia</li>
-<li><strong>Platform:</strong> South Australian Government Open Data Portal</li>
-<li><strong>Original dataset:</strong> South Australian Government Regions</li>
-</ul>
-<p><strong>Data collection method:</strong> The original dataset is administrative geographic boundary data used for government planning, monitoring, and service delivery across South Australia.</p>
-<p><strong>Processing steps:</strong> The original shapefile was processed by:</p>
-<ul>
-<li>Importing the GDA2020 version of the South Australian Government Regions shapefile.</li>
-<li>Creating a correspondence table between South Australian</li>
-<li>Government regions and SA Water operational regions.</li>
-<li>Joining the correspondence table to the spatial dataset.</li>
-<li>Aggregating regional boundaries into six operational regions: Metropolitan, Outer Metro, Eyre, Northern, South East, Remote Communities</li>
-<li>Saving the resulting spatial dataset as an RDS file.</li>
-</ul>
-<p><strong>Spatial coverage:</strong> South Australia</p>
-<p><strong>Coordinate reference system (CRS):</strong> GDA2020</p>
-<p><strong>File format:</strong> RDS (spatial sf object)</p>
-<p><strong>Dataset dimensions:</strong></p>
-<ul>
-<li>6 operational regions</li>
-<li>Polygon geometry</li>
-</ul>
-<p><strong>Variables:</strong> | Variable | Description | | ———| ————-| | <code>water_region</code> | Approximate SA Water operational region. | | <code>geometry</code> | Spatial polygon representing the operational region boundary. |</p>
-<p><strong>Region correspondence:</strong> | SA Water Operational Region | Matched South Australian Government Regions | | ————————— | ————————————————————————— | | Metropolitan | Eastern Adelaide, Northern Adelaide, Southern Adelaide, Western Adelaide | | Outer Metro | Adelaide Hills, Barossa Light and Lower North, Fleurieu and Kangaroo Island | | Eyre | Eyre and Western | | Northern | Yorke and Mid North, Far North | | South East | Limestone Coast | | Remote Communities | Murray and Mallee |</p>
-<p><strong>Limitations:</strong></p>
-<ul>
-<li>SA Water operational regions are not publicly available as spatial boundaries.</li>
-<li>Operational regions were approximated using South Australian Government regional boundaries.</li>
-<li>The correspondence table was created manually based on geographic location and SA Water service network information.</li>
-<li>The dataset is intended for exploratory visualisation and does not represent official SA Water operational boundaries.</li>
-</ul>
-<p><strong>License:</strong> This processed dataset is derived from the South Australian Government Regions dataset published by the Government of South Australia under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence.</p>
-<p>Users may copy, share, and adapt the dataset provided appropriate attribution is given to the original source. The correspondence table and regional aggregation were created for this project and do not represent official SA Water operational boundaries.</p>
-<p><strong>Dataset created:</strong> 4 June 2026</p>
-<p><strong>Dataset last updated:</strong> 5 June 2026</p>
-<p><strong>Metadata last updated:</strong> 5 June 2026</p>
-</section>
-</section>
-<section id="read-me" class="level3">
-<h3 class="anchored" data-anchor-id="read-me">Read Me</h3>
+<section id="readme-file" class="level3">
+<h3 class="anchored" data-anchor-id="readme-file">README File</h3>
+<p>A <code>README.txt</code> file was prepared following the Harvard School README template <span class="citation" data-cites="harvard_readme_files">(<a href="#ref-harvard_readme_files" role="doc-biblioref">Harvard Medical School Research Data Management, 2026</a>)</span>. The file documents the processed datasets, data sources, processing steps, and limitations, and is available in the <code>processed_data</code> folder.</p>
 </section>
 <section id="data-dictionary" class="level3">
 <h3 class="anchored" data-anchor-id="data-dictionary">Data Dictionary</h3>
+<p>A data dictionary (<code>data_dictionary.csv</code>) was prepared for both processed datasets and is available in the <code>processed_data</code> folder. The data dictionary documents variable names, data types, descriptions, example values, and derivation information to support interpretation and reuse of the data.</p>
+</section>
+<section id="processed-data-folder-structure" class="level3">
+<h3 class="anchored" data-anchor-id="processed-data-folder-structure">Processed Data Folder Structure</h3>
+<p>All processed datasets and supporting documentation are stored in the <code>processed_data</code> folder. The folder structure is shown below.</p>
+<pre class="text"><code>processed_data/
+│
+├── README.txt
+├── data_dictionary.csv
+│
+├── sawater_quality_apr26_processed.csv
+├── sawater_quality_apr26_metadata.txt
+│
+├── sa_operational_geom.rds
+└── sa_operational_geom_metadata.txt</code></pre>
+<p>The folder contains the processed datasets used for analysis, together with supporting documentation including metadata files, a data dictionary, and a README file to facilitate interpretation, reproducibility, and reuse.</p>
 <!-- Task 2 Tab: Writing your blogpost -->
 </section>
 </div>
@@ -738,11 +662,26 @@ Complete Home Filtration. (2024, November). <em>Chemicals or contaminants: What 
 <div id="ref-dew2026waterdryconditions" class="csl-entry" role="listitem">
 Department for Environment and Water. (2026). <em>Water and dry conditions</em>. Government of South Australia. <a href="https://www.environment.sa.gov.au/topics/water-and-river-murray/projects-plans-security-and-legislation/water-security/water-and-dry-conditions">https://www.environment.sa.gov.au/topics/water-and-river-murray/projects-plans-security-and-legislation/water-security/water-and-dry-conditions</a>
 </div>
+<div id="ref-janitor" class="csl-entry" role="listitem">
+Firke, S. (2024). <em>Janitor: Simple tools for examining and cleaning dirty data</em>. <a href="https://doi.org/10.32614/CRAN.package.janitor">https://doi.org/10.32614/CRAN.package.janitor</a>
+</div>
 <div id="ref-sa_gov_regions" class="csl-entry" role="listitem">
 Government of South Australia. (2025). <em>SA government regions</em> [Dataset]. Data.SA. <a href="https://data.sa.gov.au/data/dataset/south-australian-government-regions">https://data.sa.gov.au/data/dataset/south-australian-government-regions</a>
 </div>
+<div id="ref-harvard_readme_files" class="csl-entry" role="listitem">
+Harvard Medical School Research Data Management. (2026). <em>README files</em>. Harvard Medical School. <a href="https://datamanagement.hms.harvard.edu/collect-analyze/documentation-metadata/readme-files">https://datamanagement.hms.harvard.edu/collect-analyze/documentation-metadata/readme-files</a>
+</div>
+<div id="ref-here" class="csl-entry" role="listitem">
+Müller, K. (2025). <em>Here: A simpler way to find your files</em>. <a href="https://doi.org/10.32614/CRAN.package.here">https://doi.org/10.32614/CRAN.package.here</a>
+</div>
 <div id="ref-nhmrc_physical_chemical_values" class="csl-entry" role="listitem">
 National Health and Medical Research Council. (2026). <em>1.3.4 physical and chemical guideline values</em>. Australian Drinking Water Guidelines. <a href="https://guidelines.nhmrc.gov.au/australian-drinking-water-guidelines/intro/chapter-1/1.3-water-quality-characteristics/1.3.4-physical-and-chemical-guideline-values">https://guidelines.nhmrc.gov.au/australian-drinking-water-guidelines/intro/chapter-1/1.3-water-quality-characteristics/1.3.4-physical-and-chemical-guideline-values</a>
+</div>
+<div id="ref-sf_article" class="csl-entry" role="listitem">
+Pebesma, E. (2018). <span class="nocase">Simple Features for R: Standardized Support for Spatial Vector Data</span>. <em><span>The R Journal</span></em>, <em>10</em>(1), 439–446. <a href="https://doi.org/10.32614/RJ-2018-009">https://doi.org/10.32614/RJ-2018-009</a>
+</div>
+<div id="ref-sf_book" class="csl-entry" role="listitem">
+Pebesma, E., &amp; Bivand, R. (2023). <em><span class="nocase">Spatial Data Science: With applications in R</span></em>. <span>Chapman and Hall/CRC</span>. <a href="https://doi.org/10.1201/9780429459016">https://doi.org/10.1201/9780429459016</a>
 </div>
 <div id="ref-sawater_networks_treatment" class="csl-entry" role="listitem">
 SA Water. (2026a). <em>Networks and water treatment facilities</em>. SA Water. <a href="https://www.sawater.com.au/water-and-the-environment/how-we-deliver-your-water-services/networks-and-water-treatment-facilities">https://www.sawater.com.au/water-and-the-environment/how-we-deliver-your-water-services/networks-and-water-treatment-facilities</a>
@@ -752,6 +691,12 @@ SA Water. (2026b). <em>Water quality</em> [Dataset]. Data.SA. <a href="https://d
 </div>
 <div id="ref-sawater_water_quality_results_Apr2026" class="csl-entry" role="listitem">
 SA Water. (2026c). <em>Water quality performance results</em> [Dataset]. Data.SA. <a href="https://data.sa.gov.au/data/dataset/water-quality/resource/9d161800-cfdd-46d7-8236-3e601fdc4a1c">https://data.sa.gov.au/data/dataset/water-quality/resource/9d161800-cfdd-46d7-8236-3e601fdc4a1c</a>
+</div>
+<div id="ref-tidyverse" class="csl-entry" role="listitem">
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J., Robinson, D., Seidel, D. P., Spinu, V., … Yutani, H. (2019). Welcome to the <span class="nocase">tidyverse</span>. <em>Journal of Open Source Software</em>, <em>4</em>(43), 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
+</div>
+<div id="ref-readxl" class="csl-entry" role="listitem">
+Wickham, H., &amp; Bryan, J. (2025). <em>Readxl: Read excel files</em>. <a href="https://doi.org/10.32614/CRAN.package.readxl">https://doi.org/10.32614/CRAN.package.readxl</a>
 </div>
 </div></section></div></main>
 <!-- /main column -->
