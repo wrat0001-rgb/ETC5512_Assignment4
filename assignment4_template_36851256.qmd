@@ -358,15 +358,368 @@ To visualise regional patterns, the South Australian Government Regions dataset 
 The analysis focuses on selected water quality parameters representing mineral composition, taste and appearance characteristics, and water treatment characteristics. These parameters provide a manageable way to compare tap water characteristics across South Australia.
 
 ### What does the data tell us?
-#### Regional differences in tap water characteristics
+#### How do tap water characteristics vary across regions?
 
-#### Which water quality characteristics vary the most?
+To compare regional tap water characteristics, three representative parameters were selected: **Total Dissolved Solids (TDS)** for mineral composition, **pH** for taste and appearance characteristics, and **free residual chlorine** for water treatment characteristics. According to the Australian Drinking Water Guidelines (ADWG), the aesthetic guideline for TDS is 600 mg/L, the acceptable pH range is 6.5–8.5, and chlorine concentrations up to 5 mg/L are considered acceptable in drinking water [@nhmrc_physical_chemical_values].
+
+```{r}
+#| include: false
+
+# define the water quality parameters selected for spatial analysis
+analysis1_params <- c(
+  "Total dissolved solids",
+  "pH",
+  "Chlorine (free residual)"
+)
+
+# keep only observations for the selected parameters
+analysis1_data <- sawater_quality_apr26_processed |>
+  filter(parameter %in% analysis1_params)
+
+# calculate the average water quality value for each parameter within each operational water region
+analysis1_summary <- analysis1_data |>
+  group_by(region_name, parameter) |>
+  summarise(
+    avg_value = mean(average_value, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# attach the summarised water quality results to the spatial boundaries of SA Water operational regions
+map_data <- sa_operational_geom |>
+  left_join(
+    analysis1_summary,
+    by = c("water_region" = "region_name")
+  )
+```
+
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+#| label: fig-tds_map
+#| fig-cap: "Total Dissolved Solids Across South Australia"
+
+# load packages for non-overlapping map labels and colour palettes
+library(ggrepel)
+library(RColorBrewer)
+
+# extract Total Dissolved Solids (TDS) observations for mapping
+tds_map <- map_data |>
+  filter(parameter == "Total dissolved solids")
+
+# compute polygon centroids to determine label positions
+coords <- st_centroid(tds_map)
+
+# extract centroid coordinates for use in map annotations
+coords_xy <- cbind(
+  tds_map,
+  st_coordinates(coords)
+)
+
+# create a choropleth map showing average TDS levels across SA Water operational regions
+ggplot(tds_map) +
+  geom_sf(aes(fill = avg_value)) +
+  
+  # add region labels at centroid locations while avoiding overlap
+  geom_text_repel(
+    data = coords_xy,
+    aes(X, Y, label = water_region),
+    color = "black",
+    fontface = "bold",
+    size = 3
+  ) +
+  
+  # apply a sequential blue colour scale where darker shades represent higher TDS concentrations
+  scale_fill_distiller(
+  palette = "Blues",
+  direction = 1,
+  labels = scales::comma
+) +
+  
+  # add map title, axis labels and legend title
+  labs(
+    title = "Total Dissolved Solids Across South Australia",
+    x = "Longitude",
+    y = "Latitude",
+    fill = "TDS (mg/L)"
+  ) +
+
+  theme_minimal()
+```
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+#| label: fig-ph_map
+#| fig-cap: "pH Across South Australia"
+
+# filter pH data
+ph_map <- map_data |>
+  filter(parameter == "pH")
+
+# create region centroids for label placement
+coords <- st_centroid(ph_map)
+
+# extract centroid coordinates
+coords_xy <- cbind(
+  ph_map,
+  st_coordinates(coords)
+)
+
+# create pH map by operational region
+ggplot(ph_map) +
+  geom_sf(aes(fill = avg_value)) +
+  
+  # add region labels
+  geom_text_repel(
+    data = coords_xy,
+    aes(X, Y, label = water_region),
+    color = "black",
+    fontface = "bold",
+    size = 3
+  ) +
+  
+  # apply colour scale
+  scale_fill_distiller(
+  palette = "Blues",
+  direction = 1,
+  labels = scales::comma
+  ) +
+  
+  # add title and axis labels
+  labs(
+    title = "pH Across South Australia",
+    x = "Longitude",
+    y = "Latitude",
+    fill = "pH"
+  ) +
+
+  theme_minimal()
+```
+
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+#| label: fig-chlorine_map
+#| fig-cap: "Free Residual Chlorine Across South Australia"
+
+# filter free residual chlorine data
+chlorine_map <- map_data |>
+  filter(parameter == "Chlorine (free residual)")
+
+# create region centroids for label placement
+coords <- st_centroid(chlorine_map)
+
+# extract centroid coordinates
+coords_xy <- cbind(
+  chlorine_map,
+  st_coordinates(coords)
+)
+
+# create free residual chlorine map by operational region
+ggplot(chlorine_map) +
+  geom_sf(aes(fill = avg_value)) +
+  
+  # add region labels
+  geom_text_repel(
+    data = coords_xy,
+    aes(X, Y, label = water_region),
+    color = "black",
+    fontface = "bold",
+    size = 3
+  ) +
+  
+  # apply colour scale
+  scale_fill_distiller(
+  palette = "Blues",
+  direction = 1,
+  labels = scales::comma
+  ) +
+  
+  # add title and axis labels
+  labs(
+    title = "Free Residual Chlorine Across South Australia",
+    x = "Longitude",
+    y = "Latitude",
+    fill = "Chlorine concentration (mg/L)"
+  ) +
+
+  theme_minimal()
+```
+
+@fig-tds_map, @fig-ph_map, @fig-chlorine_map show that **all regions recorded values within ADWG guideline ranges**, indicating that drinking water quality remains acceptable across South Australia. However, noticeable regional differences exist. **TDS showed the largest variation**, with the South East and Eyre regions recording higher mineral concentrations than Metropolitan and Outer Metro regions. Higher TDS values indicate greater concentrations of dissolved minerals, which can influence the taste and perceived hardness of tap water [@nhmrc_physical_chemical_values]. In contrast, pH varied only slightly between regions, while free residual chlorine showed moderate variation, reflecting differences in water treatment and distribution systems.
+
+These maps show that drinking water quality remains within ADWG guideline ranges across South Australia, but noticeable regional differences exist. The largest differences are observed for mineral-related characteristics, particularly TDS, whereas pH remains relatively consistent and chlorine shows only moderate variation. This raises a further question: which water quality parameters contribute most to these regional differences?
+
+#### Which water quality parameters vary the most?
+To identify which water quality characteristics contribute most to the observed regional differences, the **coefficient of variation (CV)** was calculated for all selected parameters. Unlike standard deviation, the CV measures variation relative to the average value of each parameter, allowing comparison between variables with different units and scales.
+
+```{r}
+#| echo: false
+#| label: tbl-summary_stats
+#| tbl-cap: "Summary statistics and ADWG guideline values for selected water quality parameters across South Australia"
+
+# summary statistics by parameter
+variation_table <- sawater_quality_apr26_processed |>
+  group_by(parameter) |>
+  summarise(
+    mean = mean(average_value, na.rm = TRUE),
+    sd = sd(average_value, na.rm = TRUE),
+    cv = sd / mean,
+    
+    # retain guideline values
+    health_guideline =
+      first(na.omit(health_guideline)),
+    
+    aesthetic_guideline =
+      first(na.omit(aesthetic_guideline)),
+    
+    .groups = "drop"
+  ) |>
+  
+  # round numeric values
+  mutate(
+    mean = round(mean, 2),
+    sd = round(sd, 2),
+    cv = round(cv, 2)
+  ) |>
+  
+  arrange(desc(cv))
+
+library(gt)
+
+variation_table |>
+  gt() |>
+  cols_label(
+    parameter = "Parameter",
+    mean = "Mean",
+    sd = "SD",
+    cv = "CV",
+    health_guideline = "Health Guideline",
+    aesthetic_guideline = "Aesthetic Guideline"
+  ) |>
+  fmt_number(
+    columns = c(mean, sd, cv),
+    decimals = 2
+  ) |>
+  tab_source_note(
+    source_note =
+      md("*Note:* Health guideline and aesthetic guideline values are based on the Australian Drinking Water Guidelines (ADWG) 2011.")
+  )
+```
+
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+#| label: fig-variation_summary
+#| fig-cap: "Variation in Water Quality Parameters Across Regions"
+
+ggplot(
+  variation_table,
+  aes(
+    x = reorder(parameter, cv),
+    y = cv,
+    fill = cv
+  )
+) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_distiller(
+    palette = "Blues",
+    direction = 1,
+    guide = "none"
+  ) +
+  labs(
+    x = "Parameter",
+    y = "Coefficient of Variation"
+  ) +
+  theme_minimal()
+```
+
+@fig-variation_summary and @tbl-summary_stats show that turbidity exhibited the greatest regional variation, followed by several mineral-related parameters including magnesium, calcium, alkalinity, sodium, and sulphate. Although TDS showed clear regional differences in @fig-tds_map, several individual mineral parameters varied even more relative to their average values. In contrast, pH showed very little variation across regions, consistent with @fig-ph_map, while free residual chlorine in @fig-chlorine_map displayed only moderate variation.
+
+Together, these results suggest that regional differences in drinking water are driven primarily by mineral-related characteristics rather than treatment-related characteristics. However, the analysis so far is based on regional averages, which may conceal important differences between individual water supply systems. The next section investigates variation within a single region.
+
 #### Are regional averages hiding local differences?
+
+Because TDS showed clear regional differences in @fig-tds_map and is closely related to dissolved mineral content, it was selected for further investigation. The **Remote Communities region was chosen** because it contains many individual water supply systems and displayed noticeable variation in TDS, allowing local differences to be explored in more detail.
+
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+#| label: fig-remote_tds
+#| fig-cap: "TDS Across Water Supply Systems in Remote Communities"
+
+# filter Remote Communities TDS data
+remote_tds <- sawater_quality_apr26_processed |>
+  filter(
+    region_name == "Remote Communities",
+    parameter == "Total dissolved solids"
+  )
+
+# calculate regional average
+remote_avg <- mean(remote_tds$average_value)
+
+ggplot(
+  remote_tds,
+  aes(
+    x = reorder(system_name, average_value),
+    y = average_value
+  )
+) +
+  geom_point(
+    color = "#2171B5",
+    size = 2
+  ) +
+
+  # regional average
+  geom_hline(
+    aes(
+      yintercept = remote_avg,
+      linetype = "Remote Communities regional average"
+    ),
+    color = "red",
+    linewidth = 0.6
+  ) +
+
+  # ADWG aesthetic guideline for TDS
+  geom_hline(
+    aes(
+      yintercept = 600,
+      linetype = "ADWG aesthetic guideline"
+    ),
+    color = "darkred",
+    linewidth = 0.6
+  ) +
+
+  coord_flip() +
+
+  scale_linetype_manual(
+    values = c(
+      "Remote Communities regional average" = "dashed",
+      "ADWG aesthetic guideline" = "dotted"
+    ),
+    name = NULL
+  ) +
+
+  labs(
+    x = "Water Supply System",
+    y = "TDS (mg/L)"
+  ) +
+
+  theme_minimal()
+```
+
+@fig-remote_tds reveals substantial variation between water supply systems. Although the Remote Communities regional average is approximately 360 mg/L, individual systems range from around 30 mg/L to over 800 mg/L. Several systems exceed the ADWG aesthetic guideline of 600 mg/L, while others remain well below both the guideline and regional average.
+
+This variation suggests that local water supply systems can differ considerably even within the same operational region, likely reflecting differences in source water and mineral composition. Higher TDS values indicate greater concentrations of dissolved minerals, which may contribute to a stronger mineral taste. Therefore, regional averages are useful for identifying broad patterns but may not fully represent the experience of individual communities.
 
 ### So what?
 
 
-#### What could be explored next?
 
 ### Blogpost Structure
 

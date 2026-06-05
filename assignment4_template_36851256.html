@@ -636,21 +636,661 @@ $ geometry     &lt;GEOMETRY [°]&gt; MULTIPOLYGON (((133.8186 -2..., POLYGON ((1
 </section>
 <section id="what-does-the-data-tell-us" class="level3">
 <h3 class="anchored" data-anchor-id="what-does-the-data-tell-us">What does the data tell us?</h3>
-<section id="regional-differences-in-tap-water-characteristics" class="level4">
-<h4 class="anchored" data-anchor-id="regional-differences-in-tap-water-characteristics">Regional differences in tap water characteristics</h4>
+<section id="how-do-tap-water-characteristics-vary-across-regions" class="level4">
+<h4 class="anchored" data-anchor-id="how-do-tap-water-characteristics-vary-across-regions">How do tap water characteristics vary across regions?</h4>
+<p>To compare regional tap water characteristics, three representative parameters were selected: <strong>Total Dissolved Solids (TDS)</strong> for mineral composition, <strong>pH</strong> for taste and appearance characteristics, and <strong>free residual chlorine</strong> for water treatment characteristics. According to the Australian Drinking Water Guidelines (ADWG), the aesthetic guideline for TDS is 600 mg/L, the acceptable pH range is 6.5–8.5, and chlorine concentrations up to 5 mg/L are considered acceptable in drinking water <span class="citation" data-cites="nhmrc_physical_chemical_values">(<a href="#ref-nhmrc_physical_chemical_values" role="doc-biblioref">National Health and Medical Research Council, 2026</a>)</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-tds_map" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tds_map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment4_template_36851256_files/figure-html/fig-tds_map-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tds_map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Total Dissolved Solids Across South Australia
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-ph_map" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ph_map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment4_template_36851256_files/figure-html/fig-ph_map-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ph_map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: pH Across South Australia
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-chlorine_map" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chlorine_map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment4_template_36851256_files/figure-html/fig-chlorine_map-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chlorine_map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Free Residual Chlorine Across South Australia
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-tds_map" class="quarto-xref">Figure&nbsp;1</a>, <a href="#fig-ph_map" class="quarto-xref">Figure&nbsp;2</a>, <a href="#fig-chlorine_map" class="quarto-xref">Figure&nbsp;3</a> show that <strong>all regions recorded values within ADWG guideline ranges</strong>, indicating that drinking water quality remains acceptable across South Australia. However, noticeable regional differences exist. <strong>TDS showed the largest variation</strong>, with the South East and Eyre regions recording higher mineral concentrations than Metropolitan and Outer Metro regions. Higher TDS values indicate greater concentrations of dissolved minerals, which can influence the taste and perceived hardness of tap water <span class="citation" data-cites="nhmrc_physical_chemical_values">(<a href="#ref-nhmrc_physical_chemical_values" role="doc-biblioref">National Health and Medical Research Council, 2026</a>)</span>. In contrast, pH varied only slightly between regions, while free residual chlorine showed moderate variation, reflecting differences in water treatment and distribution systems.</p>
+<p>These results suggest that regional differences in tap water characteristics are driven more by mineral composition than by pH or treatment-related characteristics.</p>
 </section>
-<section id="which-water-quality-characteristics-vary-the-most" class="level4">
-<h4 class="anchored" data-anchor-id="which-water-quality-characteristics-vary-the-most">Which water quality characteristics vary the most?</h4>
+<section id="which-water-quality-parameters-vary-the-most" class="level4">
+<h4 class="anchored" data-anchor-id="which-water-quality-parameters-vary-the-most">Which water quality parameters vary the most?</h4>
+<p>To identify which water quality characteristics contribute most to the observed regional differences, the <strong>coefficient of variation (CV)</strong> was calculated for all selected parameters. Unlike standard deviation, the CV measures variation relative to the average value of each parameter, allowing comparison between variables with different units and scales.</p>
+<div class="cell">
+<div id="tbl-summary_stats" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary_stats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary statistics and ADWG guideline values for selected water quality parameters across South Australia
+</figcaption>
+<div aria-describedby="tbl-summary_stats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="wqujwgylik" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wqujwgylik table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#wqujwgylik thead, #wqujwgylik tbody, #wqujwgylik tfoot, #wqujwgylik tr, #wqujwgylik td, #wqujwgylik th {
+  border-style: none;
+}
+
+#wqujwgylik p {
+  margin: 0;
+  padding: 0;
+}
+
+#wqujwgylik .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#wqujwgylik .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#wqujwgylik .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#wqujwgylik .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#wqujwgylik .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wqujwgylik .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wqujwgylik .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wqujwgylik .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#wqujwgylik .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#wqujwgylik .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#wqujwgylik .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#wqujwgylik .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#wqujwgylik .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#wqujwgylik .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#wqujwgylik .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wqujwgylik .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wqujwgylik .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wqujwgylik .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wqujwgylik .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wqujwgylik .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#wqujwgylik .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#wqujwgylik .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#wqujwgylik .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wqujwgylik .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#wqujwgylik .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#wqujwgylik .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wqujwgylik .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wqujwgylik .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#wqujwgylik .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wqujwgylik .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#wqujwgylik .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wqujwgylik .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wqujwgylik .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wqujwgylik .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wqujwgylik .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wqujwgylik .gt_left {
+  text-align: left;
+}
+
+#wqujwgylik .gt_center {
+  text-align: center;
+}
+
+#wqujwgylik .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wqujwgylik .gt_font_normal {
+  font-weight: normal;
+}
+
+#wqujwgylik .gt_font_bold {
+  font-weight: bold;
+}
+
+#wqujwgylik .gt_font_italic {
+  font-style: italic;
+}
+
+#wqujwgylik .gt_super {
+  font-size: 65%;
+}
+
+#wqujwgylik .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#wqujwgylik .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#wqujwgylik .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#wqujwgylik .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#wqujwgylik .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#wqujwgylik .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#wqujwgylik .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#wqujwgylik .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#wqujwgylik div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="parameter" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Parameter</th>
+<th id="mean" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean</th>
+<th id="sd" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">SD</th>
+<th id="cv" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">CV</th>
+<th id="health_guideline" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Health Guideline</th>
+<th id="aesthetic_guideline" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Aesthetic Guideline</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="parameter">Turbidity</td>
+<td class="gt_row gt_right" headers="mean">0.16</td>
+<td class="gt_row gt_right" headers="sd">0.18</td>
+<td class="gt_row gt_right" headers="cv">1.11</td>
+<td class="gt_row gt_left" headers="health_guideline">NG</td>
+<td class="gt_row gt_left" headers="aesthetic_guideline">≤ 5</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="parameter">Magnesium</td>
+<td class="gt_row gt_right" headers="mean">18.82</td>
+<td class="gt_row gt_right" headers="sd">17.41</td>
+<td class="gt_row gt_right" headers="cv">0.92</td>
+<td class="gt_row gt_left" headers="health_guideline">NG</td>
+<td class="gt_row gt_left" headers="aesthetic_guideline">NG</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="parameter">Calcium</td>
+<td class="gt_row gt_right" headers="mean">35.21</td>
+<td class="gt_row gt_right" headers="sd">31.77</td>
+<td class="gt_row gt_right" headers="cv">0.90</td>
+<td class="gt_row gt_left" headers="health_guideline">NG</td>
+<td class="gt_row gt_left" headers="aesthetic_guideline">NG</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="parameter">Alkalinity</td>
+<td class="gt_row gt_right" headers="mean">147.38</td>
+<td class="gt_row gt_right" headers="sd">122.47</td>
+<td class="gt_row gt_right" headers="cv">0.83</td>
+<td class="gt_row gt_left" headers="health_guideline">NG</td>
+<td class="gt_row gt_left" headers="aesthetic_guideline">NG</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="parameter">Sodium</td>
+<td class="gt_row gt_right" headers="mean">96.27</td>
+<td class="gt_row gt_right" headers="sd">79.99</td>
+<td class="gt_row gt_right" headers="cv">0.83</td>
+<td class="gt_row gt_left" headers="health_guideline">NG</td>
+<td class="gt_row gt_left" headers="aesthetic_guideline">≤ 180</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="parameter">Sulphate</td>
+<td class="gt_row gt_right" headers="mean">41.39</td>
+<td class="gt_row gt_right" headers="sd">32.75</td>
+<td class="gt_row gt_right" headers="cv">0.79</td>
+<td class="gt_row gt_left" headers="health_guideline">NG</td>
+<td class="gt_row gt_left" headers="aesthetic_guideline">≤ 250</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="parameter">Fluoride</td>
+<td class="gt_row gt_right" headers="mean">0.49</td>
+<td class="gt_row gt_right" headers="sd">0.32</td>
+<td class="gt_row gt_right" headers="cv">0.65</td>
+<td class="gt_row gt_left" headers="health_guideline">≤ 1.5</td>
+<td class="gt_row gt_left" headers="aesthetic_guideline">NG</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="parameter">Chlorine (free residual)</td>
+<td class="gt_row gt_right" headers="mean">0.81</td>
+<td class="gt_row gt_right" headers="sd">0.46</td>
+<td class="gt_row gt_right" headers="cv">0.56</td>
+<td class="gt_row gt_left" headers="health_guideline">≤ 5</td>
+<td class="gt_row gt_left" headers="aesthetic_guideline">≤ 0.6</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="parameter">Total dissolved solids</td>
+<td class="gt_row gt_right" headers="mean">389.92</td>
+<td class="gt_row gt_right" headers="sd">206.13</td>
+<td class="gt_row gt_right" headers="cv">0.53</td>
+<td class="gt_row gt_left" headers="health_guideline">NG</td>
+<td class="gt_row gt_left" headers="aesthetic_guideline">≤ 600</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="parameter">pH</td>
+<td class="gt_row gt_right" headers="mean">7.79</td>
+<td class="gt_row gt_right" headers="sd">0.50</td>
+<td class="gt_row gt_right" headers="cv">0.06</td>
+<td class="gt_row gt_left" headers="health_guideline">NG</td>
+<td class="gt_row gt_left" headers="aesthetic_guideline">6.5 - 8.5</td>
+</tr>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="6" class="gt_sourcenote"><em>Note:</em> Health guideline and aesthetic guideline values are based on the Australian Drinking Water Guidelines (ADWG) 2011.</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-variation_summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-variation_summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment4_template_36851256_files/figure-html/fig-variation_summary-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-variation_summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Variation in Water Quality Parameters Across Regions
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-variation_summary" class="quarto-xref">Figure&nbsp;4</a> shows that turbidity exhibited the greatest regional variation, followed by several mineral-related parameters including magnesium, calcium, alkalinity, sodium, and sulphate. Although Total Dissolved Solids (TDS) showed noticeable regional differences in <a href="#fig-tds_map" class="quarto-xref">Figure&nbsp;1</a>, several individual mineral parameters exhibited even greater relative variation. This suggests that variation in drinking water characteristics is driven by specific mineral characteristics rather than overall dissolved mineral content alone. In contrast, pH showed very little variation across regions, consistent with the pattern observed in <a href="#fig-ph_map" class="quarto-xref">Figure&nbsp;2</a>, while free residual chlorine displayed moderate variation.</p>
+<p>These results suggest that variation is more pronounced for mineral-related characteristics than for treatment-related characteristics such as free residual chlorine. However, the analysis so far is based on regional averages, which may mask variation between individual water supply systems within the same operational region. The next section explores whether meaningful differences also exist at the local supply-system level.</p>
 </section>
 <section id="are-regional-averages-hiding-local-differences" class="level4">
 <h4 class="anchored" data-anchor-id="are-regional-averages-hiding-local-differences">Are regional averages hiding local differences?</h4>
+<p>To investigate whether regional averages conceal local variation, Total Dissolved Solids (TDS) was examined across individual water supply systems within the <strong>Remote Communities region</strong>. TDS was selected because it showed noticeable regional differences in <a href="#fig-tds_map" class="quarto-xref">Figure&nbsp;1</a> and is an indicator of dissolved mineral content in drinking water.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-remote_tds" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-remote_tds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment4_template_36851256_files/figure-html/fig-remote_tds-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-remote_tds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: TDS Across Water Supply Systems in Remote Communities
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-remote_tds" class="quarto-xref">Figure&nbsp;5</a> shows substantial variation between systems. While the Remote Communities regional average is approximately 360 mg/L, individual systems range from around 30 mg/L to over 800 mg/L. Several systems exceed the ADWG aesthetic guideline of 600 mg/L, whereas others remain well below both the regional average and guideline value. Differences in TDS are likely related to variations in local water sources and dissolved mineral content. Higher TDS values indicate greater concentrations of dissolved minerals, which may influence the taste and aesthetic acceptability of drinking water by producing a stronger mineral taste <span class="citation" data-cites="nhmrc_physical_chemical_values">(<a href="#ref-nhmrc_physical_chemical_values" role="doc-biblioref">National Health and Medical Research Council, 2026</a>)</span>.</p>
+<p>These results suggest that regional averages are useful for identifying broad patterns but may mask important local differences. Water quality characteristics can vary considerably between supply systems within the same operational region.</p>
 </section>
 </section>
 <section id="so-what" class="level3">
 <h3 class="anchored" data-anchor-id="so-what">So what?</h3>
-<section id="what-could-be-explored-next" class="level4">
-<h4 class="anchored" data-anchor-id="what-could-be-explored-next">What could be explored next?</h4>
-</section>
 </section>
 <section id="blogpost-structure" class="level3">
 <h3 class="anchored" data-anchor-id="blogpost-structure">Blogpost Structure</h3>
