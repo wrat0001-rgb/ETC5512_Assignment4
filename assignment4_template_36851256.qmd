@@ -13,6 +13,9 @@ nocite: |
   @sf_book
   @sf_article
   @here
+  @ggrepe
+  @rcolorbrewer
+  @gt
 editor: visual
 ---
 
@@ -721,21 +724,73 @@ This variation suggests that local water supply systems can differ considerably 
 
 This analysis shows that tap water characteristics do vary across South Australia, but the differences are primarily related to mineral composition rather than drinking water safety. While pH remained relatively consistent across regions, larger differences were observed for mineral-related characteristics such as Total Dissolved Solids (TDS), calcium, magnesium, and sulphate.
 
-These differences are likely influenced by the diverse water sources used across South Australia, including River Murray water, reservoirs, groundwater, and desalinated water [@epa_where_do_we_get_our_water; @dew_water_resources_environments]. However, all regions generally remained within Australian Drinking Water Guidelines (ADWG) ranges [@nhmrc_physical_chemical_values].
+These differences are likely influenced by the diverse water sources used across South Australia, including River Murray water, reservoirs, groundwater, and desalinated water [@epa_where_water_comes_from; @dew_water_resources_environments]. However, all regions generally remained within Australian Drinking Water Guidelines (ADWG) ranges [@nhmrc_physical_chemical_values].
 
 The analysis also revealed that regional averages can hide substantial local variation. Within the Remote Communities region, TDS values ranged from around 30 mg/L to over 800 mg/L, demonstrating that water characteristics may differ considerably between individual supply systems.
 
 Overall, the results suggest that perceptions of differences in South Australian tap water are not entirely unfounded. While drinking water generally remains within ADWG guideline ranges, differences in mineral composition and source water characteristics can influence taste and consumer perception [@tait2025adelaide_tap_water].
 
 
+### What could be explored further?
+
+This analysis focused on regional differences in selected water quality characteristics using a single reporting period. Future analyses could explore:
+
+- How tap water characteristics change over time by combining multiple historical SA Water datasets.
+- Whether differences in water characteristics can be linked to specific water sources, such as River Murray water, groundwater, reservoirs, or desalinated water.
+- Additional water quality parameters not included in this study, such as hardness, aluminium, or nitrate, to provide a more comprehensive assessment of regional water quality.
+- The relationship between measured water quality characteristics and consumer perceptions of taste and drinking water quality.
+
+
 <!-- Task 3 Tab: Behind the Scenes -  -->
 
 ## Behind the Scenes
 
-### What's in this section
+### Question 5
+*Tell us about parts of your data processing or analysis that weren’t “sexy” and wouldn’t typically be included in a blog post. (e.g. Was their any data drudgery or time intensive wrangling? Were there any repetitive tasks or manual tasks? If it was easy, describe what made it easy?)*
 
-Here is where you should tell us about your reflection on your analysis (Task 3).
+Some of the less visible but important tasks in this project included:
 
-Again, these are the details about **your** perspective and the gritty details behind the scenes of your analysis.
+- I spent time cleaning the SA Water dataset by removing footer rows, standardising variable names, and converting values reported below detection limits into numeric format.
+- I reviewed a large number of water quality parameters before selecting a smaller set that best represented mineral composition, taste and appearance, and water treatment characteristics.
+- One of the most time-consuming tasks was manually creating a correspondence table between SA Water operational regions and South Australian Government regions because the two datasets used different geographic classifications.
+- I also experimented with displaying all parameters on a single faceted map. However, differences in units and value ranges made the maps difficult to interpret, so I spent considerable time testing different approaches before deciding to focus on separate maps for three representative parameters.
+- Although they were not featured in the blog post, preparing metadata, data dictionaries, and a README file required additional effort to ensure the processed datasets were well documented and reproducible.
+
+
+### Question 6
+*Were there any challenges that you faced in conducting this analysis. These may take the form of data limitations or coding challenges? (e.g. Was there anything in your analysis that you were not anticipating when you started? Did you have to change your intended scope? Did you need to master a new skill? Were there any problems you were proud of solving?)*
+
+Some challenges encountered during this project included:
+
+- The SA Water dataset uses operational regions, while the spatial dataset uses South Australian Government regions. Because no official correspondence table was available, an approximate mapping had to be created manually.
+- The water quality parameters have very different units and value ranges. I initially explored displaying all parameters using faceted maps, but differences in scales made comparisons difficult and sometimes visually misleading. As a result, I focused on three representative parameters.
+- The dataset does not include detailed information about water sources for individual supply systems, limiting the ability to explain the exact causes of regional differences.
+- I originally considered analysing changes in water quality over time. However, this would require combining multiple historical SA Water datasets, which was beyond the scope of this project.
+
+A key skill developed during this project was working with spatial data in R, including joining spatial and tabular datasets to create maps and investigate regional patterns.
+
+I was particularly proud of solving the mismatch between the two regional classification systems and creating operational region maps that could be linked to the water quality data. This required manually developing a correspondence table because no official mapping was available, and it enabled the regional visualisations that formed a key part of the analysis.
+
+
+### Question 7
+*Tell us about any imperfect parts of your work and how you would like to expand or improve this analysis in future? Be clear about any limitations or aspects of your analysis that fell beyond scope.*
+
+Some limitations of this analysis and potential future improvements include:
+
+- I used data from a single reporting period, which provides only a snapshot of tap water characteristics. In future, I would like to combine multiple historical SA Water datasets to investigate long-term trends.
+- I focused on a selected set of water quality parameters to keep the analysis manageable. Including additional parameters could provide a more comprehensive assessment of regional water quality.
+- The dataset does not contain detailed information about water sources for individual supply systems, limiting my ability to explain the exact causes of regional differences. Future analyses could investigate whether differences are associated with specific water sources such as River Murray water, groundwater, reservoirs, or desalinated water.
+- This study focused on measured water quality characteristics rather than consumer experiences. In future, I would be interested in exploring whether differences in water quality parameters are related to public perceptions of tap water taste and quality.
+
+
+### Question 8
+*Tell us about how you used AI in your approach to your assignment. (e.g. Was AI consistently reliable? Did you provide AI with additional context? Was there anywhere where you questioned or verified the AI outputs? Was there anywhere we AI helped you learn something new?)*
+
+AI was used as a support tool throughout this project for brainstorming research questions, identifying meaningful analyses within the limitations of the available dataset, assisting with R coding, and improving documentation and written communication. It helped me explore analytical approaches, such as using the coefficient of variation (CV) to compare variables with different units and scales, and learn new techniques such as creating centroids and adding labels to spatial maps in R. To obtain relevant responses, I provided detailed context about the datasets, research objectives, and assignment requirements. However, AI outputs were not accepted without review. I verified coding suggestions, interpretations, and conclusions against the data, relevant literature, and assignment requirements before incorporating them into the final submission.
+
+
+### Question 9
+*Submit 4 earlier versions of your .qmd files to show your iterative process. These versions must show iterations of your work (not just a linear progression of Task 1, Task 2, Task 3, citations). Reflect on the progress made between each versions by providing a short statement for markers of what you fixed/learnt/improved/changed between each file. Also like to reflect on what changed between your first checklist submission. (Note: There is an expectation for students familiar with GitHub that you will submit a Github repository and refer to 4 individual commits.)*
+
 
 :::
