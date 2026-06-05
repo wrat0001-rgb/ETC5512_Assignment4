@@ -651,7 +651,7 @@ Because TDS showed clear regional differences in @fig-tds_map and is closely rel
 #| message: false
 #| echo: false
 #| label: fig-remote_tds
-#| fig-cap: "TDS Across Water Supply Systems in Remote Communities"
+#| fig-cap: "TDS Across Water Supply Systems in the Remote Communities Region"
 
 # filter Remote Communities TDS data
 remote_tds <- sawater_quality_apr26_processed |>
@@ -713,24 +713,20 @@ ggplot(
   theme_minimal()
 ```
 
-@fig-remote_tds reveals substantial variation between water supply systems. Although the Remote Communities regional average is approximately 360 mg/L, individual systems range from around 30 mg/L to over 800 mg/L. Several systems exceed the ADWG aesthetic guideline of 600 mg/L, while others remain well below both the guideline and regional average.
+@fig-remote_tds reveals substantial variation between water supply systems. Although the Remote Communities regional average is approximately 360 mg/L, individual systems range from around 30 mg/L in Oak Valley to over 800 mg/L in Watinuma. Several systems exceed the ADWG aesthetic guideline of 600 mg/L, while others remain well below both the guideline and regional average.
 
-This variation suggests that local water supply systems can differ considerably even within the same operational region, likely reflecting differences in source water and mineral composition. Higher TDS values indicate greater concentrations of dissolved minerals, which may contribute to a stronger mineral taste. Therefore, regional averages are useful for identifying broad patterns but may not fully represent the experience of individual communities.
+This variation suggests that local water supply systems can differ considerably even within the same operational region, likely reflecting differences in source water and mineral composition. Higher TDS values indicate greater concentrations of dissolved minerals, which may contribute to a stronger mineral taste [@metropolitanplumbing_adelaide_tap_water]. Therefore, regional averages are useful for identifying broad patterns but may not fully represent the experience of individual communities.
 
-### So what?
+### So, does tap water differ across South Australia?
 
+This analysis shows that tap water characteristics do vary across South Australia, but the differences are primarily related to mineral composition rather than drinking water safety. While pH remained relatively consistent across regions, larger differences were observed for mineral-related characteristics such as Total Dissolved Solids (TDS), calcium, magnesium, and sulphate.
 
+These differences are likely influenced by the diverse water sources used across South Australia, including River Murray water, reservoirs, groundwater, and desalinated water [@epa_where_do_we_get_our_water; @dew_water_resources_environments]. However, all regions generally remained within Australian Drinking Water Guidelines (ADWG) ranges [@nhmrc_physical_chemical_values].
 
-### Blogpost Structure
+The analysis also revealed that regional averages can hide substantial local variation. Within the Remote Communities region, TDS values ranged from around 30 mg/L to over 800 mg/L, demonstrating that water characteristics may differ considerably between individual supply systems.
 
-There is no strict structure for you to follow. However, here is a skeleton structure you may find helpful.
+Overall, the results suggest that perceptions of differences in South Australian tap water are not entirely unfounded. While drinking water generally remains within ADWG guideline ranges, differences in mineral composition and source water characteristics can influence taste and consumer perception [@tait2025adelaide_tap_water].
 
-1.  Title (is set at the top of this document)
-2.  Motivation\
-3.  Data\
-4.  Analysis\
-5.  Conclusions\
-6.  References
 
 <!-- Task 3 Tab: Behind the Scenes -  -->
 

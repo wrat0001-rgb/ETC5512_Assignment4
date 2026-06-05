@@ -1,14 +1,17 @@
 ﻿sawater_quality_apr26,,,,
 Variable Name,Variable Label,Data Type,Description,Example
 region_name,Region Name,Character,SA Water operational region where the water supply system is located.,Metropolitan
-system_name,System Name,Character,Name of the water supply system.,Coffin Bay
-parameter,Water Quality Parameter,Character,Water quality characteristic being measured.,Total dissolved solids
-units,Measurement Unit,Character,Unit used to report the parameter value.,mg/L
+system_name,System Name,Character,"The name of the system that provides water to customers.  It includes all infrastructure from catchment to tap, including the source water, water storage reservoirs, treatment plants and distribution networks.",Coffin Bay
+parameter,Water Quality Parameter,Character,Water quality characteristic being measured to defines water quality..,Total dissolved solids
+units,Standard measurement Unit,Character,Unit used to report the parameter value.,mg/L
 health_guideline,Health Guideline,Character,"ADWG health-based guideline value where applicable. ""NG"" indicates no guideline value.",≤ 1.5
 aesthetic_guideline,Aesthetic Guideline,Character,"ADWG aesthetic guideline value related to taste, appearance, or odour. ""NG"" indicates no guideline value.",≤ 500
 average_value,Average Value,Numeric,"Rolling 12-month average measurement value reported by SA Water. Derived by removing ""<"" symbols from the original text field and converting values to numeric format.",223
-health_compliance_number,Health Compliance (%),Character,Percentage compliance with health guideline values where reported.,100%
-disinfection,Disinfection Method,Character,Primary disinfection method used by the water supply system.,Chlorine
+health_compliance_number,Health Compliance (%),Character,"Percentage compliance with health guideline values where reported. Rolling value calculated over previous 12 months.  While we aim for 100 per cent health compliance all the time, the ADWG recognises exceedances in test results can happen occasionally.  Most health guidelines for chemicals are based on a lifetime of exposure, therefore even if the compliance figures in this report are less than 100 per cent, it does not mean your water is not safe to drink.  An exceedance of the health guideline is immediately investigated and corrective action can be taken, in conjunction with SA Health.  Extensive testing by our water quality scientists is done to confirm South Australia’s drinking water is clean, good quality and safe to drink.",100%
+disinfection,Disinfection Method,Character,"Primary disinfection method used by the water supply system.
+1) Chlorine is used in the water treatment process to protect public health and ensure water is safe to drink, destroying bacteria and other pathogens that can be present in source water.
+2) chloramine destroys bacteria and other pathogens that can be present in source water and ensures tap water is clean and safe to drink. Because chloramine is better than chlorine at penetrating longer pipes it’s used in longer water distribution systems across the state.
+3) Ultraviolet light is used in some of our plants – exposure to appropriate doses of UV light destroys bacteria, viruses and protozoa, making them non harmful to humans. The required UV dose is dependent on certain water quality factors such as clarity, dissolved compounds and microorganisms present.",Chlorine
 ,,,,
 sa_operational_geom,,,,
 Variable Name,Variable Label,Data Type,Description,Example
