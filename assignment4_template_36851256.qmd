@@ -642,13 +642,14 @@ ggplot(
   theme_minimal()
 ```
 
-@fig-variation_summary and @tbl-summary_stats show that turbidity exhibited the greatest regional variation, followed by several mineral-related parameters including magnesium, calcium, alkalinity, sodium, and sulphate. Although TDS showed clear regional differences in @fig-tds_map, several individual mineral parameters varied even more relative to their average values. In contrast, pH showed very little variation across regions, consistent with @fig-ph_map, while free residual chlorine in @fig-chlorine_map displayed only moderate variation.
+@fig-variation_summary and @tbl-summary_stats show that turbidity exhibited the greatest regional variation, followed by several mineral-related parameters including magnesium, calcium, alkalinity, sodium, and sulphate. Although TDS showed clear regional differences in @fig-tds_map, several individual mineral parameters exhibited even greater relative variation. In contrast, pH showed very little variation across regions, consistent with @fig-ph_map, while free residual chlorine in @fig-chlorine_map displayed only moderate variation.
 
-Together, these results suggest that regional differences in drinking water are driven primarily by mineral-related characteristics rather than treatment-related characteristics. However, because the analysis is based on regional averages, it may conceal important differences between individual water supply systems. The next section explores whether regional averages are hiding local variation.
+Together, these results suggest that regional differences in drinking water are driven primarily by mineral-related characteristics rather than treatment-related characteristics. However, because the analysis is based on regional averages, it may conceal important differences between individual water supply systems. The next section explores whether regional averages are hiding local variation. 
+
 
 #### Are regional averages hiding local differences?
 
-Because TDS showed clear regional differences in @fig-tds_map and is closely related to dissolved mineral content, it was selected for further investigation. The **Remote Communities region was chosen** because it contains many individual water supply systems and displayed noticeable variation in TDS, allowing local differences to be explored in more detail.
+Although turbidity showed the highest coefficient of variation, **TDS was selected** for further investigation because it displayed clear regional patterns in @fig-tds_map and has a direct connection to dissolved mineral content and consumer perceptions of tap water. The **Remote Communities region was chosen** because it contains many individual water supply systems and displayed noticeable variation in TDS, allowing local differences to be explored in more detail.
 
 ```{r}
 #| warning: false
@@ -729,7 +730,7 @@ These differences are likely influenced by the diverse water sources used across
 
 The analysis also revealed that regional averages can hide substantial local variation. Within the Remote Communities region, TDS values ranged from around 30 mg/L to over 800 mg/L, demonstrating that water characteristics may differ considerably between individual supply systems.
 
-Overall, the results suggest that perceptions of differences in South Australian tap water are not entirely unfounded. While drinking water generally remains within ADWG guideline ranges, regional differences in mineral composition can influence taste and contribute to different drinking water experiences across communities [@tait2025adelaide_tap_water].
+Overall, the results suggest that perceptions of differences in South Australian tap water are not entirely unfounded, as measurable differences in mineral composition exist both between regions and between individual supply systems. While drinking water generally remains within ADWG guideline ranges, regional differences in mineral composition can influence taste and contribute to different drinking water experiences across communities [@tait2025adelaide_tap_water].
 
 
 ### What could be explored further?
@@ -795,7 +796,9 @@ AI was used as a support tool throughout this project for brainstorming research
 
 | Commit | Commit message | Iterations of work
 |--------|----------------|-------------------------
-|        | Refine reflection section and clarify limitations and future work | Refined the reflection section by reducing overlap between Questions 5–7. I separated behind-the-scenes work, analytical challenges, and project limitations into distinct sections, while also clarifying future directions for extending the analysis. This improved the overall consistency between the blog post, conclusions, and reflections.
-|.       |
+| `27087b99de6d6e0acb463caa1b2412134791d950` | Refine reflection section and clarify limitations and future work | Refined the reflection section by reducing overlap between Questions 5–7. I separated behind-the-scenes work, analytical challenges, and project limitations into distinct sections, while also clarifying future directions for extending the analysis. This improved the overall consistency between the blog post, conclusions, and reflections.
+| `8a21fe83850f45a574eb3056d016e9e426a0c00b` | Align README, metadata, and data dictionary with dataset description in task1
+ | 
+| `cbdafab524e77dcf7ceb83d40406f026036a1e2b` | Improve blog interpretation, transitions, and conclusions | Refined the blog post by improving transitions between analytical sections, reducing repetitive interpretation, and strengthening the connection between findings and conclusions. This helped create a clearer narrative from regional differences, to parameter variation, to local supply-system differences.
 
 :::
