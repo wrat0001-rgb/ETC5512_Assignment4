@@ -552,9 +552,9 @@ ggplot(chlorine_map) +
   theme_minimal()
 ```
 
-@fig-tds_map, @fig-ph_map, @fig-chlorine_map show that **all regions recorded values within ADWG guideline ranges**, indicating that drinking water quality remains acceptable across South Australia. However, noticeable regional differences exist. **TDS showed the largest variation**, with the South East and Eyre regions recording higher mineral concentrations than Metropolitan and Outer Metro regions. Higher TDS values indicate greater concentrations of dissolved minerals, which can influence the taste and perceived hardness of tap water [@nhmrc_physical_chemical_values]. In contrast, pH varied only slightly between regions, while free residual chlorine showed moderate variation, reflecting differences in water treatment and distribution systems.
+These maps (@fig-tds_map, @fig-ph_map, @fig-chlorine_map) show that **all regions recorded values within ADWG guideline ranges**, indicating that drinking water quality remains acceptable across South Australia. However, noticeable regional differences exist. **TDS showed the largest variation**, with the South East and Eyre regions recording higher mineral concentrations than Metropolitan and Outer Metro regions. Higher TDS values indicate greater concentrations of dissolved minerals, which can influence the taste and perceived hardness of tap water [@nhmrc_physical_chemical_values]. In contrast, pH varied only slightly between regions, while free residual chlorine showed moderate variation, reflecting differences in water treatment and distribution systems.
 
-These maps show that drinking water quality remains within ADWG guideline ranges across South Australia, but noticeable regional differences exist. The largest differences are observed for mineral-related characteristics, particularly TDS, whereas pH remains relatively consistent and chlorine shows only moderate variation. This raises a further question: which water quality parameters contribute most to these regional differences?
+These regional patterns suggest that differences in drinking water characteristics are driven more by mineral-related properties than by treatment-related characteristics. To investigate this further, the next section compares variation across all selected water quality parameters to identify which characteristics contribute most to regional differences.
 
 #### Which water quality parameters vary the most?
 To identify which water quality characteristics contribute most to the observed regional differences, the **coefficient of variation (CV)** was calculated for all selected parameters. Unlike standard deviation, the CV measures variation relative to the average value of each parameter, allowing comparison between variables with different units and scales.
@@ -644,7 +644,7 @@ ggplot(
 
 @fig-variation_summary and @tbl-summary_stats show that turbidity exhibited the greatest regional variation, followed by several mineral-related parameters including magnesium, calcium, alkalinity, sodium, and sulphate. Although TDS showed clear regional differences in @fig-tds_map, several individual mineral parameters varied even more relative to their average values. In contrast, pH showed very little variation across regions, consistent with @fig-ph_map, while free residual chlorine in @fig-chlorine_map displayed only moderate variation.
 
-Together, these results suggest that regional differences in drinking water are driven primarily by mineral-related characteristics rather than treatment-related characteristics. However, the analysis so far is based on regional averages, which may conceal important differences between individual water supply systems. The next section investigates variation within a single region.
+Together, these results suggest that regional differences in drinking water are driven primarily by mineral-related characteristics rather than treatment-related characteristics. However, because the analysis is based on regional averages, it may conceal important differences between individual water supply systems. The next section explores whether regional averages are hiding local variation.
 
 #### Are regional averages hiding local differences?
 
@@ -719,7 +719,7 @@ ggplot(
 
 @fig-remote_tds reveals substantial variation between water supply systems. Although the Remote Communities regional average is approximately 360 mg/L, individual systems range from around 30 mg/L in Oak Valley to over 800 mg/L in Watinuma. Several systems exceed the ADWG aesthetic guideline of 600 mg/L, while others remain well below both the guideline and regional average.
 
-This variation suggests that local water supply systems can differ considerably even within the same operational region, likely reflecting differences in source water and mineral composition. Higher TDS values indicate greater concentrations of dissolved minerals, which may contribute to a stronger mineral taste [@metropolitanplumbing_adelaide_tap_water]. Therefore, regional averages are useful for identifying broad patterns but may not fully represent the experience of individual communities.
+This variation suggests that local water supply systems can differ considerably even within the same operational region. Differences in source water and mineral composition may contribute to these patterns. Higher TDS values indicate greater concentrations of dissolved minerals, which may contribute to a stronger mineral taste [@metropolitanplumbing_adelaide_tap_water]. Therefore, regional averages are useful for identifying broad patterns but may not fully represent the experience of individual communities.
 
 ### So, does tap water differ across South Australia?
 
@@ -729,17 +729,17 @@ These differences are likely influenced by the diverse water sources used across
 
 The analysis also revealed that regional averages can hide substantial local variation. Within the Remote Communities region, TDS values ranged from around 30 mg/L to over 800 mg/L, demonstrating that water characteristics may differ considerably between individual supply systems.
 
-Overall, the results suggest that perceptions of differences in South Australian tap water are not entirely unfounded. While drinking water generally remains within ADWG guideline ranges, differences in mineral composition and source water characteristics can influence taste and consumer perception [@tait2025adelaide_tap_water].
+Overall, the results suggest that perceptions of differences in South Australian tap water are not entirely unfounded. While drinking water generally remains within ADWG guideline ranges, regional differences in mineral composition can influence taste and contribute to different drinking water experiences across communities [@tait2025adelaide_tap_water].
 
 
 ### What could be explored further?
 
-This analysis focused on regional differences in selected water quality characteristics using a single reporting period. Future analyses could explore:
+This analysis focused on selected water quality characteristics using data from a single reporting period. Future work could expand the analysis by:
 
-- How tap water characteristics change over time by combining multiple historical SA Water datasets.
-- Whether differences in water characteristics can be linked to specific water sources, such as River Murray water, groundwater, reservoirs, or desalinated water.
-- Additional water quality parameters not included in this study, such as hardness, aluminium, or nitrate, to provide a more comprehensive assessment of regional water quality.
-- The relationship between measured water quality characteristics and consumer perceptions of taste and drinking water quality.
+- Investigating how tap water characteristics change over time using multiple historical SA Water datasets.
+- Examining whether regional differences in water quality are associated with specific water sources, such as River Murray water, groundwater, reservoirs, or desalinated water.
+- Including additional water quality parameters, such as hardness, aluminium, or nitrate, to provide a more comprehensive assessment of regional water quality.
+- Exploring whether measured water quality characteristics are related to consumer perceptions of tap water taste and drinking water quality.
 
 
 <!-- Task 3 Tab: Behind the Scenes -  -->
