@@ -2,7 +2,7 @@
 Variable Name,Variable Label,Data Type,Description,Example
 region_name,Region Name,Character,SA Water operational region where the water supply system is located.,Metropolitan
 system_name,System Name,Character,"The name of the system that provides water to customers.  It includes all infrastructure from catchment to tap, including the source water, water storage reservoirs, treatment plants and distribution networks.",Coffin Bay
-parameter,Water Quality Parameter,Character,Water quality characteristic being measured to defines water quality..,Total dissolved solids
+parameter,Water Quality Parameter,Character,"Water quality characteristic being measured to defines water quality. This processed dataset contains ten selected parameters representing mineral composition, taste and appearance characteristics, and water treatment characteristics.",Total dissolved solids
 units,Standard measurement Unit,Character,Unit used to report the parameter value.,mg/L
 health_guideline,Health Guideline,Character,"ADWG health-based guideline value where applicable. ""NG"" indicates no guideline value.",≤ 1.5
 aesthetic_guideline,Aesthetic Guideline,Character,"ADWG aesthetic guideline value related to taste, appearance, or odour. ""NG"" indicates no guideline value.",≤ 500
