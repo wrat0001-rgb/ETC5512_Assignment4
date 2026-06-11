@@ -752,9 +752,9 @@ Some of the less visible but important tasks in this project included:
 
 - I spent time cleaning the SA Water dataset by removing footer rows, standardising variable names, and converting values reported below detection limits into numeric format.
 - I reviewed a large number of water quality parameters before selecting a smaller set that best represented mineral composition, taste and appearance, and water treatment characteristics.
-- One of the most time-consuming tasks was manually creating a correspondence table between SA Water operational regions and South Australian Government regions because the two datasets used different geographic classifications.
-- I also experimented with displaying all parameters on a single faceted map. However, differences in units and value ranges made the maps difficult to interpret, so I spent considerable time testing different approaches before deciding to focus on separate maps for three representative parameters.
-- Although they were not featured in the blog post, preparing metadata, data dictionaries, and a README file required additional effort to ensure the processed datasets were well documented and reproducible.
+- I manually created a correspondence table between SA Water operational regions and South Australian Government regions so that the water quality data could be mapped spatially.
+- I prepared metadata, data dictionaries, and a README file to ensure the processed datasets were well documented and reproducible.
+- I tested a range of visualisation approaches before deciding on the final set of maps and figures used in the blog post.
 
 
 ### Question 6
@@ -762,12 +762,12 @@ Some of the less visible but important tasks in this project included:
 
 Some challenges encountered during this project included:
 
-- The SA Water dataset uses operational regions, while the spatial dataset uses South Australian Government regions. Because no official correspondence table was available, an approximate mapping had to be created manually.
-- The water quality parameters have very different units and value ranges. I initially explored displaying all parameters using faceted maps, but differences in scales made comparisons difficult and sometimes visually misleading. As a result, I focused on three representative parameters.
-- The dataset does not include detailed information about water sources for individual supply systems, limiting the ability to explain the exact causes of regional differences.
-- I originally considered analysing changes in water quality over time. However, this would require combining multiple historical SA Water datasets, which was beyond the scope of this project.
+- The SA Water dataset uses operational regions, while the spatial dataset uses South Australian Government regions. Because no official correspondence table was available, I had to develop an approximate mapping manually.
+- I initially attempted to display all selected water quality parameters using faceted maps. However, large differences in units and value ranges made comparisons difficult and sometimes visually misleading, so I refined the scope to focus on three representative parameters.
+- The dataset does not contain detailed information about water sources for individual supply systems, limiting my ability to explain the exact causes of regional differences.
+- I originally considered analysing changes in water quality over time. However, combining multiple historical SA Water datasets was beyond the scope of this project.
 
-A key skill developed during this project was working with spatial data in R, including joining spatial and tabular datasets to create maps and investigate regional patterns.
+A key skill developed during this project was working with spatial data in R, including joining spatial and tabular datasets, creating centroids for maps labels, and producing maps to investigate regional patterns.
 
 I was particularly proud of solving the mismatch between the two regional classification systems and creating operational region maps that could be linked to the water quality data. This required manually developing a correspondence table because no official mapping was available, and it enabled the regional visualisations that formed a key part of the analysis.
 
@@ -777,10 +777,10 @@ I was particularly proud of solving the mismatch between the two regional classi
 
 Some limitations of this analysis and potential future improvements include:
 
-- I used data from a single reporting period, which provides only a snapshot of tap water characteristics. In future, I would like to combine multiple historical SA Water datasets to investigate long-term trends.
+- I used data from a single reporting period, which provides only a snapshot of tap water characteristics. In future, I would like to combine multiple historical SA Water datasets to investigate how water quality changes over time.
 - I focused on a selected set of water quality parameters to keep the analysis manageable. Including additional parameters could provide a more comprehensive assessment of regional water quality.
-- The dataset does not contain detailed information about water sources for individual supply systems, limiting my ability to explain the exact causes of regional differences. Future analyses could investigate whether differences are associated with specific water sources such as River Murray water, groundwater, reservoirs, or desalinated water.
-- This study focused on measured water quality characteristics rather than consumer experiences. In future, I would be interested in exploring whether differences in water quality parameters are related to public perceptions of tap water taste and quality.
+- Although the analysis identified regional differences in mineral-related characteristics, the dataset does not contain detailed information about water sources for individual supply systems. In future, I would like to investigate whether these differences are associated with specific water sources such as River Murray water, groundwater, reservoirs, or desalinated water.
+- This study focused on measured water quality characteristics rather than consumer experiences. Future work could explore whether differences in water quality parameters are related to public perceptions of tap water taste and quality.
 
 
 ### Question 8
