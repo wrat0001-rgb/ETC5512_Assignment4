@@ -788,17 +788,48 @@ Some limitations of this analysis and potential future improvements include:
 ### Question 8
 *Tell us about how you used AI in your approach to your assignment. (e.g. Was AI consistently reliable? Did you provide AI with additional context? Was there anywhere where you questioned or verified the AI outputs? Was there anywhere we AI helped you learn something new?)*
 
-AI was used as a support tool throughout this project for brainstorming research questions, identifying meaningful analyses within the limitations of the available dataset, assisting with R coding, and improving documentation and written communication. It helped me explore analytical approaches, such as using the coefficient of variation (CV) to compare variables with different units and scales, and learn new techniques such as creating centroids and adding labels to spatial maps in R. To obtain relevant responses, I provided detailed context about the datasets, research objectives, and assignment requirements. However, AI outputs were not accepted without review. I verified coding suggestions, interpretations, and conclusions against the data, relevant literature, and assignment requirements before incorporating them into the final submission.
+AI was used as a support tool throughout this project for brainstorming research questions, identifying meaningful analyses within the limitations of the available dataset, assisting with R coding, and improving documentation and written communication. It helped me explore analytical approaches, such as using the coefficient of variation (CV) to compare variables with different units and scales, and learn new techniques such as creating centroids and adding labels to spatial maps in R. To obtain relevant responses, I provided detailed context about the datasets, research objectives, and assignment requirements.
+
+However, AI was not always reliable. Some suggested analyses were not suitable for the available data, and some coding solutions required modification before they could be applied to my project. This reinforced the importance of understanding the data and critically evaluating AI-generated outputs rather than accepting them automatically. I verified coding suggestions, interpretations, and conclusions against the data, relevant literature, and assignment requirements before incorporating them into the final submission.
 
 
 ### Question 9
 *Submit 4 earlier versions of your .qmd files to show your iterative process. These versions must show iterations of your work (not just a linear progression of Task 1, Task 2, Task 3, citations). Reflect on the progress made between each versions by providing a short statement for markers of what you fixed/learnt/improved/changed between each file. Also like to reflect on what changed between your first checklist submission. (Note: There is an expectation for students familiar with GitHub that you will submit a Github repository and refer to 4 individual commits.)*
 
-| Commit | Commit message | Iterations of work
-|--------|----------------|-------------------------
-| `27087b99de6d6e0acb463caa1b2412134791d950` | Refine reflection section and clarify limitations and future work | Refined the reflection section by reducing overlap between Questions 5–7. I separated behind-the-scenes work, analytical challenges, and project limitations into distinct sections, while also clarifying future directions for extending the analysis. This improved the overall consistency between the blog post, conclusions, and reflections.
-| `8a21fe83850f45a574eb3056d016e9e426a0c00b` | Align README, metadata, and data dictionary with dataset description in task1
- | 
-| `cbdafab524e77dcf7ceb83d40406f026036a1e2b` | Improve blog interpretation, transitions, and conclusions | Refined the blog post by improving transitions between analytical sections, reducing repetitive interpretation, and strengthening the connection between findings and conclusions. This helped create a clearer narrative from regional differences, to parameter variation, to local supply-system differences.
+**GitHub repository:**
+<https://github.com/wrat0001-rgb/ETC5512_Assignment4>
+
+The following commits demonstrate key iterations in my project:
+
+| Commit  | What changed / improved  |
+| --------| -------------------------|
+| **[271f909](https://github.com/wrat0001-rgb/ETC5512_Assignment4/commit/271f909143b4156f101733998e1097e0386939f2) – Add metadata, README, data dictionary files for both processed datasets** | After completing the initial data processing, I improved the project documentation by creating metadata files, a README, and a data dictionary. This helped make the datasets more transparent, reproducible, and easier for others to understand and reuse.  |
+| **[577196d](https://github.com/wrat0001-rgb/ETC5512_Assignment4/commit/577196df775db9a92b6d9bff07b39587ec76a5a9) – Refine reflection section and clarify limitations and future work**       | I revised Task 3 to better separate behind-the-scenes work, project challenges, and future improvements. This helped make the reflections more specific and aligned with the purpose of each question.                                                        |
+| **[cbdafab](https://github.com/wrat0001-rgb/ETC5512_Assignment4/commit/cbdafab524e77dcf7ceb83d40406f026036a1e2b) – Improve blog interpretation, transitions, and conclusions**               | I strengthened the interpretation of results, improved transitions between analytical sections, and revised the conclusion so that it more directly answered the research question and linked findings across the analysis.                                   |
+| **[e9eaf82](https://github.com/wrat0001-rgb/ETC5512_Assignment4/commit/e9eaf828724361a14da19aa3c3c0ef7517be163d) – Improve analytical flow and justify parameter selection**                 | I refined the analytical narrative by explaining why TDS was selected for further investigation despite turbidity having the highest coefficient of variation. I also strengthened the connection between regional analysis and local supply-system analysis. |
+
+#### Reflection on changes since my first checklist submission
+Compared with my first checklist submission, the project evolved from a mainly descriptive regional comparison into a more comprehensive analysis. I expanded the analysis by comparing variability across water quality parameters using the coefficient of variation (CV) and investigating variation between individual water supply systems within the same region. I also improved the project documentation through metadata files, a data dictionary, and a README, and refined the interpretation of results, discussion of limitations, future work, and reflections throughout the report.
+
+### AI Acknowledgement
+
+I used generative AI tools (ChatGPT, OpenAI) to support my learning and improve efficiency during the completion of this assignment. AI was used as a supplementary tool for guidance, troubleshooting, and clarification, while all data processing, analysis decisions, interpretations, and final outputs were completed and verified independently by me.
+
+Specifically, I used AI assistance to:
+
+- Brainstorm and refine the research question and analytical focus based on the available datasets.
+- Identify suitable analyses that could be conducted within the limitations of the data.
+- Troubleshoot R coding issues related to data cleaning, filtering, joins, and data type conversion.
+- Create and refine ggplot2 visualisations, including maps and coefficient of variation plots.
+- Learn and apply spatial analysis techniques, including creating centroids, adding labels to maps, and joining spatial and non-spatial datasets.
+- Understand and apply the coefficient of variation (CV) for comparing variables with different units and scales.
+- Improve interpretation of visualisations and statistical summaries.
+- Improve the clarity, structure, and flow of written explanations, conclusions, and reflections.
+- Refine project documentation, including the README, metadata files, and data dictionary.
+- Check grammar, wording, and consistency throughout the report.
+
+AI outputs were not accepted without review. Coding suggestions, interpretations, and written content were checked against the data, relevant literature, and assignment requirements before being incorporated into the final submission. Using AI also helped me learn new techniques in R and develop a deeper understanding of spatial data analysis and data communication.
+
+Link to AI conversation history used during the project: <https://chatgpt.com/share/6a2ab56f-f564-83ec-9758-ecd569f29958>
 
 :::
