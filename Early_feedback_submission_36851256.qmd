@@ -1,0 +1,451 @@
+---
+title: "Submission for early feedback"
+subtitle: "Assignment 4 ETC5512"
+author: "Warnaya Ratirotjanakul (36851256)"
+date: today
+format: html
+editor: visual
+---
+
+### Proposed Question
+
+Are there differences in tap water characteristics across regions in South Australia?
+
+This analysis explores whether tap water characteristics, including mineral composition and water treatment indicators, vary across regions in South Australia.
+
+### Proposed Data
+
+South Australia was selected as the case study because, as one of Australia’s driest states, drinking water management is important across different regions. This raises the question of whether people living in different parts of South Australia experience measurable differences in tap water characteristics. The dataset was obtained from the Government of South Australia and contains 4,872 observations and 11 variables related to drinking water quality. Key variables include `Region Name`, `System Name`, `Parameter`, `Average Value`, `Health Guideline`, `Aesthetic Guideline`, and `Disinfection`. According to the metadata, average values are calculated as rolling values over the previous 12 months, making the dataset suitable for comparing regional differences in tap water characteristics.
+
+SA Water quality data source: <https://data.sa.gov.au/data/dataset/water-quality>
+
+SA Water quality metadata: <https://data.sa.gov.au/data/dataset/water-quality/resource/71f9ff52-24e0-4cd7-9b43-5ef9c44b7a1b>
+
+```{r}
+#| include: FALSE
+
+# load library
+library(readxl)
+library(tidyverse)
+library(sf)
+library(ggrepel)
+```
+
+```{r}
+# load dataset
+url <- "https://data.sa.gov.au/data/dataset/996ec2ae-d52c-4d7e-be9c-d4dab1c1aa45/resource/9d161800-cfdd-46d7-8236-3e601fdc4a1c/download/water-quality-performance-results-april-2026.xlsx"
+download.file(url, "raw_data/water-quality-performance-results-april-2026.xlsx", mode = "wb")
+water_quality <- read_excel("raw_data/water-quality-performance-results-april-2026.xlsx") |>
+  slice(1:(n() - 9))
+
+# inspect dataset
+glimpse(water_quality)
+```
+
+### Responses to checklist
+
+Max 1 - 2 sentences each. Make these specific to your question and data and not generic.
+
+\[ x \] Think about the scope of your assignment. Can you answer the question well in the time available?
+
+Yes. The analysis uses a single water quality dataset containing 4,872 observations and 11 variables, which keeps the analysis manageable while still providing enough scope for data cleaning, wrangling, visualisation, and regional comparison.
+
+\[ x \] Does the question you’ve posed provide you sufficient scope to show off some of the skills you’ve learnt in this unit?
+
+Yes. This analysis applies skills from ETC5512 including working with open data, cleaning and wrangling real-world datasets, creating visualisations, and integrating geographic information to explore regional patterns in water quality.
+
+\[ x \] Is the data you’ve selected suitable to answer your question?
+
+Yes. The dataset contains regional information and multiple water quality indicators, including measured parameters, average values, and guideline values, which support comparison of tap water characteristics across regions in South Australia.
+
+\[ x \] Write some pseudo-code, does your approach make sense?
+
+#### Data preparation
+
+```{r}
+#| include: FALSE
+# load library
+library(janitor)
+library(stringr)
+
+# Load water quality dataset
+url <- "https://data.sa.gov.au/data/dataset/996ec2ae-d52c-4d7e-be9c-d4dab1c1aa45/resource/9d161800-cfdd-46d7-8236-3e601fdc4a1c/download/water-quality-performance-results-april-2026.xlsx"
+download.file(url, "raw_data/water-quality-performance-results-april-2026.xlsx", mode = "wb")
+water_quality <- read_excel("raw_data/water-quality-performance-results-april-2026.xlsx") |>
+  slice(1:(n() - 9))
+
+# inspect dataset
+glimpse(water_quality)
+```
+
+```{r}
+#| warning: FALSE
+#| messsage: FALSE
+
+# format column name to snake_case
+water_quality_clean <- water_quality |>
+  clean_names()
+
+# clean and prepare variables
+water_quality_clean <- water_quality_clean |>
+  # select relevant water quality indicators
+  select(
+    -end_date, 
+    -comment) |>
+  
+  # converting to numeric by remove the < symbol
+  mutate(
+    below_detection =
+      str_detect(average_value, "<"),
+    
+    average_value =
+      str_remove(average_value, "<"),
+    
+    average_value =
+      as.numeric(average_value)
+  )
+  
+# Count NA in each column
+colSums(is.na(water_quality_clean))
+
+# inspect dataset
+glimpse(water_quality_clean)
+```
+
+Parameters were selected based on their relevance to mineral composition, taste and appearance characteristics, and drinking water treatment processes that may vary across regions.
+
+| Category | Parameter | Justification |
+|------------------------|------------------------|------------------------|
+| **Hardness and mineral composition** | Calcium | Calcium is a major contributor to water hardness and reflects mineral content in tap water. |
+|  | Magnesium | Magnesium contributes to water hardness and regional mineral composition. |
+|  | Alkalinity | Alkalinity reflects the buffering capacity and chemical stability of water. |
+|  | Total Dissolved Solids (TDS) | TDS measures the overall concentration of dissolved minerals in water. |
+| **Taste and appearance characteristics** | pH | pH influences the taste and chemical characteristics of tap water. |
+|  | Turbidity | Turbidity represents water clarity and the presence of suspended particles. |
+|  | Sodium | Sodium may affect the salinity and taste of drinking water. |
+|  | Sulphate | Sulphate is a naturally occurring mineral that may influence water taste. |
+| **Water treatment characteristics** | Fluoride | Fluoride is commonly added or monitored as part of drinking water treatment practices. |
+|  | Chlorine (free residual) | Free residual chlorine reflects active disinfection levels and may influence the taste and odour of tap water. |
+
+```{r}
+#| include: FALSE
+
+# check parameter names
+unique(water_quality_clean$parameter)
+```
+
+```{r}
+# selected parameters
+selected_params <- c(
+  "Calcium",
+  "Magnesium",
+  "Alkalinity",
+  "Total dissolved solids",
+  "pH",
+  "Turbidity",
+  "Sodium",
+  "Sulphate",
+  "Fluoride",
+  "Chlorine (free residual)"
+)
+
+water_quality_selected <- water_quality_clean |>
+  filter(parameter %in% selected_params)
+```
+
+#### Analysis 1: Compare tap water characteristics across regions
+
+The `water_quality` dataset uses SA Water operational regions, while the South Australia map (`southaus_map`) dataset uses administrative regional boundaries. Since the two datasets use different geographic classifications, a manual correspondence table was created to approximately match regions based on geographic location and regional characteristics.
+
+| Water Operation Region | Matched SA Regions | Grouping Criteria |
+|------------------------|------------------------|------------------------|
+| Metropolitan | Eastern Adelaide, Northern Adelaide, Southern Adelaide, Western Adelaide | Adelaide metropolitan and urban areas |
+| Outer Metro | Adelaide Hills, Barossa Light and Lower North, Fleurieu and Kangaroo Island | Outer metropolitan and peri-urban areas |
+| Eyre | Eyre and Western | Direct geographic alignment |
+| Northern | Yorke and Mid North, Far North | Northern inland regional areas |
+| South East | Limestone Coast | South-eastern regional alignment |
+| Remote Communities | Murray and Mallee | Remote and sparsely populated areas |
+
+This matching was used for exploratory visualisation only and does not represent official SA Water operational boundaries.
+
+SA Government Regions: <https://data.sa.gov.au/data/dataset/south-australian-government-regions>
+
+SA Government Regions Metadata: <https://location.sa.gov.au/LMS/Reports/ReportMetadata.aspx?p_no=668&pu=y>
+
+```{r}
+# read the national map from electoral data
+southaus_map <- read_sf(here::here("raw_data/SAGovtRegions_shp/SAGovtRegions_GDA2020.shp"))
+
+# create operational mapping
+region_lookup <- tribble(
+  ~region, ~water_region,
+
+  "Eastern Adelaide", "Metropolitan",
+  "Northern Adelaide", "Metropolitan",
+  "Southern Adelaide", "Metropolitan",
+  "Western Adelaide", "Metropolitan",
+
+  "Adelaide Hills", "Outer Metro",
+  "Barossa, Light and Lower North", "Outer Metro",
+  "Fleurieu and Kangaroo Island", "Outer Metro",
+
+  "Eyre and Western", "Eyre",
+
+  "Yorke and Mid North", "Northern",
+  "Far North", "Northern",
+
+  "Limestone Coast", "South East",
+
+  "Murray and Mallee", "Remote Communities"
+)
+
+# join lookup to SA map
+sa_operational <- southaus_map |>
+  left_join(region_lookup, by = "region")
+
+# merge polygons into operational regions
+sa_operational_geom <- sa_operational |>
+  group_by(water_region) |>
+  summarise()
+```
+
+To compare tap water characteristics across regions, three representative parameters were selected from different categories of water characteristics. These parameters were chosen because they are easier to interpret and represent differences in mineral composition, water chemistry, and treatment processes across South Australia.
+
+| Category | Selected Parameter | Reason for Selection |
+|------------------------|------------------------|------------------------|
+| Mineral composition | Total Dissolved Solids (TDS) | Indicates the concentration of dissolved minerals in tap water. |
+| Taste and chemical characteristics | pH | Reflects water chemistry and may influence water characteristics. |
+| Water treatment characteristics | Chlorine (free residual) | Reflects active disinfection levels and may affect taste and odour. |
+
+```{r}
+# selected parameters for analysis 1
+analysis1_params <- c(
+  "Total dissolved solids",
+  "pH",
+  "Chlorine (free residual)"
+)
+
+# filter selected parameters
+analysis1_data <- water_quality_selected |>
+  filter(parameter %in% analysis1_params)
+
+# summarise average values by region and parameter
+analysis1_summary <- analysis1_data |>
+  group_by(region_name, parameter) |>
+  summarise(
+    avg_value = mean(average_value, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# join summary data with operational region geometry
+map_data <- sa_operational_geom |>
+  left_join(
+    analysis1_summary,
+    by = c("water_region" = "region_name")
+  )
+```
+
+```{r}
+#| warning: false
+#| message: false
+#| label: fig-tds_map
+#| fig-cap: "Total Dissolved Solids Across South Australia"
+
+# TDS map
+tds_map <- map_data |>
+  filter(parameter == "Total dissolved solids")
+
+# create centroids
+coords <- st_centroid(tds_map)
+
+# extract coordinates
+coords_xy <- cbind(
+  tds_map,
+  st_coordinates(coords)
+)
+
+ggplot(tds_map) +
+  geom_sf(aes(fill = avg_value)) +
+  
+  # add region labels
+  geom_text_repel(
+    data = coords_xy,
+    aes(X, Y, label = water_region),
+    color = "orange",
+    fontface = "bold",
+    size = 3
+  ) +
+
+  labs(
+    x = "Longitude",
+    y = "Latitude",
+    fill = "TDS (mg/L)"
+  ) +
+
+  theme_minimal()
+```
+
+From @fig-tds_map, higher dissolved mineral concentrations were observed in the South East region, while Northern and Metropolitan regions generally showed lower TDS values.
+
+```{r}
+#| warning: false
+#| message: false
+#| label: fig-ph_map
+#| fig-cap: "pH Across South Australia"
+
+# pH map
+ph_map <- map_data |>
+  filter(parameter == "pH")
+
+# create centroids
+coords <- st_centroid(ph_map)
+
+# extract coordinates
+coords_xy <- cbind(
+  ph_map,
+  st_coordinates(coords)
+)
+
+ggplot(ph_map) +
+  geom_sf(aes(fill = avg_value)) +
+  
+  # add region labels
+  geom_text_repel(
+    data = coords_xy,
+    aes(X, Y, label = water_region),
+    color = "orange",
+    fontface = "bold",
+    size = 3
+  ) +
+
+  labs(
+    x = "Longitude",
+    y = "Latitude",
+    fill = "pH"
+  ) +
+
+  theme_minimal()
+```
+
+From @fig-ph_map, pH values were relatively consistent across South Australia, although Northern and some eastern regions showed slightly higher pH levels than Eyre and Metropolitan regions.
+
+```{r}
+#| warning: false
+#| message: false
+#| label: fig-chlorine_map
+#| fig-cap: "Free Residual Chlorine Across South Australia"
+
+# chlorine map
+chlorine_map <- map_data |>
+  filter(parameter == "Chlorine (free residual)")
+
+# create centroids
+coords <- st_centroid(chlorine_map)
+
+# extract coordinates
+coords_xy <- cbind(
+  chlorine_map,
+  st_coordinates(coords)
+)
+
+ggplot(chlorine_map) +
+  geom_sf(aes(fill = avg_value)) +
+  
+  # add region labels
+  geom_text_repel(
+    data = coords_xy,
+    aes(X, Y, label = water_region),
+    color = "orange",
+    fontface = "bold",
+    size = 3
+  ) +
+
+  labs(
+    x = "Longitude",
+    y = "Latitude",
+    fill = "Chlorine"
+  ) +
+
+  theme_minimal()
+```
+
+From @fig-chlorine_map, higher chlorine levels were observed in Eyre and Northern regions, while lower levels appeared in Metropolitan, Remote Communities, and some South East areas.
+
+#### Analysis 2: Identify which water quality parameters vary the most
+
+To compare variation across water quality parameters, the coefficient of variation (CV) was calculated for each parameter across operational regions. CV standardises variation relative to the mean, allowing parameters measured on different scales and units to be compared more fairly.
+
+```{r}
+# calculate variation by parameter
+variation_summary <- water_quality_selected |>
+  group_by(parameter) |>
+  summarise(
+    mean_value = mean(average_value, na.rm = TRUE),
+    sd_value = sd(average_value, na.rm = TRUE),
+    cv = sd_value / mean_value
+  ) |>
+  arrange(desc(cv))
+
+variation_summary
+```
+
+```{r}
+#| warning: false
+#| message: false
+#| label: fig-variation_summary
+#| fig-cap: "Variation in Water Quality Parameters Across Regions"
+
+ggplot(variation_summary,
+       aes(x = reorder(parameter, cv),
+           y = cv)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  labs(
+    x = "Parameter",
+    y = "Coefficient of Variation"
+  ) +
+  theme_minimal()
+```
+
+#### Analysis 3: Explore variation between water supply systems within the Remote Communities region
+
+While Analysis 1 compared average water characteristics between operational regions, water quality may still vary between individual water supply systems within the same region. Since `system_name` represents individual water supply systems, this analysis focuses on the Remote Communities region to explore local variation in water quality characteristics. **Remote Communities** was selected because remote areas may rely on different local water sources and supply systems, which could lead to greater variation in tap water characteristics. **Total Dissolved Solids (TDS)** was selected because it showed clear regional variation in earlier analyses and represents dissolved mineral concentration in tap water.
+
+```{r}
+#| warning: false
+#| message: false
+#| label: fig-remote_tds
+#| fig-cap: "TDS Across Water Supply Systems in Remote Communities"
+
+# filter Remote Communities TDS data
+remote_tds <- water_quality_selected |>
+  filter(
+    region_name == "Remote Communities",
+    parameter == "Total dissolved solids"
+  )
+
+# plot variation across systems
+ggplot(remote_tds,
+       aes(x = reorder(system_name, average_value),
+           y = average_value)) +
+  geom_point(
+    color = "steelblue",
+    size = 2
+  ) +
+  coord_flip() +
+  labs(
+    x = "Water Supply System",
+    y = "TDS (mg/L)"
+  ) +
+  theme_minimal()
+```
+
+From @fig-remote_tds,TDS levels varied substantially between water supply systems within the Remote Communities region, ranging from below 50 mg/L to around 800 mg/L. This suggests that local water sources and supply conditions may differ considerably even within the same operational region.
+
+\[ x \] Is your proposed analysis original? Ensure your analysis is NOT a reproduction but you are adding something new.
+
+Yes. Rather than only reporting overall water quality performance, this analysis explores regional differences in tap water characteristics and whether people living in different parts of South Australia experience measurably different tap water characteristics.
+
+\[ x \] Lastly, we want you to chose something you are passionate about to practice your learning. So try to have some fun with this!
+
+I am interested in sustainability and environmental systems, and this topic feels personal because of my experience moving from Thailand to Australia. Growing up, drinking tap water directly was uncommon, so I was surprised that many Australians regularly drink from the tap. This made me curious about whether tap water characteristics differ across regions in South Australia.
