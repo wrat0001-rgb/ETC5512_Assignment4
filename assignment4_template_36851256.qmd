@@ -792,5 +792,9 @@ AI was used as a support tool throughout this project for brainstorming research
 ### Question 9
 *Submit 4 earlier versions of your .qmd files to show your iterative process. These versions must show iterations of your work (not just a linear progression of Task 1, Task 2, Task 3, citations). Reflect on the progress made between each versions by providing a short statement for markers of what you fixed/learnt/improved/changed between each file. Also like to reflect on what changed between your first checklist submission. (Note: There is an expectation for students familiar with GitHub that you will submit a Github repository and refer to 4 individual commits.)*
 
+| Commit | Commit message | Iterations of work
+|--------|----------------|-------------------------
+|        | Refine reflection section and clarify limitations and future work | Refined the reflection section by reducing overlap between Questions 5–7. I separated behind-the-scenes work, analytical challenges, and project limitations into distinct sections, while also clarifying future directions for extending the analysis. This improved the overall consistency between the blog post, conclusions, and reflections.
+|.       |
 
 :::
