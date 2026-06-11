@@ -23,7 +23,7 @@ Processed Data:
 2. sawater_quality_apr26_processed_metadata.txt – metadata describing the water quality dataset, including data source, variables, processing steps, coverage, limitations, and licensing information.
 3. sa_operational_geom.rds – processed spatial dataset used for mapping and visualisation.
 4. sa_operational_geom_metadata.txt – metadata describing the spatial dataset, including data source, spatial processing steps, coverage, limitations, and licensing information.
-5. data_dictionary.xlsx – data dictionary containing variable names, descriptions, data types, and example values for the processed datasets.
+5. data_dictionary.csv – data dictionary containing variable names, descriptions, data types, and example values for the processed datasets.
 
 ## Data Sources
 Dataset 1: SA Water Quality Performance Results

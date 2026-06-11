@@ -31,7 +31,7 @@ To answer this question, the analysis addresses three sub-questions:
 
 1. How do tap water characteristics vary across operational regions in South Australia?
 2. Which water quality parameters show the greatest variation between regions?
-3. How much variation exists between water supply systems within the same operational region?
+3. How much variation exists between water supply systems within an operational region, and can regional averages mask these differences?
 
 I chose this question because I am interested in sustainability and environmental systems, particularly how natural resources are managed across different communities. South Australia was selected as the case study because it is one of Australia's driest states [@dew2026waterdryconditions], making water management especially important. After moving from Thailand to Australia, I noticed that drinking tap water directly is much more common in Australia, which made me curious about whether tap water characteristics differ across regions and local water supply systems.
 
@@ -84,10 +84,11 @@ Australian tap water is regulated under the Australian Drinking Water Guidelines
 
 - Results are reported as rolling 12-month average values and may not capture short-term or seasonal variation.
 - Operational regions contain multiple water supply systems, which may mask local differences within a region.
-- Exact sampling locations are not provided.
-The dataset contains many water quality parameters, so representative variables were selected for detailed analysis.
+- Exact sampling locations are not provided. 
+- The dataset contains many water quality parameters, so representative variables were selected for detailed analysis.
 - Each dataset release summarises the previous 12 months. Analysing long-term trends would require combining multiple historical datasets.
 - SA Water operational regions do not align directly with South Australian Government regions, requiring an approximate correspondence table for mapping.
+- Information about the underlying water source (e.g. River Murray, groundwater, reservoir, or desalinated water) is not provided for individual supply systems.
 
 **Ethical and privacy considerations:**
 
@@ -198,7 +199,7 @@ sawater_quality_apr26_processed <- sawater_quality_apr26_processed |>
 glimpse(sawater_quality_apr26_processed) 
 colSums(is.na(sawater_quality_apr26_processed))
 ```
-Parameters were then selected to represent the three main categories of tap water characteristics identified earlier: **mineral composition**, **taste and appearance characteristics**, and **water treatment characteristics**. These parameters were chosen because they provide a broad representation of drinking water quality and consumer acceptability across South Australia. The resulting processed dataset was saved as `sawater_quality_apr26_processed.csv` for subsequent analysis.
+Parameters were then selected to represent the three main categories of tap water characteristics identified earlier: **mineral composition**, **taste and appearance characteristics**, and **water treatment characteristics**. These parameters were chosen because they provide a broad representation of drinking water quality and consumer acceptability across South Australia. The resulting processed dataset was saved as `sawater_quality_apr26_processed.csv` and used throughout the analysis.
 
 ```{r}
 # check parameter names
@@ -331,7 +332,7 @@ processed_data/
 ├── data_dictionary.csv
 │
 ├── sawater_quality_apr26_processed.csv
-├── sawater_quality_apr26_metadata.txt
+├── sawater_quality_apr26_processed_metadata.txt
 │
 ├── sa_operational_geom.rds
 └── sa_operational_geom_metadata.txt
