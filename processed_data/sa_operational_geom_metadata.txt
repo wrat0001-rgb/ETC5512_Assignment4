@@ -4,9 +4,9 @@ Dataset title: South Australia Operational Regions (Processed Spatial Dataset)
 
 Dataset description: This processed spatial dataset was derived from the South Australian Government Regions dataset published by the South Australian Government [@sa_gov_regions].
 
-The dataset contains geographic boundaries aggregated to approximate SA Water operational regions. It was created to support visualisation of regional differences in tap water characteristics across South Australia.
+The dataset contains geographic boundaries aggregated to approximate SA Water operational regions. It was created to support visualisation and comparison of regional differences in tap water characteristics across South Australia and can be joined with the processed SA Water quality dataset using the operational region variable.
 
-Purpose: This dataset was created to support mapping, visualisation, and regional comparison of tap water characteristics across South Australia.
+Purpose: This dataset was created to visualise regional patterns in tap water characteristics, support mapping of SA Water operational regions, enable comparison of water quality characteristics across regions.
 
 Data source:
 - Publisher: Department for Housing and Urban Development, Government of South Australia
@@ -17,7 +17,7 @@ Data collection method: The original dataset is administrative geographic bounda
 
 Processing steps: The original shapefile was processed by:
 - Importing the GDA2020 version of the South Australian Government Regions shapefile.
-- Creating a correspondence table between South Australian Government regions and SA Water operational region.
+- Creating a correspondence table between South Australian Government regions and SA Water operational regions.
 - Joining the correspondence table to the spatial dataset.
 - Aggregating regional boundaries into six operational regions: Metropolitan, Outer Metro, Eyre, Northern, South East, and Remote Communities.
 - Saving the resulting spatial dataset as an RDS file.
@@ -65,4 +65,4 @@ Dataset created: 4 June 2026
 
 Dataset last updated: 5 June 2026
 
-Metadata last updated: 5 June 2026
+Metadata last updated: 11 June 2026

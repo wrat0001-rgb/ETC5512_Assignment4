@@ -12,7 +12,7 @@ This dataset was created to investigate:
 
 1. Differences in tap water characteristics across South Australian operational regions.
 2. Which water quality parameters vary most between regions.
-3. Variation between water supply systems within operational regions.
+3. Whether regional averages mask variation between water supply systems within operational regions.
 
 Data source:
 - Publisher: SA Water
@@ -69,6 +69,7 @@ Limitations:
 - Exact sampling locations are not provided.
 - Only selected water quality parameters were retained from the original dataset.
 - Long-term trend analysis would require combining multiple historical releases.
+- Detailed information about water sources for individual supply systems was not available in the dataset. As a result, differences in water quality characteristics could not be directly linked to specific water sources.
 
 License:
 This processed dataset is derived from the SA Water Quality Performance Results dataset published by SA Water under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence. Appropriate attribution to the original source is required.
@@ -77,4 +78,4 @@ Dataset created: 4 June 2026
 
 Dataset last updated: 5 June 2026
 
-Metadata last updated: 5 June 2026
+Metadata last updated: 11 June 2026
